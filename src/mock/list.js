@@ -3,15 +3,17 @@ function getImg(imgName) {
 }
 export const songList = [
   {
+    id: 1,
     title: "song A",
     coverPic: getImg(3),
     info: {
       title: "title 123456789032343531111333",
       left: "left xx xxyyxxyyxxzasdfaasdf",
-      right: "2歌曲",
+      right: "2文章",
     },
   },
   {
+    id: 2,
     title: "B",
     coverPic: getImg(3),
     info: {
@@ -21,6 +23,7 @@ export const songList = [
     },
   },
   {
+    id: 3,
     title: "C",
     coverPic: getImg(3),
     info: {
@@ -30,6 +33,7 @@ export const songList = [
     },
   },
   {
+    id: 4,
     title: "D",
     coverPic: getImg(3),
   },

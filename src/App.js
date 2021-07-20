@@ -1,16 +1,15 @@
 import React, { Suspense } from "react";
 import {
   BrowserRouter,
-  Router,
   Route,
   Redirect,
   Switch,
 } from "react-router-dom";
 import routers from "./router/index.js";
 
-import MHeader from "./components/Header/index.js";
+// import MHeader from "./components/Header/index.js";
 import MSiderBar from "./components/Sidebar/index.js";
-import MPlayer from "./components/Player/index.js";
+// import MPlayer from "./components/Player/index.js";
 
 import "./App.css";
 

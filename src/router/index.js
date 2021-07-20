@@ -15,4 +15,9 @@ export default [
     name: "collection",
     component: lazy(() => import("../views/Collection")),
   },
+  {
+    path: "/detail/:id",
+    name: "detail",
+    component: lazy(() => import("../views/Detail")),
+  },
 ];
