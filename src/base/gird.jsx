@@ -14,25 +14,23 @@ function GridItemBase({ item, noClick = false, customClass }, ref) {
   // console.log("restProps", restProps);
 
   // old
-  // const itemRef = useRef(null);
-  // ref = itemRef.current;
+  const itemRef = useRef(null);
+  ref = itemRef.current;
 
   // new
-  const [itemRef, setItemRef] = useState();
-  const getItemRef = useCallback((node) => {
-    console.log("node item", node);
-    setItemRef(node);
-    ref = node;
-  }, []);
+  // const [itemRef, setItemRef] = useState();
+  // const getItemRef = useCallback((node) => {
+  //   console.log("node item", node);
+  //   setItemRef(node);
+  //   ref = node;
+  // }, []);
 
   const history = useHistory();
   function handleClick(item) {
     console.log("click item itemRef", item, itemRef);
-    // console.log("click item itemRef", item, itemRef.current);
-    // setInProp((bool) => !bool);
 
-    const { top, left, right, bottom } = itemRef.getBoundingClientRect();
-    // const { top, left, right, bottom } = itemRef.current.getBoundingClientRect();
+    // const { top, left, right, bottom } = itemRef.getBoundingClientRect();
+    const { top, left, right, bottom } = itemRef.current.getBoundingClientRect();
     console.log(top, left);
     const width = right - left;
     const height = bottom - top;
@@ -43,10 +41,9 @@ function GridItemBase({ item, noClick = false, customClass }, ref) {
     <li
       onClick={() => (noClick ? console.log("noClick", noClick) : handleClick(item))}
       key={item.title}
-      // ref={itemRef}
-      ref={getItemRef}
+      ref={itemRef}
+      // ref={getItemRef}
       className={customClass ? customClass : Style.li}
-      // style={style}
     >
       {/* // 点击时记录位置 ，即Detail 动画初始位置 */}
       <img src={item.coverPic} alt={item.coverPic} />

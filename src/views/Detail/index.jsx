@@ -27,47 +27,39 @@ export default function Detail(props) {
   const location = useLocation();
   console.log("params", params);
   const [x, y, width, height] = location.state;
+  console.log("state", location.state)
   const item = songList.filter((item) => item.id === parseInt(params.id))[0];
 
-  // const refGridItem = useRef(null);
+  const refGridItem = useRef(null);
   // // 使用 useRef 报错：Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?
-  // const refGridItem = useCallback((node) => {
-  //   console.log("node", node);
-  //   RefGridItem.current = node;
-  // }, []);
+  const domRef = useCallback((node) => {
+    console.log("node", node);
+    refGridItem.current = node;
+  }, []);
 
   // const domRef = useRef();
   // useImperativeHandle(ref, () => {
 
   // })
 
-  const refGridItem = createRef();
-
-  const initCSS = {
-    width: `${width}px`,
-    height: `${height}px`,
-    transform: `translate(${x}px, ${y}px)`,
-    transition: "all 6s",
-  };
-  const endCSS = {
-    transform: `translate(0px, 0px)`,
-    transition: "all 6s",
-  };
-
-  const onExit = useCallback((node) => {
-    console.log("onExit", node);
-    node.style.transform = `translate(${x}px, ${y}px)`;
-    node.style.color = "pink";
-    node.style.width = width;
-    node.style.height = height;
-    node.style.transition = "all 1s";
-  }, []);
+  // const refGridItem = createRef();
+  // console.log("const refGridItem = createRef()", refGridItem)
+ 
+  // const onExit = useCallback((node) => {
+  //   console.log("onExit", node);
+  //   node.style.transform = `translate(${x}px, ${y}px)`;
+  //   node.style.color = "pink";
+  //   node.style.width = width;
+  //   node.style.height = height;
+  //   node.style.transition = "all 1s";
+  // }, []);
 
   useEffect(() => {
     return () => {
-      console.log("beforeUnMount  [props.match]", props.match);
+      console.log("beforeUnMount  [props.match]", props);
       // RefGridItem.current
       console.log("refGridItem", refGridItem);
+      // console.log("domRef", domRef);
       // console.log("refGridItem.current", refGridItem.current);
     };
   }, []);
@@ -78,6 +70,7 @@ export default function Detail(props) {
         {/* onClick 禁止GridItem 点击事件 */}
         <GridItem
           ref={refGridItem}
+          // ref={domRef}
           item={item}
           noClick={true}
           customClass={Style.fullLi}
