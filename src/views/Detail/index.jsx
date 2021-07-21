@@ -1,79 +1,90 @@
-import React, { useState, useEffect } from "react";
-import { Transition } from "react-transition-group";
+import React, { useEffect, useCallback, useRef, createRef } from "react";
 import { useParams, useLocation } from "react-router";
 import { GridItem } from "../../base/gird";
 
 import { songList } from "../../mock/list";
 
-// import Style from "./index.less";
+import styled from "styled-components";
+import Style from "./index.less";
+
+console.log("Style.fullLi", Style.fullLi);
+console.log("Style.", Style);
+
+const Wrap = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 100px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+`;
 
 export default function Detail(props) {
+  // function Detail(props, ref) {
   console.log("Detail props", props);
-  const [inProp, setInProp] = useState(true);
-  const [transitionStyles, setTransitionStyles] = useState({
-    entering: { opacity: 1 },
-    entered: { opacity: 1 },
-    exiting: { opacity: 0.6 },
-    exited: { opacity: 0.3 },
-  });
   const params = useParams();
   const location = useLocation();
   console.log("params", params);
-  const [x, y] = location.state;
+  const [x, y, width, height] = location.state;
   const item = songList.filter((item) => item.id === parseInt(params.id))[0];
-  const endCss = {
-    transition: `translate(${x}px, ${y}px)`,
-  };
-  console.log("endCss", endCss);
-  // var transitionStyles;
-  useEffect(() => {
-    setTransitionStyles({
-      entering: { opacity: 1, ...endCss },
-      entered: { opacity: 1, ...endCss },
-      exiting: { opacity: 0.6 },
-      exited: { opacity: 0.3 },
-    });
-  }, [inProp]);
 
-  function onExit() {
-    setInProp(false);
-  }
+  // const refGridItem = useRef(null);
+  // // 使用 useRef 报错：Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?
+  // const refGridItem = useCallback((node) => {
+  //   console.log("node", node);
+  //   RefGridItem.current = node;
+  // }, []);
+
+  // const domRef = useRef();
+  // useImperativeHandle(ref, () => {
+
+  // })
+
+  const refGridItem = createRef();
+
+  const initCSS = {
+    width: `${width}px`,
+    height: `${height}px`,
+    transform: `translate(${x}px, ${y}px)`,
+    transition: "all 6s",
+  };
+  const endCSS = {
+    transform: `translate(0px, 0px)`,
+    transition: "all 6s",
+  };
+
+  const onExit = useCallback((node) => {
+    console.log("onExit", node);
+    node.style.transform = `translate(${x}px, ${y}px)`;
+    node.style.color = "pink";
+    node.style.width = width;
+    node.style.height = height;
+    node.style.transition = "all 1s";
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      console.log("beforeUnMount  [props.match]", props.match);
+      // RefGridItem.current
+      console.log("refGridItem", refGridItem);
+      // console.log("refGridItem.current", refGridItem.current);
+    };
+  }, []);
+
   return (
-    <div>
-      <Transition in={inProp} onExit={onExit} timeout={80}>
-        {(state) => (
-          <div
-            style={{
-              ...defaultStyle,
-              ...transitionStyles[state],
-              ...endCss, // 失效，why, 时机？！
-            }}
-          >
-            {/* 禁止GridItem 点击事件 */}
-            <GridItem item={item} noClick={true} />
-            <h1>Detail</h1>
-            <h1>{endCss.transition}</h1>
-          </div>
-        )}
-      </Transition>
-      <button onClick={() => setInProp((bool) => !bool)}>click</button>
-    </div>
+    <Wrap>
+      <div>
+        {/* onClick 禁止GridItem 点击事件 */}
+        <GridItem
+          ref={refGridItem}
+          item={item}
+          noClick={true}
+          customClass={Style.fullLi}
+        />
+      </div>
+    </Wrap>
   );
 }
 
-const duration = 3000;
-
-const defaultStyle = {
-  // transition: `all ${duration}ms ease-in-out`,
-  background: "rgba(0,0,0,0.01)",
-  // transition 支持部分css属性 https://www.wodecun.com/blog/8036.html，
-};
-
-// const transitionStyles = {
-//   entering: { opacity: 1 },
-//   entered: { opacity: 1 },
-//   exiting: { opacity: 1 },
-//   exited: { opacity: 0.3 },
-// };
-
-// export default withRouter(Detail);
+// transition 支持部分css属性 https://www.wodecun.com/blog/8036.html，
