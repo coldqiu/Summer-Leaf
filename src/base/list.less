@@ -1,73 +1,68 @@
 .wrap {
-    display: flex;
+  display: flex;
+  background: skyblue;
+  .info {
+    flex: 1 1;
+    padding: 0 25px;
+    overflow: hidden;
 
-    .info {
-        flex    : 1 1;
-        padding : 0 25px;
+    .title {
+      padding: 20px 0 15px 0;
+      font-size: 28px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .message {
+      padding-bottom: 20px;
+      font-size: 23.5px;
+      overflow: hidden;
+
+      * {
+        display: inline-block;
+        line-height: 1.5;
+      }
+
+      .left {
+        max-width: 60%;
+        font-size: 25px;
+        white-space: nowrap;
         overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: bottom;
+      }
 
+      .mid {
+        // margin: 10px;
+        width: 15%;
+        text-align: center;
+      }
 
-        .title {
-            padding      : 20px 0 15px 0;
-            font-size    : 28px;
-            white-space  : nowrap;
-            overflow     : hidden;
-            text-overflow: ellipsis;
-
-        }
-
-        .message {
-            padding-bottom: 20px;
-            font-size     : 23.5px;
-            overflow      : hidden;
-
-            * {
-                display    : inline-block;
-                line-height: 1.5;
-            }
-
-            .left {
-                max-width     : 60%;
-                font-size     : 25px;
-                white-space   : nowrap;
-                overflow      : hidden;
-                text-overflow : ellipsis;
-                vertical-align: bottom;
-            }
-
-
-            .mid {
-                // margin: 10px;
-                width     : 15%;
-                text-align: center;
-                ;
-            }
-
-            .right {
-                width         : 25%;
-                white-space   : nowrap;
-                overflow      : hidden;
-                text-overflow : ellipsis;
-                vertical-align: bottom;
-
-            }
-        }
+      .right {
+        width: 25%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: bottom;
+      }
     }
+  }
 
-    .menu {
-        flex           : 0 0 55px;
-        display        : flex;
-        justify-content: center;
-        align-items    : center;
+  .menu {
+    flex: 0 0 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        span {
-            display      : inline-block;
-            width        : 55px;
-            height       : 55px;
-            border-radius: 50%;
-            line-height  : 50px;
-            text-align   : center;
-            background   : rgba(0, 0, 0, 0.1);
-        }
+    span {
+      display: inline-block;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      line-height: 50px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.1);
     }
+  }
 }

@@ -4,6 +4,7 @@ function getImg(imgName) {
 export const songList = [
   {
     id: 1,
+    type: "song",
     title: "song A",
     coverPic: getImg(3),
     info: {
@@ -14,6 +15,7 @@ export const songList = [
   },
   {
     id: 2,
+    type: "song",
     title: "B",
     coverPic: getImg(3),
     info: {
@@ -24,6 +26,7 @@ export const songList = [
   },
   {
     id: 3,
+    type: "song",
     title: "C",
     coverPic: getImg(3),
     info: {
@@ -34,6 +37,7 @@ export const songList = [
   },
   {
     id: 4,
+    type: "song",
     title: "D",
     coverPic: getImg(3),
   },

@@ -1,50 +1,46 @@
 //
-import { useState, useRef, forwardRef, useCallback } from "react";
+import { useEffect, useCallback, useState } from "react";
 import { useHistory } from "react-router-dom";
 
 import Style from "./grid.less";
 import List from "./list";
 
-export default function Grid({ list = [] }) {
-  const arr = list.map((item) => <GridItem item={item} key={item.title} />);
+export default function Grid({ list = [], click }) {
+  const arr = list.map((item) => <GridItem item={item} key={item.title} click={click} />);
   return <ul className={Style.ul}>{arr}</ul>;
 }
 
-function GridItemBase({ item, noClick = false, customClass }, ref) {
-  // console.log("restProps", restProps);
-
-  // old
-  const itemRef = useRef(null);
-  ref = itemRef.current;
-
-  // new
-  // const [itemRef, setItemRef] = useState();
-  // const getItemRef = useCallback((node) => {
-  //   console.log("node item", node);
-  //   setItemRef(node);
-  //   ref = node;
-  // }, []);
-
+export function GridItem({ item, click }) {
   const history = useHistory();
-  function handleClick(item) {
-    console.log("click item itemRef", item, itemRef);
+  const [dom, setDom] = useState(null);
+  const ref = useCallback((node) => {
+    console.log("list page node", node);
+    setDom(node);
+  }, []);
 
-    // const { top, left, right, bottom } = itemRef.getBoundingClientRect();
-    const { top, left, right, bottom } = itemRef.current.getBoundingClientRect();
-    console.log(top, left);
+  const handleClick = useCallback(() => {
+    console.log("to Detial handleClick ref ", dom);
+    const { top, left, right, bottom } = dom.getBoundingClientRect();
     const width = right - left;
     const height = bottom - top;
-    // history.push(`/detail/${item.id}`, [left, top, width, height]);
-    history.push(`/song/${item.id}`, [left, top, width, height]);
-  }
+    // 动画完成 才切换路由
+    // history.push(`/song/${item.id}`, [left, top, width, height]);
+    console.log("list click left, top, width, height", left, top, width, height);
+    const pos = [left, top, width, height];
+    click(item, pos);
+  }, [dom]);
+
+  useEffect(() => {
+    // console.log("GridItem Mounted childDom", dom);
+    return () => {
+      // const dom = childRef.current;
+      // const { top, left, right, bottom } = dom.getBoundingClientRect();
+      // console.log("GridItem willUnMount childDom", dom);
+    };
+  }, []);
+
   return (
-    <li
-      onClick={() => (noClick ? console.log("noClick", noClick) : handleClick(item))}
-      key={item.title}
-      ref={itemRef}
-      // ref={getItemRef}
-      className={customClass ? customClass : Style.li}
-    >
+    <li onClick={() => handleClick(item)} key={item.title} ref={ref} className={Style.li}>
       {/* // 点击时记录位置 ，即Detail 动画初始位置 */}
       <img src={item.coverPic} alt={item.coverPic} />
       <List
@@ -55,5 +51,3 @@ function GridItemBase({ item, noClick = false, customClass }, ref) {
     </li>
   );
 }
-
-export const GridItem = forwardRef(GridItemBase);

@@ -17,20 +17,16 @@ export default function MyList({ tabs }) {
         initalPage={"t2"}
         onTabClick={onTabClick}
         onChange={onChange}
-        // renderTabBar={(props) => <DefaultTabBar {...props} />}
         tabBarPosition={"top"}
         swipeable={true}
         useOnPan={true}
-        // animated={animated}
         destroyInactiveTab={false}
         prerenderingSiblingsNumber={1}
         distanceToChangeTab={0.42}
         usePaged={true}
         tabDirection={"horizontal"}
-        // tabBarUnderlineStyle={ }
         tabBarBackgroundColor={"deepskyblue"}
         tabBarActiveTextColor={"red"}
-        // className={Style.tabsWrap} // 无效
         tabBarTextStyle={tabsBar}
         tabBarUnderlineStyle={tabBarUnderlineStyle}
       >
@@ -60,3 +56,15 @@ const tabsBar = {
 const tabBarUnderlineStyle = {
   background: "deepskyblue",
 };
+
+{
+  /* {tabs
+          ? tabs.map((item) => {
+              return (
+                <div key={item.key} className={Style.content}>
+                  <item.component {...item.comProps} />
+                </div>
+              );
+            })
+          : props.children} */
+}

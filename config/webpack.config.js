@@ -206,7 +206,9 @@ module.exports = function (webpackEnv) {
       pathinfo: isEnvDevelopment,
       // There will be one main bundle, and one file per asynchronous chunk.
       // In development, it does not produce real files.
-      filename: isEnvProduction ? "static/js/[name].[contenthash:8].js" : isEnvDevelopment && "static/js/bundle.js",
+      filename: isEnvProduction
+        ? "static/js/[name].[contenthash:8].js"
+        : isEnvDevelopment && "static/js/bundle.js",
       // TODO: remove this when upgrading to webpack 5
       futureEmitAssets: true,
       // There are also additional JS chunk files if you use code splitting.
@@ -219,8 +221,10 @@ module.exports = function (webpackEnv) {
       publicPath: paths.publicUrlOrPath,
       // Point sourcemap entries to original disk location (format as URL on Windows)
       devtoolModuleFilenameTemplate: isEnvProduction
-        ? (info) => path.relative(paths.appSrc, info.absoluteResourcePath).replace(/\\/g, "/")
-        : isEnvDevelopment && ((info) => path.resolve(info.absoluteResourcePath).replace(/\\/g, "/")),
+        ? (info) =>
+            path.relative(paths.appSrc, info.absoluteResourcePath).replace(/\\/g, "/")
+        : isEnvDevelopment &&
+          ((info) => path.resolve(info.absoluteResourcePath).replace(/\\/g, "/")),
       // Prevents conflicts when multiple webpack runtimes (from different apps)
       // are used on the same page.
       jsonpFunction: `webpackJsonp${appPackageJson.name}`,
@@ -311,7 +315,9 @@ module.exports = function (webpackEnv) {
       // We placed these paths second because we want `node_modules` to "win"
       // if there are any conflicts. This matches Node resolution mechanism.
       // https://github.com/facebook/create-react-app/issues/253
-      modules: ["node_modules", paths.appNodeModules].concat(modules.additionalModulePaths || []),
+      modules: ["node_modules", paths.appNodeModules].concat(
+        modules.additionalModulePaths || []
+      ),
       // These are the reasonable defaults supported by the Node ecosystem.
       // We also include JSX as a common component filename extension to support
       // some tools, although we do not recommend using it, see:
@@ -417,8 +423,13 @@ module.exports = function (webpackEnv) {
                     },
                   ],
                   // 添加 装饰器 语法支持
-                  [require.resolve("@babel/plugin-proposal-decorators"), { legacy: true }],
-                  isEnvDevelopment && shouldUseReactRefresh && require.resolve("react-refresh/babel"),
+                  [
+                    require.resolve("@babel/plugin-proposal-decorators"),
+                    { legacy: true },
+                  ],
+                  isEnvDevelopment &&
+                    shouldUseReactRefresh &&
+                    require.resolve("react-refresh/babel"),
                 ].filter(Boolean),
                 // This is a feature of `babel-loader` for webpack (not Babel itself).
                 // It enables caching results in ./node_modules/.cache/babel-loader/
@@ -439,10 +450,18 @@ module.exports = function (webpackEnv) {
                 babelrc: false,
                 configFile: false,
                 compact: false,
-                presets: [[require.resolve("babel-preset-react-app/dependencies"), { helpers: true }]],
+                presets: [
+                  [
+                    require.resolve("babel-preset-react-app/dependencies"),
+                    { helpers: true },
+                  ],
+                ],
                 plugins: [
                   // 添加 装饰器 语法支持
-                  [require.resolve("@babel/plugin-proposal-decorators"), { legacy: true }],
+                  [
+                    require.resolve("@babel/plugin-proposal-decorators"),
+                    { legacy: true },
+                  ],
                 ],
                 cacheDirectory: true,
                 // See #6846 for context on why cacheCompression is disabled
@@ -625,7 +644,9 @@ module.exports = function (webpackEnv) {
       // Inlines the webpack runtime script. This script is too small to warrant
       // a network request.
       // https://github.com/facebook/create-react-app/issues/5358
-      isEnvProduction && shouldInlineRuntimeChunk && new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/runtime-.+[.]js/]),
+      isEnvProduction &&
+        shouldInlineRuntimeChunk &&
+        new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/runtime-.+[.]js/]),
       // Makes some environment variables available in index.html.
       // The public URL is available as %PUBLIC_URL% in index.html, e.g.:
       // <link rel="icon" href="%PUBLIC_URL%/favicon.ico">
@@ -688,7 +709,9 @@ module.exports = function (webpackEnv) {
             manifest[file.name] = file.path;
             return manifest;
           }, seed);
-          const entrypointFiles = entrypoints.main.filter((fileName) => !fileName.endsWith(".map"));
+          const entrypointFiles = entrypoints.main.filter(
+            (fileName) => !fileName.endsWith(".map")
+          );
 
           return {
             files: manifestFiles,
@@ -723,8 +746,12 @@ module.exports = function (webpackEnv) {
           }),
           async: isEnvDevelopment,
           checkSyntacticErrors: true,
-          resolveModuleNameModule: process.versions.pnp ? `${__dirname}/pnpTs.js` : undefined,
-          resolveTypeReferenceDirectiveModule: process.versions.pnp ? `${__dirname}/pnpTs.js` : undefined,
+          resolveModuleNameModule: process.versions.pnp
+            ? `${__dirname}/pnpTs.js`
+            : undefined,
+          resolveTypeReferenceDirectiveModule: process.versions.pnp
+            ? `${__dirname}/pnpTs.js`
+            : undefined,
           tsconfig: paths.appTsConfig,
           reportFiles: [
             // This one is specifically to match during CI tests,
