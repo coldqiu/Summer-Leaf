@@ -36,7 +36,6 @@ export default function Song(porps) {
   });
 
   const onExit = useCallback((e) => {
-    debugger;
     console.log("onExit e", e);
     const { position } = cache.current;
     console.log("position: 时机s", position);
