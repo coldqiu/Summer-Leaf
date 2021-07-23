@@ -6,7 +6,7 @@ export default function Collection(porps) {
   return (
     <div className={Style.collection}>
       <Header title={"Collection"} />
-      <TabList />
+      {/* <TabList /> */}
       <h1>Collection</h1>
     </div>
   );

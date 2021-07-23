@@ -29,7 +29,7 @@ export default function Song(porps) {
     dom.style.height = `${position[3]}px`;
     dom.style.transform = `translate(${position[0]}px, ${position[1]}px)`;
     dom.style.transition = `all 0.45s cubic-bezier(.56,.4,.3,1)`;
-    // dom.children[0].style.heigth = "50vw";
+    // dom.children[0].style.height = "50vw";
   }, []);
   function onBack() {
     history.push(`/song`);

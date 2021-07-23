@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import styled from "styled-components";
+// import LazyLoad from "react-lazyload";
 import List from "@/base/list.jsx";
 import Style from "./Cover.less";
 const Wrap = styled.div`
