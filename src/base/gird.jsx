@@ -1,6 +1,5 @@
 //
 import { useEffect, useCallback, useState } from "react";
-import { useHistory } from "react-router-dom";
 
 import Style from "./grid.less";
 import List from "./list";
@@ -11,7 +10,6 @@ export default function Grid({ list = [], click }) {
 }
 
 export function GridItem({ item, click }) {
-  const history = useHistory();
   const [dom, setDom] = useState(null);
   const ref = useCallback((node) => {
     setDom(node);
