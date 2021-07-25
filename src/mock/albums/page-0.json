@@ -1,0 +1,4226 @@
+{
+    "code": "SUCCESS",
+    "result": {
+      "status": "SUCCESS",
+      "data": {
+        "type": 2,
+        "title": null,
+        "pagingVO": { "page": 1, "pageSize": 30, "pages": 31, "count": 922 },
+        "songs": null,
+        "albums": [
+          {
+            "favFlag": 0,
+            "albumId": 420681,
+            "albumStringId": "9uB14287f",
+            "albumName": "SUPER EUROBEAT presents INITIAL D ABSOLUTE ALBUM feat.KEISUKE TAKAHASHI",
+            "subName": "头文字D",
+            "albumLogo": "https://pic.xiami.net/images/album/img0/62500/4206811295322000.jpg",
+            "logoFocus": null,
+            "artistId": 62500,
+            "artistStringId": "bgrSabed9",
+            "artistName": "日本ACG",
+            "company": "Avex Entertainment",
+            "upgradeRole": 0,
+            "albumCategory": "原声带、影视音乐",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1164729600000,
+            "albumStatus": 0,
+            "playCount": 531836,
+            "collects": 630,
+            "recommends": 38,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "SUPER EUROBEAT presents INITIAL D ABSOLUTE ALBUM feat.KEISUKE TAKAHASHI",
+            "songCount": 13,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img0/62500/4206811295322000.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img0/62500/4206811295322000.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img0/62500/4206811295322000.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "日语",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/60/13530550186360.jpg",
+            "artistAlias": "日本ACG",
+            "companyId": 149970,
+            "categoryId": 18,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 62500,
+                "artistStringId": "bgrSabed9",
+                "artistName": "日本ACG",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/60/13530550186360.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "ri ben ACG",
+                "alias": "日本ACG",
+                "area": "Japan 日本",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["3344", "cat_76_18939980"],
+            "companies": [{ "id": "149970", "name": "Avex Entertainment" }],
+            "cds": [{ "cdId": 40257764, "cdSerial": 1, "name": "" }]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 4552,
+            "albumStringId": "iZsf83ed",
+            "albumName": "花间梦事",
+            "subName": "书香音乐系列 (五)",
+            "albumLogo": "https://pic.xiami.net/images/album/img3/903/45521400835325.jpg",
+            "logoFocus": null,
+            "artistId": 903,
+            "artistStringId": "KPda6b9",
+            "artistName": "王俊雄",
+            "company": "发现音乐",
+            "upgradeRole": 0,
+            "albumCategory": "录音室专辑",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1051718400000,
+            "albumStatus": 0,
+            "playCount": 4385156,
+            "collects": 2817,
+            "recommends": 660,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "hua jian meng shi ",
+            "songCount": 12,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img3/903/45521400835325.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img3/903/45521400835325.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img3/903/45521400835325.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": true,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "其他",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/imgs/903/851/17a2be0d_903_1545136695187.jpg",
+            "artistAlias": "奕睆居士",
+            "companyId": 26675,
+            "categoryId": 13,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 903,
+                "artistStringId": "KPda6b9",
+                "artistName": "王俊雄",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/imgs/903/851/17a2be0d_903_1545136695187.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "wang jun xiong ",
+                "alias": "奕睆居士",
+                "area": "Taiwan, PRC 中国台湾",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["LOSSLESS", "cat_76_13697100", "845", "MQA"],
+            "companies": [{ "id": "26675", "name": "发现音乐" }],
+            "cds": [{ "cdId": 40662937, "cdSerial": 1, "name": "" }]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 2100209530,
+            "albumStringId": "nmTppQ57c18",
+            "albumName": "Lift Me Up (FlyBoy Remix)",
+            "subName": "",
+            "albumLogo": "https://pic.xiami.net/images/album/img51/476551/4765511443476551.jpg",
+            "logoFocus": null,
+            "artistId": 2099989932,
+            "artistStringId": "yhDsW69fb39",
+            "artistName": "FlyBoy",
+            "company": "Self-Released",
+            "upgradeRole": 0,
+            "albumCategory": "EP、单曲",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1443196800000,
+            "albumStatus": 0,
+            "playCount": 2183397,
+            "collects": 71,
+            "recommends": 4,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "",
+            "songCount": 1,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img51/476551/4765511443476551.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img51/476551/4765511443476551.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img51/476551/4765511443476551.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "英语",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/86/15318801284686.jpg",
+            "artistAlias": "",
+            "companyId": 2857,
+            "categoryId": 15,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 2099989932,
+                "artistStringId": "yhDsW69fb39",
+                "artistName": "FlyBoy",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/86/15318801284686.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "",
+                "alias": "",
+                "area": "Italy 意大利 ",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["cat_76_15794252", "3355"],
+            "companies": [{ "id": "2857", "name": "Self-Released" }],
+            "cds": [{ "cdId": 39773271, "cdSerial": 1, "name": "" }]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 358482,
+            "albumStringId": "fHza4e500",
+            "albumName": "For Your Memories",
+            "subName": "",
+            "albumLogo": "https://pic.xiami.net/images/album/img16/68116/3584821260263687.jpg",
+            "logoFocus": null,
+            "artistId": 68116,
+            "artistStringId": "cxNk25fd0",
+            "artistName": "Acoustic Café",
+            "company": "フォーライフ ミュージックエンタテイメント",
+            "upgradeRole": 0,
+            "albumCategory": "合集、杂锦",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1066752000000,
+            "albumStatus": 0,
+            "playCount": 422635,
+            "collects": 528,
+            "recommends": 60,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "For Your Memories",
+            "songCount": 13,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img16/68116/3584821260263687.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img16/68116/3584821260263687.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img16/68116/3584821260263687.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "日语",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artist/38/12602633824638.png",
+            "artistAlias": "Acoustic Cafe",
+            "companyId": 8425,
+            "categoryId": 17,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 68116,
+                "artistStringId": "cxNk25fd0",
+                "artistName": "Acoustic Café",
+                "artistLogo": "https://pic.xiami.net/images/artist/38/12602633824638.png",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "Acoustic Café ",
+                "alias": "Acoustic Cafe",
+                "area": "Japan 日本",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["cat_76_17891404"],
+            "companies": [{ "id": "8425", "name": "フォーライフ ミュージックエンタテイメント" }],
+            "cds": [{ "cdId": 40236223, "cdSerial": 1, "name": "" }]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 2104298925,
+            "albumStringId": "nnkzfP534ef",
+            "albumName": "TBS系 火曜ドラマ 中学聖日記 オリジナル・サウンドトラック",
+            "subName": "中学圣日记 原声带",
+            "albumLogo": "https://pic.xiami.net/images/album/img81/476281/51300071543476281.jpg",
+            "logoFocus": null,
+            "artistId": 2100019256,
+            "artistStringId": "nmS1KU95d63",
+            "artistName": "信澤宣明/小濑村晶",
+            "company": "Anchor Records",
+            "upgradeRole": 0,
+            "albumCategory": "原声带、影视音乐",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1543939200000,
+            "albumStatus": 0,
+            "playCount": 357389,
+            "collects": 1127,
+            "recommends": 161,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "T B S xi   huo yao ド ラ マ   zhong xue sheng ri ji   オ リ ジ ナ ル ・ サ ウ ン ド ト ラ ッ ク",
+            "songCount": 28,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img81/476281/51300071543476281.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img81/476281/51300071543476281.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img81/476281/51300071543476281.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": true,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "纯音乐",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/91/14606206821991.jpg",
+            "artistAlias": "信泽宣明 / のぶさわ のぶあき / Nobusawa Nobuaki",
+            "companyId": 4365,
+            "categoryId": 18,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 2100019256,
+                "artistStringId": "nmS1KU95d63",
+                "artistName": "信澤宣明",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/91/14606206821991.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "",
+                "alias": "信泽宣明 / のぶさわ のぶあき / Nobusawa Nobuaki",
+                "area": "Japan 日本",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              },
+              {
+                "artistId": 55554,
+                "artistStringId": "E2Wbcc4b",
+                "artistName": "小濑村晶",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/62/13899476194262.jpeg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "Akira Kosemura",
+                "alias": "Akira Kosemura/小瀬村晶",
+                "area": "Japan 日本",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["LOSSLESS", "752", "cat_76_18939980", "MQA"],
+            "companies": [{ "id": "4365", "name": "Anchor Records" }],
+            "cds": [{ "cdId": 42734158, "cdSerial": 1, "name": "" }]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 1396257009,
+            "albumStringId": "xwa5R5a57f0",
+            "albumName": "The Essential Eric Carmen",
+            "subName": "",
+            "albumLogo": "https://pic.xiami.net/images/album/img29/34229/13962570091396257009.jpg",
+            "logoFocus": null,
+            "artistId": 34229,
+            "artistStringId": "byWNef7d6",
+            "artistName": "Eric Carmen",
+            "company": "Arista Records",
+            "upgradeRole": 0,
+            "albumCategory": "精选集",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1395676800000,
+            "albumStatus": 0,
+            "playCount": 20484,
+            "collects": 23,
+            "recommends": 1,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "The Essential Eric Carmen",
+            "songCount": 30,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img29/34229/13962570091396257009.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img29/34229/13962570091396257009.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img29/34229/13962570091396257009.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "英语",
+            "cdCount": 2,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/imgs/534/936/0b82d87c_20534_1527144735997.jpg",
+            "artistAlias": "",
+            "companyId": 152385,
+            "categoryId": 14,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 34229,
+                "artistStringId": "byWNef7d6",
+                "artistName": "Eric Carmen",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/imgs/534/936/0b82d87c_20534_1527144735997.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "Eric Carmen",
+                "alias": "",
+                "area": "United States of America 美国",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["343", "344", "cat_76_14745676", "1033"],
+            "companies": [{ "id": "152385", "name": "Arista Records" }],
+            "cds": [
+              { "cdId": 39633991, "cdSerial": 1, "name": "" },
+              { "cdId": 39633992, "cdSerial": 2, "name": "" }
+            ]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 1814035224,
+            "albumStringId": "xOr3dO9c641",
+            "albumName": "Heart Rock - Rock Für's Herz",
+            "subName": "",
+            "albumLogo": "https://pic.xiami.net/images/album/img58/23258/18140352241414035224.jpg",
+            "logoFocus": null,
+            "artistId": 23258,
+            "artistStringId": "bMgK23ea4",
+            "artistName": "Various Artists",
+            "company": "Ariola ‎",
+            "upgradeRole": 0,
+            "albumCategory": "合集、杂锦",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 599587200000,
+            "albumStatus": 0,
+            "playCount": 126283,
+            "collects": 65,
+            "recommends": 1,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "Heart Rock - Rock Fü r's Herz",
+            "songCount": 36,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img58/23258/18140352241414035224.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img58/23258/18140352241414035224.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img58/23258/18140352241414035224.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "英语",
+            "cdCount": 2,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/33/13517382586833.jpg",
+            "artistAlias": "欧美群星 / VA / V.A. / 众艺人 / Various Artist / Various Artists / Artistiaid Amrywiol / Varoius Artist / Varius Artist / Varioust Artist / Various Artists",
+            "companyId": 69642,
+            "categoryId": 17,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 23258,
+                "artistStringId": "bMgK23ea4",
+                "artistName": "Various Artists",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/33/13517382586833.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "",
+                "alias": "欧美群星 / VA / V.A. / 众艺人 / Various Artist / Various Artists / Artistiaid Amrywiol / Varoius Artist / Varius Artist / Varioust Artist / Various Artists",
+                "area": "",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["LOSSLESS", "cat_76_17891404", "A_EX"],
+            "companies": [{ "id": "69642", "name": "Ariola ‎" }],
+            "cds": [
+              { "cdId": 40399981, "cdSerial": 1, "name": "" },
+              { "cdId": 40399982, "cdSerial": 2, "name": "" }
+            ]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 210424,
+            "albumStringId": "jrcad3c91",
+            "albumName": "Eric Carmen [1975]",
+            "subName": "",
+            "albumLogo": "https://pic.xiami.net/images/album/img24/210424/c342255haou.jpg",
+            "logoFocus": null,
+            "artistId": 34229,
+            "artistStringId": "byWNef7d6",
+            "artistName": "Eric Carmen",
+            "company": "Rhino",
+            "upgradeRole": 0,
+            "albumCategory": "录音室专辑",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 157737600000,
+            "albumStatus": 0,
+            "playCount": 428183,
+            "collects": 175,
+            "recommends": 36,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "Eric Carmen [1975]",
+            "songCount": 10,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img24/210424/c342255haou.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img24/210424/c342255haou.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img24/210424/c342255haou.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "英语",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/imgs/534/936/0b82d87c_20534_1527144735997.jpg",
+            "artistAlias": "",
+            "companyId": 9393,
+            "categoryId": 13,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 34229,
+                "artistStringId": "byWNef7d6",
+                "artistName": "Eric Carmen",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/imgs/534/936/0b82d87c_20534_1527144735997.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "Eric Carmen",
+                "alias": "",
+                "area": "United States of America 美国",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["344", "cat_76_13697100"],
+            "companies": [{ "id": "9393", "name": "Rhino" }],
+            "cds": [{ "cdId": 29330015, "cdSerial": 1, "name": "Eric Carmen [1975]" }]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 2102400758,
+            "albumStringId": "yhN0gOcaea3",
+            "albumName": "フジテレビ系ドラマ「僕のいた時間」オリジナルサウンドトラック",
+            "subName": "我的生存时间 原声带",
+            "albumLogo": "https://pic.xiami.net/images/album/img86/828986/8289861473828986.jpeg",
+            "logoFocus": null,
+            "artistId": 117330,
+            "artistStringId": "iSO4d7d2d",
+            "artistName": "出羽良彰/やまだ豊",
+            "company": "Pony Canyon",
+            "upgradeRole": 0,
+            "albumCategory": "原声带、影视音乐",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1393344000000,
+            "albumStatus": 0,
+            "playCount": 506647,
+            "collects": 435,
+            "recommends": 32,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "フ ジ テ レ ビ xi ド ラ マ 「 pu の い た shi jian 」 オ リ ジ ナ ル サ ウ ン ド ト ラ ッ ク",
+            "songCount": 20,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img86/828986/8289861473828986.jpeg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img86/828986/8289861473828986.jpeg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img86/828986/8289861473828986.jpeg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "日语",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/61/14315096873461.jpg",
+            "artistAlias": "Dewa Yoshiaki",
+            "companyId": 1583,
+            "categoryId": 18,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 117330,
+                "artistStringId": "iSO4d7d2d",
+                "artistName": "出羽良彰",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/61/14315096873461.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "chu yu liang zhang ",
+                "alias": "Dewa Yoshiaki",
+                "area": "Japan 日本",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              },
+              {
+                "artistId": 90826,
+                "artistStringId": "NDQ580f3",
+                "artistName": "やまだ豊",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/imgs/826/679/7e0f07f6_90826_1545157991842.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "や ま だ 豊 ",
+                "alias": "山田丰 / 山田豊 / Yamada  Yutaka",
+                "area": "Japan 日本",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["A_OFF", "LOSSLESS", "752", "cat_76_18939980"],
+            "companies": [{ "id": "1583", "name": "Pony Canyon" }],
+            "cds": [{ "cdId": 38523480, "cdSerial": 1, "name": "" }]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 5021454562,
+            "albumStringId": "qyA47m9345d",
+            "albumName": "Focus Classical Music",
+            "subName": "",
+            "albumLogo": "https://pic.xiami.net/images/album/img30232/29898/1599927195241.jpg",
+            "logoFocus": null,
+            "artistId": 51009,
+            "artistStringId": "cJwj31d81",
+            "artistName": "Johann Sebastian Bach/Robert Schumann/Richard Wagner/Classical Music: 50 of the Best/Ludwig van Beethoven/Frédéric Chopin/Franz Schubert/Pablo de Sarasate/Maurice Ravel/Wolfgang Amadeus Mozart/Fritz Kreisler/Franz Liszt/Erik Satie",
+            "company": "",
+            "upgradeRole": 0,
+            "albumCategory": "录音室专辑",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1599926400000,
+            "albumStatus": 0,
+            "playCount": 62642,
+            "collects": 448,
+            "recommends": 34,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "Focus Classical Music",
+            "songCount": 29,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img30232/29898/1599927195241.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img30232/29898/1599927195241.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img30232/29898/1599927195241.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "纯音乐",
+            "cdCount": 0,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/7/14213913824507.jpg",
+            "artistAlias": "约翰·塞巴斯蒂安·巴赫",
+            "companyId": null,
+            "categoryId": 13,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 51009,
+                "artistStringId": "cJwj31d81",
+                "artistName": "Johann Sebastian Bach",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/7/14213913824507.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "",
+                "alias": "约翰·塞巴斯蒂安·巴赫",
+                "area": "Germany 德国",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              },
+              {
+                "artistId": 69013468,
+                "artistStringId": "l1khG7ec8b",
+                "artistName": "Robert Schumann",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/imgs/468/478/dedb6209_69013468_1545123552045.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "",
+                "alias": "罗伯特·舒曼 / Robert Alexander Schumann",
+                "area": "Germany 德国",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              },
+              {
+                "artistId": 100654,
+                "artistStringId": "eCu47f153",
+                "artistName": "Richard Wagner",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/70/13220174658170.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "Richard Wagner",
+                "alias": "理查德·瓦格纳",
+                "area": "Germany 德国",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              },
+              {
+                "artistId": 2112613017,
+                "artistStringId": "9dppBpf5b40",
+                "artistName": "Classical Music: 50 of the Best",
+                "artistLogo": "http://pic.xiami.net/images/common/uploadpic/80/1522222419380.png",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "",
+                "alias": "",
+                "area": "",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              },
+              {
+                "artistId": 97714,
+                "artistStringId": "bp1Qcc3bc",
+                "artistName": "Ludwig van Beethoven",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/17/13172829303517.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "Ludwig van Beethoven",
+                "alias": "路德维希·范·贝多芬",
+                "area": "Germany 德国",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              },
+              {
+                "artistId": 92786,
+                "artistStringId": "Oj264423",
+                "artistName": "Frédéric Chopin",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/59/13789780926159.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "Fré dé ric Chopin",
+                "alias": "弗雷德里克·肖邦 / Fryderyk Franciszek Chopin",
+                "area": "Poland 波兰",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              },
+              {
+                "artistId": 52950,
+                "artistStringId": "DMW99ae3",
+                "artistName": "Franz Schubert",
+                "artistLogo": "https://pic.xiami.net/images/artist/12266522265208.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "Franz Schubert",
+                "alias": "弗朗茨·舒伯特",
+                "area": "Austria 奥地利",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              },
+              {
+                "artistId": 67254,
+                "artistStringId": "b7721dd5d",
+                "artistName": "Pablo de Sarasate",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/imgs/254/169/f6720c1b_67254_1545157855853.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "Pablo de Sarasate",
+                "alias": "萨拉萨蒂",
+                "area": "欧美",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              },
+              {
+                "artistId": 46648,
+                "artistStringId": "b2lgf8b05",
+                "artistName": "Maurice Ravel",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/62/12881715745062.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "Maurice Ravel",
+                "alias": "乔瑟夫-莫里斯·拉威尔 / Joseph-Maurice Ravel",
+                "area": "France 法国",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              },
+              {
+                "artistId": 103608,
+                "artistStringId": "Cmqy441a6",
+                "artistName": "Wolfgang Amadeus Mozart",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/35/15415914947535.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "Wolfgang Amadeus Mozart",
+                "alias": "沃尔夫冈·阿马德乌斯·莫扎特",
+                "area": "Austria 奥地利",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              },
+              {
+                "artistId": 59547,
+                "artistStringId": "bf6p15e3a",
+                "artistName": "Fritz Kreisler",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/imgs/547/982/c6ba7dff_59547_1545123263937.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "Fritz Kreisler",
+                "alias": "弗里茨·克莱斯勒",
+                "area": "欧美",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              },
+              {
+                "artistId": 71290,
+                "artistStringId": "dEFe43744",
+                "artistName": "Franz Liszt",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/55/13789776104055.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "Franz Liszt",
+                "alias": "弗朗茨·李斯特 / Liszt Ferenc",
+                "area": "Hungary 匈牙利",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              },
+              {
+                "artistId": 42527,
+                "artistStringId": "d7lj61bef",
+                "artistName": "Erik Satie",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/imgs/527/389/4a1d604c_42527_1545136863188.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "",
+                "alias": "埃里克·萨蒂 / 埃里克·阿尔弗雷德·莱斯利·萨蒂",
+                "area": "France 法国",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["LOSSLESS", "cat_76_13697100", "3264"],
+            "companies": null,
+            "cds": null
+          },
+          {
+            "favFlag": 0,
+            "albumId": 487879,
+            "albumStringId": "k1nfd3f76",
+            "albumName": "史上最強の弟子ケンイチ Original Sound Track",
+            "subName": "史上最强弟子兼一 原声音乐",
+            "albumLogo": "https://pic.xiami.net/images/album/img0/62500/4878791326174970.jpg",
+            "logoFocus": null,
+            "artistId": 62500,
+            "artistStringId": "bgrSabed9",
+            "artistName": "日本ACG",
+            "company": "コピーライツバンク",
+            "upgradeRole": 0,
+            "albumCategory": "原声带、影视音乐",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1174406400000,
+            "albumStatus": 0,
+            "playCount": 73027,
+            "collects": 107,
+            "recommends": 28,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "shi shang zui 強 の di zi ケ ン イ チ  Original Sound Track",
+            "songCount": 39,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img0/62500/4878791326174970.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img0/62500/4878791326174970.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img0/62500/4878791326174970.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "日语",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/60/13530550186360.jpg",
+            "artistAlias": "日本ACG",
+            "companyId": 17565,
+            "categoryId": 18,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 62500,
+                "artistStringId": "bgrSabed9",
+                "artistName": "日本ACG",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/60/13530550186360.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "ri ben ACG",
+                "alias": "日本ACG",
+                "area": "Japan 日本",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["3344", "cat_76_18939980"],
+            "companies": [{ "id": "17565", "name": "コピーライツバンク" }],
+            "cds": [{ "cdId": 32662779, "cdSerial": 1, "name": "" }]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 366517,
+            "albumStringId": "fJ4Bc1b3a",
+            "albumName": "This Is It & Other Great Michael Jackson Songs",
+            "subName": "",
+            "albumLogo": "https://pic.xiami.net/images/album/imgs/517/33/009540c2_366517_1533237098890.jpeg",
+            "logoFocus": null,
+            "artistId": 60177,
+            "artistStringId": "cvJh2aace",
+            "artistName": "Lex Vandyke",
+            "company": "Indie Europe",
+            "upgradeRole": 0,
+            "albumCategory": "合集、杂锦",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1256832000000,
+            "albumStatus": 0,
+            "playCount": 201877,
+            "collects": 567,
+            "recommends": 98,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "This Is It & Other Great Michael Jackson Songs",
+            "songCount": 14,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/imgs/517/33/009540c2_366517_1533237098890.jpeg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/imgs/517/33/009540c2_366517_1533237098890.jpeg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/imgs/517/33/009540c2_366517_1533237098890.jpeg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "英语",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artist/12408147844549.jpg",
+            "artistAlias": "",
+            "companyId": 51300,
+            "categoryId": 17,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 60177,
+                "artistStringId": "cvJh2aace",
+                "artistName": "Lex Vandyke",
+                "artistLogo": "https://pic.xiami.net/images/artist/12408147844549.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "Lex Vandyke",
+                "alias": "",
+                "area": "United Kingdom 英国",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["3076", "cat_76_17891404"],
+            "companies": [
+              { "id": "51300", "name": "Indie Europe" },
+              { "id": "33943", "name": "Zoom" }
+            ],
+            "cds": [{ "cdId": 40673130, "cdSerial": 1, "name": "" }]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 493219,
+            "albumStringId": "k2Bnb346b",
+            "albumName": "THE LIGHTS OF HEROES",
+            "subName": "",
+            "albumLogo": "https://pic.xiami.net/images/album/img14/56514/4932191329124428.jpg",
+            "logoFocus": null,
+            "artistId": 56514,
+            "artistStringId": "beJud4539",
+            "artistName": "angela",
+            "company": "King Records",
+            "upgradeRole": 0,
+            "albumCategory": "EP、单曲",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1327420800000,
+            "albumStatus": 0,
+            "playCount": 8199,
+            "collects": 67,
+            "recommends": 26,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "THE LIGHTS OF HEROES",
+            "songCount": 6,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img14/56514/4932191329124428.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img14/56514/4932191329124428.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img14/56514/4932191329124428.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "日语",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/91/15215329454391.jpg",
+            "artistAlias": "安吉拉 / アンジェラ",
+            "companyId": 83933,
+            "categoryId": 15,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 56514,
+                "artistStringId": "beJud4539",
+                "artistName": "angela",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/91/15215329454391.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "angela",
+                "alias": "安吉拉 / アンジェラ",
+                "area": "Japan 日本",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["A_OFF", "cat_76_15794252"],
+            "companies": [{ "id": "83933", "name": "King Records" }],
+            "cds": [{ "cdId": 40159842, "cdSerial": 1, "name": "" }]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 2102686303,
+            "albumStringId": "USf8Qh2a6f9",
+            "albumName": "Red Sea Road",
+            "subName": "",
+            "albumLogo": "https://pic.xiami.net/images/album/img24/525824/5258241485525824.jpg",
+            "logoFocus": null,
+            "artistId": 695641925,
+            "artistStringId": "iyOiaR3a53f",
+            "artistName": "Ellie Holcomb",
+            "company": "Full Heart Music",
+            "upgradeRole": 0,
+            "albumCategory": "录音室专辑",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1485446400000,
+            "albumStatus": 0,
+            "playCount": 1018781,
+            "collects": 106,
+            "recommends": 6,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "Red Sea Road",
+            "songCount": 13,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img24/525824/5258241485525824.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img24/525824/5258241485525824.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img24/525824/5258241485525824.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "英语",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/70/13956419252770.jpg",
+            "artistAlias": "",
+            "companyId": 118881,
+            "categoryId": 13,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 695641925,
+                "artistStringId": "iyOiaR3a53f",
+                "artistName": "Ellie Holcomb",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/70/13956419252770.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "Ellie Holcomb",
+                "alias": "",
+                "area": "United States of America 美国",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["677", "cat_76_13697100"],
+            "companies": [{ "id": "118881", "name": "Full Heart Music" }],
+            "cds": [
+              { "cdId": 41047213, "cdSerial": 1, "name": "" },
+              { "cdId": 41047212, "cdSerial": 1, "name": "" }
+            ]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 6991,
+            "albumStringId": "jCD1c89c",
+            "albumName": "民歌蔡琴",
+            "subName": "",
+            "albumLogo": "https://pic.xiami.net/images/album/img48/1348/69911415708325.jpeg",
+            "logoFocus": null,
+            "artistId": 1348,
+            "artistStringId": "cXc58c38",
+            "artistName": "蔡琴",
+            "company": "点将唱片",
+            "upgradeRole": 0,
+            "albumCategory": "录音室专辑",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 820425600000,
+            "albumStatus": 0,
+            "playCount": 6489940,
+            "collects": 3311,
+            "recommends": 468,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "min ge cai qin ",
+            "songCount": 12,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img48/1348/69911415708325.jpeg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img48/1348/69911415708325.jpeg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img48/1348/69911415708325.jpeg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "国语",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/85/13837264273585.png",
+            "artistAlias": "Tsai Chin",
+            "companyId": 12703,
+            "categoryId": 13,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 1348,
+                "artistStringId": "cXc58c38",
+                "artistName": "蔡琴",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/85/13837264273585.png",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "cai qin ",
+                "alias": "Tsai Chin",
+                "area": "Taiwan, PRC 中国台湾",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["A_OFF", "LOSSLESS", "cat_76_13697100", "3022"],
+            "companies": [{ "id": "12703", "name": "点将唱片" }],
+            "cds": [{ "cdId": 40609252, "cdSerial": 1, "name": "" }]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 508265,
+            "albumStringId": "k65Tc7600",
+            "albumName": "听见",
+            "subName": "",
+            "albumLogo": "https://pic.xiami.net/images/album/img21/119/582d62f41d853_5965821_1479369460.jpg",
+            "logoFocus": null,
+            "artistId": 2825,
+            "artistStringId": "yjl48fad",
+            "artistName": "JS",
+            "company": "音思拜耳音乐工作室",
+            "upgradeRole": 0,
+            "albumCategory": "录音室专辑",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1335974400000,
+            "albumStatus": 0,
+            "playCount": 1303975,
+            "collects": 1723,
+            "recommends": 1034,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "ting jian ",
+            "songCount": 12,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img21/119/582d62f41d853_5965821_1479369460.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img21/119/582d62f41d853_5965821_1479369460.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img21/119/582d62f41d853_5965821_1479369460.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": true,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "国语",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/76/14254645104576.jpg",
+            "artistAlias": "Justin+Sophia",
+            "companyId": 97338,
+            "categoryId": 13,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 2825,
+                "artistStringId": "yjl48fad",
+                "artistName": "JS",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/76/14254645104576.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": true,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "JS",
+                "alias": "Justin+Sophia",
+                "area": "Taiwan, PRC 中国台湾",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["3092", "LOSSLESS", "M_MAN", "1541", "cat_76_13697100"],
+            "companies": [{ "id": "97338", "name": "音思拜耳音乐工作室" }],
+            "cds": [{ "cdId": 40575127, "cdSerial": 1, "name": "" }]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 482077,
+            "albumStringId": "gn8364a7d",
+            "albumName": "美しの里～四季",
+            "subName": "",
+            "albumLogo": "https://pic.xiami.net/images/album/img61/392061/4820771510392062.jpg",
+            "logoFocus": null,
+            "artistId": 52788,
+            "artistStringId": "bdLobbbd3",
+            "artistName": "黒石ひとみ",
+            "company": "Eyes Project",
+            "upgradeRole": 0,
+            "albumCategory": "录音室专辑",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1200758400000,
+            "albumStatus": 0,
+            "playCount": 4073431,
+            "collects": 1592,
+            "recommends": 171,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "mei し の li ～ si ji ",
+            "songCount": 12,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img61/392061/4820771510392062.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img61/392061/4820771510392062.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img61/392061/4820771510392062.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "日语",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/59/14214950447959.jpg",
+            "artistAlias": "黑石瞳 / Kuroishi Hitomi",
+            "companyId": 22374,
+            "categoryId": 13,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 52788,
+                "artistStringId": "bdLobbbd3",
+                "artistName": "黒石ひとみ",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/59/14214950447959.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "黒 shi ひ と み ",
+                "alias": "黑石瞳 / Kuroishi Hitomi",
+                "area": "Japan 日本",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["cat_76_13697100"],
+            "companies": [{ "id": "22374", "name": "Eyes Project" }],
+            "cds": [{ "cdId": 40713193, "cdSerial": 1, "name": "" }]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 376919,
+            "albumStringId": "jYvzc4f8b",
+            "albumName": "宇宙主题",
+            "subName": "",
+            "albumLogo": "https://pic.xiami.net/images/album/img36/73336/3769191271147825.jpg",
+            "logoFocus": null,
+            "artistId": 73336,
+            "artistStringId": "bZi224698",
+            "artistName": "Giovanni",
+            "company": "AVC",
+            "upgradeRole": 0,
+            "albumCategory": "合集、杂锦",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1197475200000,
+            "albumStatus": 0,
+            "playCount": 1141999,
+            "collects": 681,
+            "recommends": 103,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "yu zhou zhu ti ",
+            "songCount": 15,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img36/73336/3769191271147825.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img36/73336/3769191271147825.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img36/73336/3769191271147825.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "英语",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/41/12711467417641.jpg",
+            "artistAlias": "乔瓦尼",
+            "companyId": 13047,
+            "categoryId": 17,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 73336,
+                "artistStringId": "bZi224698",
+                "artistName": "Giovanni",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/41/12711467417641.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "Giovanni",
+                "alias": "乔瓦尼",
+                "area": "Switzerland 瑞士",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["LOSSLESS", "cat_76_17891404"],
+            "companies": [{ "id": "13047", "name": "AVC" }],
+            "cds": [{ "cdId": 40685478, "cdSerial": 1, "name": "" }]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 349680,
+            "albumStringId": "fFhc4c6ec",
+            "albumName": "Jazz Cover",
+            "subName": "",
+            "albumLogo": "https://pic.xiami.net/images/album/img28/65728/3496801254984248.jpg",
+            "logoFocus": null,
+            "artistId": 65728,
+            "artistStringId": "bhhWb9d0d",
+            "artistName": "森田葉月&森川七月",
+            "company": "GIZA studio",
+            "upgradeRole": 0,
+            "albumCategory": "录音室专辑",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1153843200000,
+            "albumStatus": 0,
+            "playCount": 357313,
+            "collects": 483,
+            "recommends": 62,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "Jazz Cover",
+            "songCount": 13,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img28/65728/3496801254984248.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img28/65728/3496801254984248.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img28/65728/3496801254984248.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "日语",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artist/62/12549841858162.jpg",
+            "artistAlias": "森田叶月&森川七月",
+            "companyId": 132419,
+            "categoryId": 13,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 65728,
+                "artistStringId": "bhhWb9d0d",
+                "artistName": "森田葉月&森川七月",
+                "artistLogo": "https://pic.xiami.net/images/artist/62/12549841858162.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "sen tian san yue &sen chuan qi yue ",
+                "alias": "森田叶月&森川七月",
+                "area": "Japan 日本",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["cat_76_13697100", "838"],
+            "companies": [{ "id": "132419", "name": "GIZA studio" }],
+            "cds": [{ "cdId": 40523143, "cdSerial": 1, "name": "" }]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 1873530200,
+            "albumStringId": "xStg0mde174",
+            "albumName": "Temptation",
+            "subName": "",
+            "albumLogo": "https://pic.xiami.net/images/album/img11/93611/18735302001373530200.jpg",
+            "logoFocus": null,
+            "artistId": 93611,
+            "artistStringId": "bEy9e8e2a",
+            "artistName": "Wychazel",
+            "company": "MG Music Ltd",
+            "upgradeRole": 0,
+            "albumCategory": "录音室专辑",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1372521600000,
+            "albumStatus": 0,
+            "playCount": 429266,
+            "collects": 514,
+            "recommends": 39,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "Temptation",
+            "songCount": 6,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img11/93611/18735302001373530200.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img11/93611/18735302001373530200.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img11/93611/18735302001373530200.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "英语",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/10/14896550475010.jpg",
+            "artistAlias": "Chris Green",
+            "companyId": 6890,
+            "categoryId": 13,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 93611,
+                "artistStringId": "bEy9e8e2a",
+                "artistName": "Wychazel",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/10/14896550475010.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "Wychazel",
+                "alias": "Chris Green",
+                "area": "United Kingdom 英国",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["cat_76_13697100"],
+            "companies": [{ "id": "6890", "name": "MG Music Ltd" }],
+            "cds": [{ "cdId": 40461429, "cdSerial": 1, "name": "" }]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 418385,
+            "albumStringId": "ovrpfbd3f",
+            "albumName": "一时 Remix概念精选辑",
+            "subName": "",
+            "albumLogo": "https://pic.xiami.net/images/album/img46/1046/4183851321594322.jpg",
+            "logoFocus": null,
+            "artistId": 1046,
+            "artistStringId": "f32b5ea7",
+            "artistName": "许巍",
+            "company": "金牌大风",
+            "upgradeRole": 0,
+            "albumCategory": "精选集",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1293811200000,
+            "albumStatus": 0,
+            "playCount": 7792297,
+            "collects": 3487,
+            "recommends": 1102,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "yi shi  Remixgai nian jing xuan ji ",
+            "songCount": 10,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img46/1046/4183851321594322.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img46/1046/4183851321594322.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img46/1046/4183851321594322.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "国语",
+            "cdCount": 2,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/86/14326365705286.jpg",
+            "artistAlias": "许玮",
+            "companyId": 32,
+            "categoryId": 14,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 1046,
+                "artistStringId": "f32b5ea7",
+                "artistName": "许巍",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/86/14326365705286.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "xu wei ",
+                "alias": "许玮",
+                "area": "China 中国大陆",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["3092", "cat_76_14745676", "1541", "835"],
+            "companies": [{ "id": "32", "name": "金牌大风" }],
+            "cds": [
+              { "cdId": 40214726, "cdSerial": 1, "name": "" },
+              { "cdId": 40214727, "cdSerial": 2, "name": "" }
+            ]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 418961,
+            "albumStringId": "ov07fbaeb",
+            "albumName": "好戏最爱 西洋电影主题曲演奏专辑 ",
+            "subName": "",
+            "albumLogo": "https://pic.xiami.net/images/album/img0/4189611294278291.jpg",
+            "logoFocus": null,
+            "artistId": 934,
+            "artistStringId": "Lud6c6b",
+            "artistName": "温金龙",
+            "company": "偉翔文化",
+            "upgradeRole": 0,
+            "albumCategory": "录音室专辑",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 918144000000,
+            "albumStatus": 0,
+            "playCount": 24967,
+            "collects": 74,
+            "recommends": 17,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "hao xi zui ai  xi yang dian ying zhu ti qu yan zou zhuan ji  ",
+            "songCount": 12,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img0/4189611294278291.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img0/4189611294278291.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img0/4189611294278291.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "国语",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/imgs/934/760/4e44ae01_934_1545164184945.jpg",
+            "artistAlias": "",
+            "companyId": 25225,
+            "categoryId": 13,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 934,
+                "artistStringId": "Lud6c6b",
+                "artistName": "温金龙",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/imgs/934/760/4e44ae01_934_1545164184945.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "wen jin long ",
+                "alias": "",
+                "area": "China 中国大陆",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["cat_76_13697100"],
+            "companies": [{ "id": "25225", "name": "偉翔文化" }],
+            "cds": [{ "cdId": 39503072, "cdSerial": 1, "name": "" }]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 1725891165,
+            "albumStringId": "mN8DWR4bb13",
+            "albumName": "Ori and the Blind Forest (Original Soundtrack)",
+            "subName": "奥里与迷失森林",
+            "albumLogo": "https://pic.xiami.net/images/album/img27/1825891127/17258911651425891200.jpg",
+            "logoFocus": null,
+            "artistId": 1825891127,
+            "artistStringId": "xPfnudc02d6",
+            "artistName": "Gareth Coker",
+            "company": "Microsoft Studios Music",
+            "upgradeRole": 0,
+            "albumCategory": "原声带、影视音乐",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1425916800000,
+            "albumStatus": 0,
+            "playCount": 2411199,
+            "collects": 5369,
+            "recommends": 304,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "Ori and the Blind Forest (Original Soundtrack)",
+            "songCount": 32,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img27/1825891127/17258911651425891200.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img27/1825891127/17258911651425891200.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img27/1825891127/17258911651425891200.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "英语",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/97/14258911261597.jpg",
+            "artistAlias": "Gareth David Coker",
+            "companyId": 127190,
+            "categoryId": 18,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 1825891127,
+                "artistStringId": "xPfnudc02d6",
+                "artistName": "Gareth Coker",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/97/14258911261597.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "Gareth Coker",
+                "alias": "Gareth David Coker",
+                "area": "United States of America 美国",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["LOSSLESS", "cat_76_18939980"],
+            "companies": [{ "id": "127190", "name": "Microsoft Studios Music" }],
+            "cds": [{ "cdId": 40714782, "cdSerial": 1, "name": "" }]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 2102958202,
+            "albumStringId": "nneMtq7137e",
+            "albumName": "糖糖音乐家陶笛音乐集（二）",
+            "subName": "",
+            "albumLogo": "https://pic.xiami.net/images/album/img59/6335/5d9fff1347d17_316790859_1570766611.jpg",
+            "logoFocus": null,
+            "artistId": 2110230637,
+            "artistStringId": "nn9smB66a19",
+            "artistName": "解亚飞",
+            "company": "独立发行",
+            "upgradeRole": 0,
+            "albumCategory": "现场专辑",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1511366400000,
+            "albumStatus": 0,
+            "playCount": 570898,
+            "collects": 128,
+            "recommends": 3,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "tang tang yin le jia tao di yin le ji （ er ） ",
+            "songCount": 14,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img59/6335/5d9fff1347d17_316790859_1570766611.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img59/6335/5d9fff1347d17_316790859_1570766611.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img59/6335/5d9fff1347d17_316790859_1570766611.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": true,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "国语",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/2/15489833167802.jpg",
+            "artistAlias": "糖糖音乐家陶笛",
+            "companyId": 1706,
+            "categoryId": 16,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 2110230637,
+                "artistStringId": "nn9smB66a19",
+                "artistName": "解亚飞",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/2/15489833167802.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": true,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "",
+                "alias": "糖糖音乐家陶笛",
+                "area": "China 中国大陆",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["LOSSLESS", "M_MAN", "cat_76_16842828", "715"],
+            "companies": [{ "id": "1706", "name": "独立发行" }],
+            "cds": [
+              { "cdId": 41331269, "cdSerial": 1, "name": "" },
+              { "cdId": 41331270, "cdSerial": 1, "name": "" }
+            ]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 2102748902,
+            "albumStringId": "yhOSGca9ea7",
+            "albumName": "Ken Hirai Singles Best Collection 歌バカ2",
+            "subName": "",
+            "albumLogo": "https://pic.xiami.net/images/album/img89/141/595606e1db602_7093789_1498810081.jpg",
+            "logoFocus": null,
+            "artistId": 6934,
+            "artistStringId": "ezi58797",
+            "artistName": "平井堅",
+            "company": "Ariola Japan",
+            "upgradeRole": 0,
+            "albumCategory": "精选集",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1499788800000,
+            "albumStatus": 0,
+            "playCount": 3982298,
+            "collects": 1257,
+            "recommends": 112,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "K e n   H i r a i   S i n g l e s   B e s t   C o l l e c t i o n   ge バ カ 2",
+            "songCount": 55,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img89/141/595606e1db602_7093789_1498810081.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img89/141/595606e1db602_7093789_1498810081.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img89/141/595606e1db602_7093789_1498810081.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "日语",
+            "cdCount": 5,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/81/13945221185881.jpg",
+            "artistAlias": "平井坚 / ひらい けん / Ken Hirai",
+            "companyId": 4025,
+            "categoryId": 14,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 6934,
+                "artistStringId": "ezi58797",
+                "artistName": "平井堅",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/81/13945221185881.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "ping jing 堅 ",
+                "alias": "平井坚 / ひらい けん / Ken Hirai",
+                "area": "Japan 日本",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["cat_76_14745676", "360"],
+            "companies": [{ "id": "4025", "name": "Ariola Japan" }],
+            "cds": [
+              { "cdId": 41141127, "cdSerial": 6, "name": "初回生産限定盤B" },
+              { "cdId": 41113940, "cdSerial": 2, "name": "通常盤 「Single Collection 2011-2017」" },
+              { "cdId": 41113941, "cdSerial": 5, "name": "初回限定盤A「Single Collection 2002-2008」" },
+              { "cdId": 41113937, "cdSerial": 1, "name": "通常盤 「Single Collection 2006-2010」" },
+              { "cdId": 41113938, "cdSerial": 4, "name": "初回限定盤A「Single Collection 1995-2002」" },
+              { "cdId": 41113939, "cdSerial": 3, "name": "「歌バカだけに。」" }
+            ]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 7615,
+            "albumStringId": "hlzc7903",
+            "albumName": "明天，还爱我吗？",
+            "subName": "Will You Still Love Me Tomorrow",
+            "albumLogo": "https://pic.xiami.net/images/album/img14/852414/76151583852415.jpg",
+            "logoFocus": null,
+            "artistId": 1421,
+            "artistStringId": "ikNf88dc",
+            "artistName": "陈淑桦",
+            "company": "百代唱片",
+            "upgradeRole": 0,
+            "albumCategory": "录音室专辑",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 595094400000,
+            "albumStatus": 0,
+            "playCount": 309028,
+            "collects": 484,
+            "recommends": 101,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "ming tian ， huan ai wo ma ？ ",
+            "songCount": 10,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img14/852414/76151583852415.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img14/852414/76151583852415.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img14/852414/76151583852415.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "国语",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/2/15139102096602.jpg",
+            "artistAlias": "Sarah Chen",
+            "companyId": 766,
+            "categoryId": 13,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 1421,
+                "artistStringId": "ikNf88dc",
+                "artistName": "陈淑桦",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/2/15139102096602.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "chen shu 桦 ",
+                "alias": "Sarah Chen",
+                "area": "Taiwan, PRC 中国台湾",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["LOSSLESS", "1541", "cat_76_13697100"],
+            "companies": [
+              { "id": "766", "name": "百代唱片" },
+              { "id": "3", "name": "滚石唱片" }
+            ],
+            "cds": [{ "cdId": 40499840, "cdSerial": 1, "name": "" }]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 338085,
+            "albumStringId": "fCgb54004",
+            "albumName": "HARD TIMES",
+            "subName": "",
+            "albumLogo": "https://pic.xiami.net/images/album/img11/62811/3380851248256089.jpg",
+            "logoFocus": null,
+            "artistId": 62811,
+            "artistStringId": "b6xN1dbab",
+            "artistName": "Blizard",
+            "company": "Warner Music",
+            "upgradeRole": 0,
+            "albumCategory": "录音室专辑",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 534614400000,
+            "albumStatus": 0,
+            "playCount": 17811,
+            "collects": 42,
+            "recommends": 6,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "HARD TIMES",
+            "songCount": 8,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img11/62811/3380851248256089.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img11/62811/3380851248256089.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img11/62811/3380851248256089.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "日语",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artist/95/12482556252395.jpg",
+            "artistAlias": "ブリザード",
+            "companyId": 1438,
+            "categoryId": 13,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 62811,
+                "artistStringId": "b6xN1dbab",
+                "artistName": "Blizard",
+                "artistLogo": "https://pic.xiami.net/images/artist/95/12482556252395.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "Blizard",
+                "alias": "ブリザード",
+                "area": "Japan 日本",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["cat_76_13697100"],
+            "companies": [{ "id": "1438", "name": "Warner Music" }],
+            "cds": [{ "cdId": 39555629, "cdSerial": 1, "name": "" }]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 474053,
+            "albumStringId": "sLUj22285",
+            "albumName": "Ζητάτε να σας πω",
+            "subName": "You Ask Me to Tell You / Zitate na sas po",
+            "albumLogo": "https://pic.xiami.net/images/album/img86/798286/1319798286.jpg",
+            "logoFocus": null,
+            "artistId": 68966,
+            "artistStringId": "bhYkddef7",
+            "artistName": "Αρλέτα",
+            "company": "CBS",
+            "upgradeRole": 0,
+            "albumCategory": "录音室专辑",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 536428800000,
+            "albumStatus": 0,
+            "playCount": 152577,
+            "collects": 309,
+            "recommends": 49,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "Ζ η τ άτ ε  ν α  σ α ς π ω ",
+            "songCount": 12,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img86/798286/1319798286.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img86/798286/1319798286.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img86/798286/1319798286.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "其他",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artist/5/12619951671805.jpg",
+            "artistAlias": "Arleta",
+            "companyId": 6798,
+            "categoryId": 13,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 68966,
+                "artistStringId": "bhYkddef7",
+                "artistName": "Αρλέτα",
+                "artistLogo": "https://pic.xiami.net/images/artist/5/12619951671805.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "Α ρ λ έτ α ",
+                "alias": "Arleta",
+                "area": "Greece 希腊",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["cat_76_13697100"],
+            "companies": [{ "id": "6798", "name": "CBS" }],
+            "cds": [{ "cdId": 35752634, "cdSerial": 1, "name": "" }]
+          },
+          {
+            "favFlag": 0,
+            "albumId": 5021302119,
+            "albumStringId": "qy9QS19148c",
+            "albumName": "Breath of Angels",
+            "subName": "",
+            "albumLogo": "https://pic.xiami.net/images/album/img30068/32382/1597663666348.jpg",
+            "logoFocus": null,
+            "artistId": 5213391503,
+            "artistStringId": "C1fNJ3e9963",
+            "artistName": "Denean",
+            "company": "Woo Way Intuitive Healing Arts",
+            "upgradeRole": 0,
+            "albumCategory": "录音室专辑",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1120060800000,
+            "albumStatus": 0,
+            "playCount": 35987,
+            "collects": 7,
+            "recommends": 0,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "Breath of Angels",
+            "songCount": 12,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img30068/32382/1597663666348.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img30068/32382/1597663666348.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img30068/32382/1597663666348.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "纯音乐",
+            "cdCount": 0,
+            "artistLogo": "http://pic.xiami.net/images/common/uploadpic/80/1522222419380.png",
+            "artistAlias": null,
+            "companyId": 55670,
+            "categoryId": 13,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 5213391503,
+                "artistStringId": "C1fNJ3e9963",
+                "artistName": "Denean",
+                "artistLogo": "http://pic.xiami.net/images/common/uploadpic/80/1522222419380.png",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "",
+                "alias": null,
+                "area": "",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["LOSSLESS", "cat_76_13697100", "846"],
+            "companies": [{ "id": "55670", "name": "Woo Way Intuitive Healing Arts" }],
+            "cds": null
+          },
+          {
+            "favFlag": 0,
+            "albumId": 462709,
+            "albumStringId": "gi6f54b4f",
+            "albumName": "X Japan Piano Solo Instruments",
+            "subName": "X Japan 纯钢琴演奏集",
+            "albumLogo": "https://pic.xiami.net/images/album/img56/7056/4627091314606924.jpg",
+            "logoFocus": null,
+            "artistId": 7056,
+            "artistStringId": "hcy99b3f",
+            "artistName": "X JAPAN",
+            "company": "Extasy Record",
+            "upgradeRole": 0,
+            "albumCategory": "合集、杂锦",
+            "grade": 0,
+            "gradeCount": 0,
+            "gradeUrl": null,
+            "userGrade": 0,
+            "userGradeComment": null,
+            "gmtPublish": 1038585600000,
+            "albumStatus": 0,
+            "playCount": 504405,
+            "collects": 1214,
+            "recommends": 233,
+            "download": 0,
+            "listen": 0,
+            "price": "0.0",
+            "pinyin": "X Japan Piano Solo Instruments",
+            "songCount": 10,
+            "isExclusive": 0,
+            "albumLogoS": "https://pic.xiami.net/images/album/img56/7056/4627091314606924.jpg@1e_1c_0i_1o_100Q_225w_225h.webp",
+            "albumLogoM": "https://pic.xiami.net/images/album/img56/7056/4627091314606924.jpg@1e_1c_0i_1o_100Q_300w_300h.webp",
+            "albumLogoL": "https://pic.xiami.net/images/album/img56/7056/4627091314606924.jpg@1e_1c_0i_1o_100Q_843w_843h.webp",
+            "type": 1,
+            "isMusician": false,
+            "mqaAlbum": false,
+            "planId": 0,
+            "planTitle": null,
+            "planLogo": null,
+            "publishStatus": 0,
+            "description": "",
+            "language": "日语",
+            "cdCount": 1,
+            "artistLogo": "https://pic.xiami.net/images/artistlogo/72/14213915891972.jpg",
+            "artistAlias": "",
+            "companyId": 15709,
+            "categoryId": 17,
+            "tag": "",
+            "artists": [
+              {
+                "artistId": 7056,
+                "artistStringId": "hcy99b3f",
+                "artistName": "X JAPAN",
+                "artistLogo": "https://pic.xiami.net/images/artistlogo/72/14213915891972.jpg",
+                "logoFocus": null,
+                "gender": null,
+                "isMusician": false,
+                "countLikes": 0,
+                "playCount": 0,
+                "comments": 0,
+                "recommends": 0,
+                "pinyin": "X JAPAN",
+                "alias": "",
+                "area": "Japan 日本",
+                "description": "",
+                "radioId": null,
+                "radioType": null,
+                "musicianUserId": 0,
+                "songCount": null,
+                "albumCount": null,
+                "birthday": null,
+                "bizTags": [],
+                "styles": null,
+                "roles": null
+              }
+            ],
+            "purviewRoleVOs": [
+              {
+                "quality": "e",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "f",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "l",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "h",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 0, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              },
+              {
+                "quality": "s",
+                "filesize": 0,
+                "isExist": true,
+                "operationVOs": [
+                  { "purpose": 1, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false },
+                  { "purpose": 2, "upgradeRole": 3, "needVip": false, "needPay": false, "needSvip": false }
+                ]
+              }
+            ],
+            "tags": ["715", "cat_76_17891404"],
+            "companies": [{ "id": "15709", "name": "Extasy Record" }],
+            "cds": [{ "cdId": 40596996, "cdSerial": 1, "name": "" }]
+          }
+        ],
+        "collects": null,
+        "headlines": null,
+        "mvs": null,
+        "artists": null,
+        "vlives": null,
+        "videos": null,
+        "topics": null,
+        "partyRooms": null,
+        "hashTags": null
+      }
+    }
+  }
+  

@@ -1,0 +1,15 @@
+.rmc-tabs {
+}
+.rmc-tabs-tab-bar-wrap {
+}
+.rmc-tabs-tab-bar {
+  margin: 0 auto;
+  width: 620px !important;
+}
+.rmc-tabs-tab-bar-tab {
+  font-size: 28px !important;
+  padding: 32px 0px !important;
+}
+.rmc-tabs-tab-bar-top {
+  border: none !important;
+}
