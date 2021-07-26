@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from "react";
+import { useCallback, useRef } from "react";
 import { Route, useHistory } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 
@@ -8,7 +8,6 @@ import Grid from "../../base/gird.jsx";
 import { songList, singerList, albumnList } from "../../mock/list";
 
 import Detail from "../Detail";
-import "./tmp.css";
 // 路由动画能实现的根本原因 `Route render: func` 无论路由是否匹配，函数都会运行
 export default function Song(porps) {
   // const [position, setPosition] = useState(null);
@@ -16,40 +15,23 @@ export default function Song(porps) {
   const cache = useRef({ position: null, item: null });
   const history = useHistory();
 
-  // function onClick(item, pos) {
-  //   setPosition(pos);
-  //   setItem(item);
-  //   // console.log("onClick", obj);
-  //   // 在这里之心跳转 可能更好！？
-  //   console.log("跳转 详情页的时机 item pos", item, pos);
-  //   history.push(`/${item.type}/${item.id}`, pos);
-  // }
-
   const onClick = useCallback((item, pos) => {
     // setPosition(pos);
     // setItem(item);
     cache.current = { position: pos, item };
-    // console.log("onClick", obj);
-    // 在这里之心跳转 可能更好！？
-    console.log("跳转 详情页的时机 item pos", item, pos);
     history.push(`/${item.type}/${item.id}`, pos);
   });
 
   const onExit = useCallback((e) => {
-    console.log("onExit e", e);
     const { position } = cache.current;
-    console.log("position: 时机s", position);
     const dom = e.children[0].children[0];
     dom.style.width = `${position[2]}px`;
     dom.style.height = `${position[3]}px`;
     dom.style.transform = `translate(${position[0]}px, ${position[1]}px)`;
-    dom.style.transition = `all 0.6s`;
-    // dom.children[0].style.heigth = "50vw";
-    // console.log("dom.children[0]", dom.children[0]);
-    // debugger;
+    dom.style.transition = `all 0.45s cubic-bezier(.56,.4,.3,1)`;
+    // dom.children[0].style.height = "50vw";
   }, []);
   function onBack() {
-    // console.log("position", position);
     history.push(`/song`);
   }
   const tabs = [
@@ -72,7 +54,7 @@ export default function Song(porps) {
         {(props) => (
           <CSSTransition
             in={props.match != null}
-            timeout={600}
+            timeout={500}
             classNames="page"
             unmountOnExit
             onExit={onExit}
