@@ -4,6 +4,7 @@ import { ToggleSiderBar } from "../../state/action";
 import Style from "./index.less";
 
 // @widthRouter 装饰 class
+// MHeader 中的内容是动态的，并受页面上的 事件影响, 存到store
 function MHeader(props) {
   // const bool = useSelector((state) => state.bool);
   console.log("header props", props);
