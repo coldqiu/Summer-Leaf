@@ -23,17 +23,18 @@ export default function Song(porps) {
   });
 
   const onExit = useCallback((e) => {
+    console.log("on Exit time e", e);
     const { position } = cache.current;
     const dom = e.children[0].children[0];
+    console.log("getComputedStyle(dom)", getComputedStyle(dom));
+
     dom.style.width = `${position[2]}px`;
     dom.style.height = `${position[3]}px`;
     dom.style.transform = `translate(${position[0]}px, ${position[1]}px)`;
-    dom.style.transition = `all 0.45s cubic-bezier(.56,.4,.3,1)`;
+    dom.style.transition = `all 6s cubic-bezier(.56,.4,.3,1)`;
     // dom.children[0].style.height = "50vw";
   }, []);
-  function onBack() {
-    history.push(`/song`);
-  }
+
   const tabs = [
     {
       key: "t1",
@@ -54,7 +55,7 @@ export default function Song(porps) {
         {(props) => (
           <CSSTransition
             in={props.match != null}
-            timeout={500}
+            timeout={6000}
             classNames="page"
             unmountOnExit
             onExit={onExit}
@@ -65,10 +66,6 @@ export default function Song(porps) {
           </CSSTransition>
         )}
       </Route>
-
-      <button style={{ marginTop: "200px" }} onClick={() => onBack()}>
-        back
-      </button>
     </div>
   );
 }
