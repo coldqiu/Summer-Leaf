@@ -37,17 +37,17 @@ export default function DetailCover({ item, pos }) {
   }, []);
   // 设置 <List>组件的进场动画css
   useEffect(() => {
-    if (listDom) {
-      // listDom.style.opacity = 1;
-      // listDom.style.position = "relative";
-      // listDom.style.bottom = 0;
-      // listDom.style.right = 0;
-      // listDom.style.left = 0;
+    const timer = setTimeout(() => {
       listDom.style.transform = "translate3d(0px, -100%, 20px)";
-      listDom.style.transition = "transform 0.4s ease-in 0.55s";
-      // listDom.style.transition = "all 0.45s ease-in 0.85s";
-      // listDom.style.zIndex = 20;
+      listDom.style.opacity = 1;
+    }, 500);
+    if (listDom) {
+      listDom.style.opacity = 0;
+      listDom.style.transition = "transform 0.4s ease-in";
     }
+    return () => {
+      clearTimeout(timer);
+    };
   }, [listDom]);
   return (
     <div className={`${Style.li} `}>
