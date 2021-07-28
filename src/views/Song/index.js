@@ -1,4 +1,4 @@
-import { useCallback, useRef } from "react";
+import { useCallback, useRef, useState, useEffect } from "react";
 import { Route, useHistory } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 
@@ -14,26 +14,34 @@ export default function Song(porps) {
   // const [item, setItem] = useState(null);
   const cache = useRef({ position: null, item: null });
   const history = useHistory();
+  console.log("song history", history);
+  const [detailVisible, setDetailVisible] = useState("visible");
 
   const onClick = useCallback((item, pos) => {
     // setPosition(pos);
     // setItem(item);
     cache.current = { position: pos, item };
     history.push(`/${item.type}/${item.id}`, pos);
+    // 仅入detail前 使detail可见
+    setDetailVisible("visible");
   });
 
   const onExit = useCallback((e) => {
     const { position } = cache.current;
     const dom = e.children[0].children[0];
+
     dom.style.width = `${position[2]}px`;
     dom.style.height = `${position[3]}px`;
     dom.style.transform = `translate(${position[0]}px, ${position[1]}px)`;
-    dom.style.transition = `all 0.45s cubic-bezier(.56,.4,.3,1)`;
+    dom.style.transition = `all 25s cubic-bezier(.56,.4,.3,1)`;
     // dom.children[0].style.height = "50vw";
+
+    // 隐藏 Detail 页中出去 img 之外的dom visibility
+    e.style.visibilty = "hidden";
+    setDetailVisible("hidden");
+    // 返回 song 需将 detailVisible 置为 visible, 或者说 进入detail前，
   }, []);
-  function onBack() {
-    history.push(`/song`);
-  }
+
   const tabs = [
     {
       key: "t1",
@@ -49,26 +57,30 @@ export default function Song(porps) {
       <TabList tabs={tabs}></TabList>
 
       {/* <Route path={"/song/:id"} component={Detail} exact={false}></Route> */}
+      {detailVisible}
 
       <Route path={"/song/:id"} exact={false}>
         {(props) => (
           <CSSTransition
             in={props.match != null}
-            timeout={500}
+            timeout={50000000}
             classNames="page"
             unmountOnExit
             onExit={onExit}
           >
             {/* <div className="page"> */}
-            <Detail {...props} state={cache.current.position} item={cache.current.item} />
+            <Detail
+              {...props}
+              state={cache.current.position}
+              item={cache.current.item}
+              visible={detailVisible}
+              // className={Style[detailVisible]}
+            />
+
             {/* </div> */}
           </CSSTransition>
         )}
       </Route>
-
-      <button style={{ marginTop: "200px" }} onClick={() => onBack()}>
-        back
-      </button>
     </div>
   );
 }

@@ -1,12 +1,23 @@
 .wrap {
   display: flex;
   background: skyblue;
+  .img {
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.1);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
   .info {
     flex: 1 1;
     padding: 0 25px;
     overflow: hidden;
 
     .title {
+      height: 70px;
+      box-sizing: border-box;
       padding: 20px 0 15px 0;
       font-size: 28px;
       white-space: nowrap;
@@ -15,13 +26,15 @@
     }
 
     .message {
+      height: 55px;
+      box-sizing: border-box;
       padding-bottom: 20px;
       font-size: 23.5px;
       overflow: hidden;
 
       * {
         display: inline-block;
-        line-height: 1.5;
+        // line-height: 1.5;
       }
 
       .left {

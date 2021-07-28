@@ -73,3 +73,24 @@ export const albumnList = [
     title: "C",
   },
 ];
+
+export const detailList = [
+  {
+    img: getImg(1),
+    title: "title 1111111",
+    left: "left xx xxyyxxyyxxzasdfaasdf",
+    right: "1文章",
+  },
+  {
+    img: getImg(2),
+    title: "title 2222",
+    left: "left xx xxyyxxyyxxzasdfaasdf",
+    right: "2文章",
+  },
+  {
+    img: getImg(3),
+    title: "title 33",
+    left: "left xx xxyyxxyyxxzasdfaasdf",
+    right: "3文章",
+  },
+];
