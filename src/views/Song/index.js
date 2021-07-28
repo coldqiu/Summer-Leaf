@@ -14,7 +14,7 @@ export default function Song(porps) {
   // const [item, setItem] = useState(null);
   const cache = useRef({ position: null, item: null });
   const history = useHistory();
-  console.log("song history", history);
+  // console.log("song history", history);
   const [detailVisible, setDetailVisible] = useState("visible");
 
   const onClick = useCallback(
