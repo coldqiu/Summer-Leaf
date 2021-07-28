@@ -56,15 +56,3 @@ const tabsBar = {
 const tabBarUnderlineStyle = {
   background: "deepskyblue",
 };
-
-{
-  /* {tabs
-          ? tabs.map((item) => {
-              return (
-                <div key={item.key} className={Style.content}>
-                  <item.component {...item.comProps} />
-                </div>
-              );
-            })
-          : props.children} */
-}

@@ -15,7 +15,6 @@ export default function DetailCover({ item, pos }) {
       setDom(node);
     }
   }, []);
-  // console.log("pos", pos);
   // 设置图片的style
   useEffect(() => {
     if (dom) {
@@ -23,7 +22,7 @@ export default function DetailCover({ item, pos }) {
       dom.style.width = `100vw`;
       dom.style.height = `100vw`;
       dom.style.transform = `translate(0px, 0px)`;
-      dom.style.transition = `all 55s cubic-bezier(.56,.4,.3,1)`;
+      dom.style.transition = `all 0.5s cubic-bezier(.56,.4,.3,1)`;
     }
     return () => {
       // console.log("GridItem willUnMount childDom", dom);
@@ -45,10 +44,8 @@ export default function DetailCover({ item, pos }) {
       // listDom.style.right = 0;
       // listDom.style.left = 0;
       listDom.style.transform = "translate3d(0px, -100%, 20px)";
-      listDom.style.transition = "transform 0.45s ease-in 0.85s";
-
+      listDom.style.transition = "transform 0.4s ease-in 0.55s";
       // listDom.style.transition = "all 0.45s ease-in 0.85s";
-
       // listDom.style.zIndex = 20;
     }
   }, [listDom]);
@@ -67,9 +64,7 @@ export default function DetailCover({ item, pos }) {
       <List
         ref={refList}
         className={Style.list}
-        info={
-          item.info ? item.info : { title: "default title", left: "xx", right: " yy" }
-        }
+        info={item.info ? item.info : { title: "default title", left: "xx", right: " yy" }}
       ></List>
     </div>
   );

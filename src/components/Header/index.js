@@ -7,7 +7,7 @@ import Style from "./index.less";
 // MHeader 中的内容是动态的，并受页面上的 事件影响, 存到store
 function MHeader(props) {
   // const bool = useSelector((state) => state.bool);
-  console.log("header props", props);
+  // console.log("header props", props);
   // console.log("props.location.pathname", props.location.pathname);
   const dispatch = useDispatch();
   return (
@@ -16,10 +16,7 @@ function MHeader(props) {
         <ul className={Style.ul}>
           <li className={Style.li}>
             <div className={Style.icon}>
-              <span
-                onClick={() => dispatch(ToggleSiderBar())}
-                className={"iconfont icon-add " + Style.copy}
-              ></span>
+              <span onClick={() => dispatch(ToggleSiderBar())} className={"iconfont icon-add " + Style.copy}></span>
             </div>
           </li>
         </ul>

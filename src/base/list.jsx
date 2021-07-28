@@ -8,7 +8,7 @@ function ListBase({ info }, ref) {
       {/* 是否有img */}
       {info.img ? (
         <div className={Style.img}>
-          <img src={info.img} />
+          <img src={info.img} alt={info.img} />
         </div>
       ) : null}
       <div className={Style.info}>

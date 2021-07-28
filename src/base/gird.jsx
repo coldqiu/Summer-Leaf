@@ -23,7 +23,7 @@ export function GridItem({ item, click }) {
     // history.push(`/song/${item.id}`, [left, top, width, height]);
     const pos = [left, top, width, height];
     click(item, pos);
-  }, [dom]);
+  }, [dom, click, item]);
 
   useEffect(() => {
     // console.log("GridItem Mounted childDom", dom);
@@ -36,11 +36,7 @@ export function GridItem({ item, click }) {
     <li onClick={() => handleClick(item)} key={item.title} className={Style.li}>
       {/* // 点击时记录【图片】位置 ，即Detail 动画初始位置 */}
       <img ref={ref} src={item.coverPic} alt={item.coverPic} />
-      <List
-        info={
-          item.info ? item.info : { title: "default title", left: "xx", right: " yy" }
-        }
-      ></List>
+      <List info={item.info ? item.info : { title: "default title", left: "xx", right: " yy" }}></List>
     </li>
   );
 }

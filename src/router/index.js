@@ -1,5 +1,5 @@
 import { lazy } from "react";
-export default [
+const list = [
   // {
   //   path: "/counter",
   //   name: "counter",
@@ -29,3 +29,5 @@ export default [
   //   component: lazy(() => import("../views/Detail")),
   // },
 ];
+
+export default list;

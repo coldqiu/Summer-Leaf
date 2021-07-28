@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams, useLocation } from "react-router";
-import styled from "styled-components";
+// import styled from "styled-components";
 
 import Cover from "./Cover";
 import List from "../../base/list";
@@ -24,7 +24,7 @@ export default function Detail(props) {
   const params = useParams();
   const location = useLocation();
   const [x, y, width, height] = props.state ? props.state : location.state;
-  const [position, setPosition] = useState(null);
+  // const [position, setPosition] = useState(null);
   const id = props.item ? props.item.id : parseInt(params.id);
   const item = songList.filter((item) => item.id === id)[0];
   // 位置大小信息 id item 应该使用 缓存
@@ -41,11 +41,7 @@ export default function Detail(props) {
 
   return (
     // <Wrap>
-    <div
-      className={`${Style.wrap} ${
-        props.visible === "visible" ? Style.visible : Style.hidden
-      }`}
-    >
+    <div className={`${Style.wrap} ${props.visible === "visible" ? Style.visible : Style.hidden}`}>
       <Cover item={item} pos={[x, y, width, height]} />
       <div className={Style.list}>
         <div className={Style.playButton}>play </div>
