@@ -1,8 +1,10 @@
 //
+import { forwardRef } from "react";
+
 import Style from "./list.less";
-export default function list({ info }) {
+function ListBase({ info }, ref) {
   return (
-    <div className={Style.wrap}>
+    <div ref={ref} className={Style.wrap}>
       {/* 是否有img */}
       {info.img ? (
         <div className={Style.img}>
@@ -24,3 +26,6 @@ export default function list({ info }) {
     </div>
   );
 }
+
+const List = forwardRef(ListBase);
+export default List;
