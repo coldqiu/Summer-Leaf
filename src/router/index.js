@@ -8,7 +8,7 @@ const list = [
   {
     path: "/song",
     name: "song",
-    component: lazy(() => import("../views/Song")),
+    component: lazy(() => import("../views/Song/index.jsx")),
     children: [
       {
         // path: "/detail/:id",
@@ -21,7 +21,7 @@ const list = [
   {
     path: "/collection",
     name: "collection",
-    component: lazy(() => import("../views/Collection")),
+    component: lazy(() => import("../views/Collection/index.jsx")),
   },
   // {
   //   path: "/detail/:id",
