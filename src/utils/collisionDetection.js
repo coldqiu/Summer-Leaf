@@ -6,14 +6,14 @@ const BOTTOM = "BOTTOM";
 const LEFT = "LEFT";
 /**
  *
- * @param {*} triggerDom  触发事件元素的 getBoungindClientRect()数据
+ * @param {*} triggerDom  触发事件元素的dom
  * @param {*} align       偏移配置
- * @param {*} overlay     组件Tooltip overlay的 getBoungindClientRect()数据
+ * @param {*} overlay     组件Tooltip overlay的dom
  *
  */
 
 export default function useCollisionDetction(triggerDom, align, overlay) {
-  // 根据以下四个数据确定绝对定位的 top left
+  // 根据以下三个dom和一个偏移信息确定绝对定位的 top left
   // overlay.offsetParent triggerDom.getBoundingClientRect() overlay align
 
   // console.log("triggerDom, align, overlay", triggerDom, align, overlay);

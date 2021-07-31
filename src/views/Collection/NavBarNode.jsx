@@ -28,7 +28,8 @@ export default function NavBarNode(props) {
     { title: "title1", click: click1 },
     { title: "title2", click: click1 },
   ];
-  const align = { top: 10, left: -10 };
+  //   const align = { top: 10, left: -10 };
+  const align = {};
 
   const rightMenu = [
     { icon: "icon-add", onClick: goToSearch },
