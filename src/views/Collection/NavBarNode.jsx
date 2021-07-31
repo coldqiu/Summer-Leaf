@@ -71,9 +71,11 @@ export default function NavBarNode(props) {
 
 function RightContentBase(props, ref) {
   const [search, menu] = props.list;
-  // 外层设置了 flex-direction: row-reverse 导致 排列是反的
   return (
     <Fragment>
+      <div className={Style.rightIcon}>
+        <Icon icon={search.icon} onClick={() => search.onClick()} />
+      </div>
       <Tooltip
         visible={menu.visible}
         clickMask={menu.clickMask}
@@ -85,9 +87,6 @@ function RightContentBase(props, ref) {
           <Icon icon={menu.icon} onClick={() => menu.onClick()} />
         </div>
       </Tooltip>
-      <div className={Style.rightIcon}>
-        <Icon icon={search.icon} onClick={() => search.onClick()} />
-      </div>
     </Fragment>
   );
 }
