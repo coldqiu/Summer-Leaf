@@ -3,20 +3,24 @@
   height: 90px;
 }
 .left {
-  flex: 1;
+  flex: 0 0 110px;
   background: #87a0ac;
   .ul {
-    text-align: left;
-    margin-left: 30px;
+    text-align: center;
   }
 }
 .middle {
-  flex: 1;
+  flex: 0 1 900px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  font-size: 30px;
   padding: 0 10px;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 600;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   background: #bbc9d0;
 }
 .right {

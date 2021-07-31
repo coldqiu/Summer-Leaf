@@ -27,6 +27,7 @@ export default function NavBarNode(props) {
   const actions = [
     { title: "title1", click: click1 },
     { title: "title2", click: click1 },
+    { title: "title1", click: click1 },
   ];
   //   const align = { top: 10, left: -10 };
   const align = {};

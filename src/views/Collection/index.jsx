@@ -5,6 +5,7 @@ import NavBarNode from "./NavBarNode";
 import Style from "./index.less";
 
 export default function Collection(props) {
+  
   return (
     <div className={Style.collection}>
       {/* <Header title={"Collection"} /> */}
