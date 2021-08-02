@@ -15,10 +15,10 @@ import Style from "./NavBarCell.less";
 
 export default function NavBarCell(props) {
   const dispatch = useDispatch();
-  const history = useHistory();
-  const onBack = useCallback(() => {
-    history.goBack();
-  }, [history]);
+  // const history = useHistory();
+  // const onBack = useCallback(() => {
+  //   history.goBack();
+  // }, [history]);
 
   const handleAction = useCallback(() => {
     console.log("handleAction");
