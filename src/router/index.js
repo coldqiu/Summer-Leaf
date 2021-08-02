@@ -23,6 +23,11 @@ const list = [
     name: "collection",
     component: lazy(() => import("../views/Collection/index.jsx")),
   },
+  {
+    path: "/search",
+    name: "search",
+    component: lazy(() => import("../views/Search/index.jsx")),
+  },
   // {
   //   path: "/detail/:id",
   //   name: "detail",

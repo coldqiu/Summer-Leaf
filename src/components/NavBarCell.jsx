@@ -15,10 +15,10 @@ import Style from "./NavBarCell.less";
 
 export default function NavBarCell(props) {
   const dispatch = useDispatch();
-  // const history = useHistory();
-  // const onBack = useCallback(() => {
-  //   history.goBack();
-  // }, [history]);
+  const history = useHistory();
+  const goToSearch = useCallback(() => {
+    history.push("/search");
+  }, [history]);
 
   const handleAction = useCallback(() => {
     console.log("handleAction");
@@ -35,7 +35,7 @@ export default function NavBarCell(props) {
   const align = {};
 
   const rightMenu = [
-    { icon: "icon-add" },
+    { icon: "icon-add", onClick: () => goToSearch() },
     {
       icon: "icon-arrow-right",
       onClick: handleAction,
