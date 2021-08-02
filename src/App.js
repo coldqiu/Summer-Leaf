@@ -2,8 +2,10 @@ import React, { Suspense } from "react";
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import routers from "./router/index.js";
 
-import MHeader from "./components/Header/index.js";
+// import MHeader from "./components/Header/index.js";
+import NavBarCell from "@/components/NavBarCell.jsx";
 import MSiderBar from "./components/Sidebar/index.js";
+
 // import MPlayer from "./components/Player/index.js";
 
 import "./App.css";
@@ -13,7 +15,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <MSiderBar />
-        <MHeader title={"MHeader title"}></MHeader>
+        {/* <MHeader title={"MHeader title"}></MHeader> */}
+        <NavBarCell />
         <Suspense fallback={<h1>loading</h1>}>
           <Switch>
             <Route exact path="/" render={() => <Redirect to="/song" />} />

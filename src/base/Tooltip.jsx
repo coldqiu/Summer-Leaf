@@ -33,6 +33,7 @@ export default function Tooltip(props) {
   };
   return (
     // Fragment key 是唯一可以传递给 Fragment 的属性。未来我们可能会添加对其他属性的支持，例如事件。
+    // (prpos.children) Icon上的点击 冒泡到Tooltip上
     <div onClick={(e) => onClick(e)} style={{ height: "100%" }}>
       {visible
         ? createPortal(

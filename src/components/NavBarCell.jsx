@@ -1,5 +1,8 @@
-import { useCallback, Fragment, forwardRef, useState } from "react";
+import { useCallback, Fragment } from "react";
 import { useHistory } from "react-router";
+import { useDispatch } from "react-redux";
+
+import { ToggleSiderBar } from "@/state/action";
 
 // import Tooltip from "rmc-tooltip";
 // import "rmc-tooltip/assets/bootstrap.css";
@@ -10,14 +13,12 @@ import NavBar from "@/base/NavBar";
 import Icon from "@/base/Icon";
 import Style from "./NavBarCell.less";
 
-export default function NavBarNode(props) {
+export default function NavBarCell(props) {
+  const dispatch = useDispatch();
   const history = useHistory();
   const onBack = useCallback(() => {
     history.goBack();
   }, [history]);
-  const goToSearch = useCallback(() => {
-    console.log("this.is.goToSearch");
-  }, []);
 
   const handleAction = useCallback(() => {
     console.log("handleAction");
@@ -34,7 +35,7 @@ export default function NavBarNode(props) {
   const align = {};
 
   const rightMenu = [
-    { icon: "icon-add", onClick: goToSearch },
+    { icon: "icon-add" },
     {
       icon: "icon-arrow-right",
       onClick: handleAction,
@@ -47,7 +48,7 @@ export default function NavBarNode(props) {
     console.log("this.is actions clickOverlayItem", item);
   }
 
-  const leftMenu = [{ icon: "icon-add", onClick: onBack }];
+  const leftMenu = [{ icon: "icon-add", onClick: () => dispatch(ToggleSiderBar()) }];
 
   return (
     <NavBar
