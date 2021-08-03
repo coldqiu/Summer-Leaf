@@ -1,6 +1,6 @@
 import { useCallback, Fragment } from "react";
 import { useHistory } from "react-router";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { ToggleSiderBar } from "@/state/action";
 
@@ -14,6 +14,7 @@ import Icon from "@/base/Icon";
 import Style from "./NavBarCell.less";
 
 export default function NavBarCell(props) {
+  const actions = useSelector((state) => state.actions);
   const dispatch = useDispatch();
   const history = useHistory();
   const goToSearch = useCallback(() => {
@@ -26,11 +27,11 @@ export default function NavBarCell(props) {
   const clickMask = useCallback(() => {
     console.log("this.is clickMask");
   }, []);
-  const actions = [
-    { title: "title1", click: clickOverlayItem },
-    { title: "title2", click: clickOverlayItem },
-    { title: "title1", click: clickOverlayItem },
-  ];
+  // const actions = [
+  //   { title: "title1", click: clickOverlayItem },
+  //   { title: "title2", click: clickOverlayItem },
+  //   { title: "title1", click: clickOverlayItem },
+  // ];
   //   const align = { top: 10, left: -10 };
   const align = {};
 

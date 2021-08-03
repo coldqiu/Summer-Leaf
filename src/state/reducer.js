@@ -3,6 +3,7 @@ import { ActionTypes } from "./action";
 const initialState = {
   bool: false,
   // title: "",
+  actions: [],
 };
 
 export default function reducer(state = initialState, action) {
@@ -11,6 +12,12 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         bool: !state.bool,
+      };
+    }
+    case ActionTypes.SetActions: {
+      return {
+        ...state,
+        actions: action.actions,
       };
     }
     default:

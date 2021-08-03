@@ -64,6 +64,7 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-transition-group": "^4.4.2",
+    "react-use": "^17.2.4",
     "redux": "^4.1.0",
     "resolve": "1.18.1",
     "resolve-url-loader": "^3.1.2",

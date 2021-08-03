@@ -1,22 +1,16 @@
 import { lazy } from "react";
 const list = [
-  // {
-  //   path: "/counter",
-  //   name: "counter",
-  //   component: lazy(() => import("../hooks/counter.js")),
-  // },
   {
     path: "/song",
     name: "song",
     component: lazy(() => import("../views/Song/index.jsx")),
-    children: [
-      {
-        // path: "/detail/:id",
-        path: "/:id",
-        name: "song-detail",
-        component: lazy(() => import("../views/Detail")),
-      },
-    ],
+    // children: [
+    //   {
+    //     path: "/:id",
+    //     name: "song-detail",
+    //     component: lazy(() => import("../views/Detail")),
+    //   },
+    // ],
   },
   {
     path: "/collection",
@@ -28,11 +22,11 @@ const list = [
     name: "search",
     component: lazy(() => import("../views/Search/index.jsx")),
   },
-  // {
-  //   path: "/detail/:id",
-  //   name: "detail",
-  //   component: lazy(() => import("../views/Detail")),
-  // },
+  {
+    path: "/song/:id",
+    name: "detail",
+    component: lazy(() => import("../views/Detail")),
+  },
 ];
 
 export default list;

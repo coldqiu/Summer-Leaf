@@ -1,15 +1,11 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { Tabs } from "rmc-tabs";
 import Style from "./index.less";
 import "./tab.css";
 import "rmc-tabs/assets/index.css";
 
 // console.log("DefaultTabBar", <DefaultTabBar></DefaultTabBar>);
-export default function MyList({ tabs }) {
-  function onTabClick(object) {}
-
-  function onChange(object) {}
-
+export function MyList({ tabs, onTabClick, onChange }, ref) {
   return (
     <div>
       <Tabs
@@ -29,6 +25,7 @@ export default function MyList({ tabs }) {
         tabBarActiveTextColor={"red"}
         tabBarTextStyle={tabsBar}
         tabBarUnderlineStyle={tabBarUnderlineStyle}
+        ref={ref}
       >
         {tabs.map((item) => {
           return (
@@ -42,10 +39,7 @@ export default function MyList({ tabs }) {
   );
 }
 
-// const tabsBar = (React.CSSProperties = {
-//   width: "600",
-//   background: "red",
-// });
+export default forwardRef(MyList);
 
 const tabsBar = {
   width: "600px",
