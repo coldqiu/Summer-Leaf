@@ -1,9 +1,8 @@
-import { useCallback, useEffect, useRef, useState, useLayoutEffect } from "react";
-import { Route, useHistory, useLocation } from "react-router-dom";
-// import { useLocation } from "react-router";
+import { useCallback, useRef, useState } from "react";
+import { Route, useHistory } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import { useDispatch } from "react-redux";
-import { useSearchParam, useMount } from "react-use";
+import { useSearchParam, useScroll } from "react-use";
 
 import TabList from "../../components/TabList";
 import Style from "./index.less";
@@ -12,18 +11,27 @@ import { songList, singerList, albumnList } from "../../mock/list";
 
 import { SetActions } from "../../state/action";
 import { actions } from "./config";
+import Detail from "../Detail";
+
+console.log("songList", songList);
 
 // 每个页面下的tab 都有详情页， 是否可以将详情页，从页面内拿出来；让URL简洁好看点；
-// 当前song页下的detail依赖了song页组件<TabList>中的点击事件传递的信息（dom大小位置，和item.id）
+// 当前song页下的detail依赖了song页组件<TabList>中的点击事件传递的信息（dom大小位置，和item.id）以及一个控制 Detail visible的变量
+{
+  /* <Detail
+  {...props}
+  state={cache.current.position}
+  item={cache.current.item}
+  visible={detailVisible}
+/>; */
+}
 
-import Detail from "../Detail";
 // 路由动画能实现的根本原因 `Route render: func` 无论路由是否匹配，函数都会运行
 export default function Song(porps) {
   const cache = useRef({ position: null, item: null });
   const history = useHistory();
   // console.log("song history", history);
   const [detailVisible, setDetailVisible] = useState("visible");
-  const location = useLocation();
   const dispatch = useDispatch();
   let currentTab = useSearchParam("tab") || "song";
   const tabRef = useRef(null);
@@ -42,6 +50,7 @@ export default function Song(porps) {
   );
 
   const onExit = useCallback((e) => {
+    debugger;
     const { position } = cache.current;
     console.log("e", e);
     const dom = e.children[0].children[0];
@@ -62,7 +71,7 @@ export default function Song(porps) {
       key: "song",
       title: "song",
       component: Grid,
-      comProps: { list: songList, click: (item, pos) => onClick(item, pos) },
+      comProps: { list: songList.list, click: (item, pos) => onClick(item, pos) },
     },
     { key: "singer", title: "singer", component: Grid, comProps: { list: singerList } },
     { key: "albumn", title: "albumn", component: Grid, comProps: { list: albumnList } },
@@ -84,8 +93,10 @@ export default function Song(porps) {
     },
     [history]
   );
+
+  const pageRef = useRef(null);
   return (
-    <div className={Style.song}>
+    <div className={Style.song} ref={pageRef}>
       <TabList
         tabs={tabs}
         onTabClick={(tab, index) => onTabClick(tab, index)}

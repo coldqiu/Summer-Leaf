@@ -168,6 +168,7 @@
     "less": "^4.1.1",
     "less-loader": "^7.3.0",
     "less-plugin-autoprefix": "^2.0.0",
+    "mockjs": "^1.1.0",
     "px2rem-loader": "^0.1.9",
     "svg-sprite-loader": "^6.0.9"
   }

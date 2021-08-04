@@ -1,7 +1,11 @@
+import { string } from "bfj/src/events";
+
+const Mock = require("mockjs");
+
 function getImg(imgName) {
   return require(`@/assets/img/${imgName}.jpg`).default;
 }
-export const songList = [
+export const songList1 = [
   {
     id: 1,
     type: "song",
@@ -40,6 +44,39 @@ export const songList = [
     type: "song",
     title: "D",
     coverPic: getImg(3),
+  },
+  {
+    id: 5,
+    type: "song",
+    title: "song A",
+    coverPic: getImg(3),
+    info: {
+      title: "title 123456789032343531111333",
+      left: "left xx xxyyxxyyxxzasdfaasdf",
+      right: "2文章",
+    },
+  },
+  {
+    id: 6,
+    type: "song",
+    title: "song A",
+    coverPic: getImg(3),
+    info: {
+      title: "title 123456789032343531111333",
+      left: "left xx xxyyxxyyxxzasdfaasdf",
+      right: "2文章",
+    },
+  },
+  {
+    id: 7,
+    type: "song",
+    title: "song A",
+    coverPic: getImg(3),
+    info: {
+      title: "title 123456789032343531111333",
+      left: "left xx xxyyxxyyxxzasdfaasdf",
+      right: "2文章",
+    },
   },
 ];
 
@@ -94,3 +131,32 @@ export const detailList = [
     right: "3文章",
   },
 ];
+
+let template = {
+  id: 1,
+  type: "song",
+  title: "song A",
+  coverPic: getImg(3),
+  info: {
+    title: "title 123456789032343531111333",
+    left: "left xx xxyyxxyyxxzasdfaasdf",
+    right: "2文章",
+  },
+};
+
+export const songList = Mock.mock({
+  "list|1-100": [
+    {
+      "id|+1": 1,
+      type: "@sentence",
+      "title|": "@paragraph",
+      // "coverPic|": getImg(parseInt(Math.random() * 7)),
+      "coverPic|": getImg(Mock.Random.natural(1, 6)),
+      "info|": {
+        title: "@paragraph",
+        left: "@name",
+        right: parseInt(Math.random() * 100),
+      },
+    },
+  ],
+});

@@ -2,7 +2,6 @@ import { ActionTypes } from "./action";
 
 const initialState = {
   bool: false,
-  // title: "",
   actions: [],
 };
 

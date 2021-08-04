@@ -10,7 +10,6 @@ export function MyList({ tabs, onTabClick, onChange, activeTab }, ref) {
     <div>
       <Tabs
         tabs={tabs}
-        initalPage={2}
         onTabClick={onTabClick}
         onChange={onChange}
         tabBarPosition={"top"}
