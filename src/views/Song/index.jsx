@@ -80,6 +80,7 @@ export default function Song(porps) {
   const onChange = useCallback(
     (tab, index) => {
       history.push(`/song?tab=${tab.title}`);
+      dispatch(SetActions(actions[tab.title]));
     },
     [history]
   );
