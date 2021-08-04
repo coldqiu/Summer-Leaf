@@ -5,12 +5,12 @@ import "./tab.css";
 import "rmc-tabs/assets/index.css";
 
 // console.log("DefaultTabBar", <DefaultTabBar></DefaultTabBar>);
-export function MyList({ tabs, onTabClick, onChange }, ref) {
+export function MyList({ tabs, onTabClick, onChange, activeTab }, ref) {
   return (
     <div>
       <Tabs
         tabs={tabs}
-        initalPage={"t2"}
+        initalPage={2}
         onTabClick={onTabClick}
         onChange={onChange}
         tabBarPosition={"top"}
@@ -26,6 +26,8 @@ export function MyList({ tabs, onTabClick, onChange }, ref) {
         tabBarTextStyle={tabsBar}
         tabBarUnderlineStyle={tabBarUnderlineStyle}
         ref={ref}
+        // activeTab={activeTab}
+        page={activeTab}
       >
         {tabs.map((item) => {
           return (
