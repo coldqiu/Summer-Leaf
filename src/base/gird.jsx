@@ -35,7 +35,7 @@ export function GridItem({ item, click }) {
   return (
     <li onClick={() => handleClick(item)} key={item.title} className={Style.li}>
       {/* // 点击时记录【图片】位置 ，即Detail 动画初始位置 */}
-      <img ref={ref} src={item.coverPic} alt={item.coverPic} />
+      <img ref={ref} src={item.coverPic1} alt={item.coverPic} />
       <List info={item.info ? item.info : { title: "default title", left: "xx", right: " yy" }}></List>
     </li>
   );

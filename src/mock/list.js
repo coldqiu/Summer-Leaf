@@ -145,7 +145,7 @@ let template = {
 };
 
 export const songList = Mock.mock({
-  "list|1-100": [
+  "list|100": [
     {
       "id|+1": 1,
       type: "@sentence",

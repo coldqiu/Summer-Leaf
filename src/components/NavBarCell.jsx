@@ -36,9 +36,9 @@ export default function NavBarCell(props) {
   const align = {};
 
   const rightMenu = [
-    { icon: "icon-add", onClick: () => goToSearch() },
+    { icon: "icon-attachment", onClick: () => goToSearch() },
     {
-      icon: "icon-arrow-right",
+      icon: "icon-menu",
       onClick: handleAction,
       clickMask,
       overlay: <OverlayNode actions={actions} />,
@@ -49,7 +49,9 @@ export default function NavBarCell(props) {
     console.log("this.is actions clickOverlayItem", item);
   }
 
-  const leftMenu = [{ icon: "icon-add", onClick: () => dispatch(ToggleSiderBar()) }];
+  const leftMenu = [
+    { icon: "icon-toggle-left", onClick: () => dispatch(ToggleSiderBar()) },
+  ];
 
   return (
     <NavBar
