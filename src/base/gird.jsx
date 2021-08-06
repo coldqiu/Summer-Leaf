@@ -8,15 +8,18 @@ import List from "./list";
 
 export default function Grid({ list = [], click }) {
   const { width: htmlClientWidth } = useWindowSize();
-  const gridItemHeight = htmlClientWidth / 2 + ((120 / 75) * htmlClientWidth) / 10;
+  // const imgHeight = htmlClientWidth / 2;
+  // const listHeight = (120 / 75) * htmlClientWidth / 10;
+  // const topMargin = 4;
+  const gridItemHeight = htmlClientWidth / 2 + ((120 / 75) * htmlClientWidth) / 10 + 4;
 
   const vlist = (
     <VirtualList
       width="100%"
-      height={"100vh"}
+      height={"100%"}
       itemCount={Math.ceil(list.length / 2)}
       itemSize={gridItemHeight}
-      // overscanCount={10}
+      overscanCount={4}
       // estimatedItemSize={1}
       renderItem={({ index, style }) => {
         return (

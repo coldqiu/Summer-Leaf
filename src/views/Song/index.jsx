@@ -8,6 +8,7 @@ import TabList from "../../components/TabList";
 import Style from "./index.less";
 import Grid from "../../base/gird.jsx";
 import { songList, singerList, albumnList } from "../../mock/list";
+import useLockElementScroll from "../../hooks/useLockElementScroll";
 
 import { SetActions } from "../../state/action";
 import { actions } from "./config";
@@ -17,34 +18,41 @@ import { AppContext } from "@/App.js";
 // 每个页面下的tab 都有详情页， 是否可以将详情页，从页面内拿出来；让URL简洁好看点；
 // 当前song页下的detail依赖了song页组件<TabList>中的点击事件传递的信息（dom大小位置，和item.id）以及一个控制 Detail visible的变量
 
-// 路由动画能实现的根本原因 `Route render: func` 无论路由是否匹配，函数都会运行
 export default function Song(props) {
   const appRef = useContext(AppContext);
   console.log("appRef", appRef);
-  // console.log("Song props", props);
 
   const [locked, toggleLocked] = useToggle(true);
-  // useLockBodyScroll(locked);
+
+  useLockElementScroll(locked);
   const cache = useRef({ position: null, item: null });
   const history = useHistory();
   const [detailVisible, setDetailVisible] = useState("visible");
   const dispatch = useDispatch();
   let currentTab = useSearchParam("tab") || "song";
-  // const tabRef = useRef(null);
   const contentRef = useRef(null);
   const tabRef = useCallback((node) => {
     if (node) {
-      console.log("tabRef node", node);
+      console.log("tabcontentRef node", node.children[0].children[0]);
       contentRef.current = node;
     }
   });
-  const { x, y } = useScroll(contentRef);
+  const { x, y } = useScroll(appRef);
   console.log("body x y", x, y);
   useEffect(() => {
-    console.log("body x y", x, y);
-  });
+    // console.log(contentRef.current.children[0].children[0])
+    console.log("locked", locked);
+    locked
+      ? (contentRef.current.children[0].children[0].style.overflow = "hidden")
+      : (contentRef.current.children[0].children[0].style.overflow = "auto");
 
-  // debugger;
+    console.log(
+      "contentRef.current.children[0].children[0].style.overflow",
+      contentRef.current.children[0].children[0]
+      // 拿到的是是渲染中的 dom ,不是 实时的；
+    );
+  }, [locked, contentRef]);
+
   // 默认song, tab变化反应在路由上，暂时放在 查询条件上， 但和当前详情页的 param 形式冲突；
 
   const onClick = useCallback(
