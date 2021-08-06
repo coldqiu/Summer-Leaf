@@ -4,7 +4,8 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import store from "./state/store";
 
-import "lib-flexible";
+// import "lib-flexible";
+import "amfe-flexible";
 import "./index.css";
 import "./assets/font/iconfont.css";
 import App from "./App";

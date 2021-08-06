@@ -58,9 +58,7 @@ export default function Song(props) {
   );
 
   const onExit = useCallback((e) => {
-    debugger;
     const { position } = cache.current;
-    console.log("e", e);
     const dom = e.children[0].children[0];
 
     dom.style.width = `${position[2]}px`;

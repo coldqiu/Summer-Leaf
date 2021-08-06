@@ -151,11 +151,11 @@ export const songList = Mock.mock({
       type: "@sentence",
       "title|": "@paragraph",
       // "coverPic|": getImg(parseInt(Math.random() * 7)),
-      "coverPic|": getImg(Mock.Random.natural(1, 6)),
+      "coverPic|": getImg(3),
       "info|": {
         title: "@paragraph",
         left: "@name",
-        right: parseInt(Math.random() * 100),
+        "right|+1": 1,
       },
     },
   ],

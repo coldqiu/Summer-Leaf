@@ -1,39 +1,47 @@
 //
-import { useEffect, useCallback, useState } from "react";
+import { useEffect, useCallback, useState, Fragment } from "react";
 import VirtualList from "react-tiny-virtual-list";
+import { useWindowSize } from "react-use";
 
 import Style from "./grid.less";
 import List from "./list";
 
 export default function Grid({ list = [], click }) {
-  const arr = list.map((item) => <GridItem item={item} key={item.title} click={click} />);
-  console.log("list.lenght", list.length);
+  const { width: htmlClientWidth } = useWindowSize();
+  const gridItemHeight = htmlClientWidth / 2 + ((120 / 75) * htmlClientWidth) / 10;
+
   const vlist = (
     <VirtualList
       width="100%"
-      height={870}
-      itemCount={list.length}
-      itemSize={105}
+      height={"100vh"}
+      itemCount={Math.ceil(list.length / 2)}
+      itemSize={gridItemHeight}
       // overscanCount={10}
       // estimatedItemSize={1}
-      renderItem={({ index, style }) => (
-        // <div key={index} style={style}>
-        //   Letter: {list[index]}, Row: #{index}
-        // </div>
-        <GridItem item={list[index]} key={list[index].title} click={click} style={style}>
-          index:{index}
-        </GridItem>
-      )}
+      renderItem={({ index, style }) => {
+        return (
+          <div key={index} style={style}>
+            <GridItem item={list[2 * index]} click={click}></GridItem>
+            <GridItem item={list[2 * index + 1]} click={click}></GridItem>
+          </div>
+        );
+      }}
     ></VirtualList>
   );
-  // return <ul className={Style.ul}>{arr}</ul>;
   return <ul className={Style.ul}>{vlist}</ul>;
 }
 
-export function GridItem({ item, click, style }) {
+export function GridItem({ item, click }) {
   const [dom, setDom] = useState(null);
+  const [liDom, setLiDom] = useState(null);
   const ref = useCallback((node) => {
     setDom(node);
+  }, []);
+
+  const liRef = useCallback((node) => {
+    if (node) {
+      setLiDom(node);
+    }
   }, []);
 
   const handleClick = useCallback(() => {
@@ -54,14 +62,9 @@ export function GridItem({ item, click, style }) {
   }, []);
 
   return (
-    <li
-      onClick={() => handleClick(item)}
-      key={item.title}
-      className={Style.li}
-      style={style}
-    >
+    <li onClick={() => handleClick(item)} key={item.title} className={Style.li}>
       {/* // 点击时记录【图片】位置 ，即Detail 动画初始位置 */}
-      <img ref={ref} src={item.coverPic1} alt={item.coverPic} />
+      <img ref={ref} src={item.coverPic} alt={item.coverPic} />
       <List
         info={
           item.info ? item.info : { title: "default title", left: "xx", right: " yy" }
