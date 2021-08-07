@@ -1,14 +1,13 @@
-import { useCallback, useRef, useState, forwardRef, useContext, useEffect } from "react";
+import { useCallback, useRef, useState, useContext } from "react";
 import { Route, useHistory } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import { useDispatch } from "react-redux";
-import { useSearchParam, useScroll, useToggle, useLockBodyScroll } from "react-use";
+import { useSearchParam, useWindowSize } from "react-use";
 
 import TabList from "../../components/TabList";
 import Style from "./index.less";
 import Grid from "../../base/gird.jsx";
 import { songList, singerList, albumnList } from "../../mock/list";
-import useLockElementScroll from "../../hooks/useLockElementScroll";
 
 import { SetActions } from "../../state/action";
 import { actions } from "./config";
@@ -20,11 +19,8 @@ import { AppContext } from "@/App.js";
 
 export default function Song(props) {
   const appRef = useContext(AppContext);
-  console.log("appRef", appRef);
-
-  const [locked, toggleLocked] = useToggle(true);
-
-  useLockElementScroll(locked);
+  const [preScrollTop, setPreScrollTop] = useState(0); // 上一次滚动事件触发的 scrollTop, 用于检测滚动方向
+  const [translateY, setTranslateY] = useState(0);
   const cache = useRef({ position: null, item: null });
   const history = useHistory();
   const [detailVisible, setDetailVisible] = useState("visible");
@@ -33,25 +29,25 @@ export default function Song(props) {
   const contentRef = useRef(null);
   const tabRef = useCallback((node) => {
     if (node) {
-      console.log("tabcontentRef node", node.children[0].children[0]);
       contentRef.current = node;
     }
-  });
-  const { x, y } = useScroll(appRef);
-  console.log("body x y", x, y);
-  useEffect(() => {
-    // console.log(contentRef.current.children[0].children[0])
-    console.log("locked", locked);
-    locked
-      ? (contentRef.current.children[0].children[0].style.overflow = "hidden")
-      : (contentRef.current.children[0].children[0].style.overflow = "auto");
+  }, []);
+  const { width: htmlClientWidth } = useWindowSize();
 
-    console.log(
-      "contentRef.current.children[0].children[0].style.overflow",
-      contentRef.current.children[0].children[0]
-      // 拿到的是是渲染中的 dom ,不是 实时的；
-    );
-  }, [locked, contentRef]);
+  const navBarCellHeight = ((100 / 75) * htmlClientWidth) / 10;
+
+  const virtualListScroll = useCallback(
+    (scrollTop, e, virtualListRef) => {
+      // onScroll 设置了passive: true 不可以调用preventDefault
+      setPreScrollTop(scrollTop);
+
+      let direction = scrollTop - preScrollTop; // 滚动方向 滚动多少
+      let distance = translateY - direction < 0 ? translateY - direction : 0;
+      setTranslateY(Math.abs(distance) < navBarCellHeight ? distance : -navBarCellHeight);
+      appRef.current.style.transform = `translate(0, ${translateY}px)`;
+    },
+    [appRef, navBarCellHeight, preScrollTop, translateY]
+  );
 
   // 默认song, tab变化反应在路由上，暂时放在 查询条件上， 但和当前详情页的 param 形式冲突；
 
@@ -85,14 +81,14 @@ export default function Song(props) {
       key: "song",
       title: "song",
       component: Grid,
-      comProps: { list: songList.list, click: (item, pos) => onClick(item, pos) },
+      comProps: { list: songList.list, click: (item, pos) => onClick(item, pos), virtualListScroll },
     },
     { key: "singer", title: "singer", component: Grid, comProps: { list: singerList } },
-    { key: "albumn", title: "albumn", component: Grid, comProps: { list: albumnList } },
+    { key: "albumn", title: "albumn", component: Grid, comProps: { list: albumnList, virtualListScroll } },
   ];
 
   const onTabClick = useCallback((tab, index) => {
-    console.log("onTabClick", tab, index);
+    // console.log("onTabClick", tab, index);
   }, []);
   const titleToIndex = {
     song: 0,
@@ -105,7 +101,7 @@ export default function Song(props) {
       history.push(`/song?tab=${tab.title}`);
       dispatch(SetActions(actions[tab.title]));
     },
-    [history]
+    [history, dispatch]
   );
 
   const pageRef = useRef(null);
@@ -120,19 +116,8 @@ export default function Song(props) {
       ></TabList>
       <Route path={"/song/:id"} exact={false}>
         {(props) => (
-          <CSSTransition
-            in={props.match != null}
-            timeout={500}
-            classNames="page"
-            unmountOnExit
-            onExit={onExit}
-          >
-            <Detail
-              {...props}
-              state={cache.current.position}
-              item={cache.current.item}
-              visible={detailVisible}
-            />
+          <CSSTransition in={props.match != null} timeout={500} classNames="page" unmountOnExit onExit={onExit}>
+            <Detail {...props} state={cache.current.position} item={cache.current.item} visible={detailVisible} />
           </CSSTransition>
         )}
       </Route>

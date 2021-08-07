@@ -1,5 +1,3 @@
-import { string } from "bfj/src/events";
-
 const Mock = require("mockjs");
 
 function getImg(imgName) {
@@ -131,18 +129,6 @@ export const detailList = [
     right: "3文章",
   },
 ];
-
-let template = {
-  id: 1,
-  type: "song",
-  title: "song A",
-  coverPic: getImg(3),
-  info: {
-    title: "title 123456789032343531111333",
-    left: "left xx xxyyxxyyxxzasdfaasdf",
-    right: "2文章",
-  },
-};
 
 export const songList = Mock.mock({
   "list|100": [

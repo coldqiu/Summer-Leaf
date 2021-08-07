@@ -45,13 +45,11 @@ export default function NavBarCell(props) {
       align: align,
     },
   ];
-  function clickOverlayItem(item) {
-    console.log("this.is actions clickOverlayItem", item);
-  }
+  // function clickOverlayItem(item) {
+  //   console.log("this.is actions clickOverlayItem", item);
+  // }
 
-  const leftMenu = [
-    { icon: "icon-toggle-left", onClick: () => dispatch(ToggleSiderBar()) },
-  ];
+  const leftMenu = [{ icon: "icon-toggle-left", onClick: () => dispatch(ToggleSiderBar()) }];
 
   return (
     <NavBar
