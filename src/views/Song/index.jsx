@@ -35,9 +35,10 @@ export default function Song(props) {
   const { width: htmlClientWidth } = useWindowSize();
 
   const navBarCellHeight = ((100 / 75) * htmlClientWidth) / 10;
-
   const virtualListScroll = useCallback(
     (scrollTop, e, virtualListRef) => {
+      console.log("preScrollTop, transLateY", preScrollTop, translateY);
+      
       // onScroll 设置了passive: true 不可以调用preventDefault
       setPreScrollTop(scrollTop);
 
@@ -83,8 +84,18 @@ export default function Song(props) {
       component: Grid,
       comProps: { list: songList.list, click: (item, pos) => onClick(item, pos), virtualListScroll },
     },
-    { key: "singer", title: "singer", component: Grid, comProps: { list: singerList } },
-    { key: "albumn", title: "albumn", component: Grid, comProps: { list: albumnList, virtualListScroll } },
+    {
+      key: "singer",
+      title: "singer",
+      component: Grid,
+      comProps: { list: singerList.list, click: (item, pos) => onClick(item, pos), virtualListScroll },
+    },
+    {
+      key: "albumn",
+      title: "albumn",
+      component: Grid,
+      comProps: { list: albumnList.list, click: (item, pos) => onClick(item, pos), virtualListScroll },
+    },
   ];
 
   const onTabClick = useCallback((tab, index) => {

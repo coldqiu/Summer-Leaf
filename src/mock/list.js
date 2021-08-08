@@ -78,36 +78,36 @@ export const songList1 = [
   },
 ];
 
-export const singerList = [
-  {
-    title: "singer A",
-    coverPic: getImg(2),
-  },
-  {
-    title: "B",
-    coverPic: getImg(2),
-  },
-  {
-    title: "C",
-    coverPic: getImg(2),
-  },
-  {
-    title: "D",
-    coverPic: getImg(2),
-  },
-];
+// export const singerList = [
+//   {
+//     title: "singer A",
+//     coverPic: getImg(2),
+//   },
+//   {
+//     title: "B",
+//     coverPic: getImg(2),
+//   },
+//   {
+//     title: "C",
+//     coverPic: getImg(2),
+//   },
+//   {
+//     title: "D",
+//     coverPic: getImg(2),
+//   },
+// ];
 
-export const albumnList = [
-  {
-    title: "albumn A",
-  },
-  {
-    title: "B",
-  },
-  {
-    title: "C",
-  },
-];
+// export const albumnList = [
+//   {
+//     title: "albumn A",
+//   },
+//   {
+//     title: "B",
+//   },
+//   {
+//     title: "C",
+//   },
+// ];
 
 export const detailList = [
   {
@@ -134,10 +134,44 @@ export const songList = Mock.mock({
   "list|100": [
     {
       "id|+1": 1,
-      type: "@sentence",
+      type: "song",
       "title|": "@paragraph",
       // "coverPic|": getImg(parseInt(Math.random() * 7)),
       "coverPic|": getImg(3),
+      "info|": {
+        title: "@paragraph",
+        left: "@name",
+        "right|+1": 1,
+      },
+    },
+  ],
+});
+
+export const singerList = Mock.mock({
+  "list|100": [
+    {
+      "id|+1": 1,
+      type: "singer",
+      "title|": "@paragraph",
+      // "coverPic|": getImg(parseInt(Math.random() * 7)),
+      "coverPic|": getImg(1),
+      "info|": {
+        title: "@paragraph",
+        left: "@name",
+        "right|+1": 1,
+      },
+    },
+  ],
+});
+
+export const albumnList = Mock.mock({
+  "list|100": [
+    {
+      "id|+1": 1,
+      type: "albumn",
+      "title|": "@paragraph",
+      // "coverPic|": getImg(parseInt(Math.random() * 7)),
+      "coverPic|": getImg(4),
       "info|": {
         title: "@paragraph",
         left: "@name",
