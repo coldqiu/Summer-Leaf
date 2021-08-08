@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState, useContext } from "react";
+import { useCallback, useRef, useState, useContext, useEffect } from "react";
 import { Route, useHistory } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import { useDispatch } from "react-redux";
@@ -33,22 +33,33 @@ export default function Song(props) {
     }
   }, []);
   const { width: htmlClientWidth } = useWindowSize();
-
+  const [isFirstScroll, setIsFirstScroll] = useState(true);
   const navBarCellHeight = ((100 / 75) * htmlClientWidth) / 10;
   const virtualListScroll = useCallback(
     (scrollTop, e, virtualListRef) => {
-      console.log("preScrollTop, transLateY", preScrollTop, translateY);
-      
+      console.log("scrollTop, preScrollTop, transLateY", scrollTop, preScrollTop, translateY);
       // onScroll 设置了passive: true 不可以调用preventDefault
-      setPreScrollTop(scrollTop);
+      // 多个tab页的滚动都会影响 顶部的fixed效果
 
+      // 切换 tabs 页的第一个滚动 仅设置preScrollTop
+      if (isFirstScroll) {
+        setPreScrollTop(scrollTop);
+        setIsFirstScroll(false);
+        return;
+      }
+
+      setPreScrollTop(scrollTop);
       let direction = scrollTop - preScrollTop; // 滚动方向 滚动多少
       let distance = translateY - direction < 0 ? translateY - direction : 0;
       setTranslateY(Math.abs(distance) < navBarCellHeight ? distance : -navBarCellHeight);
       appRef.current.style.transform = `translate(0, ${translateY}px)`;
     },
-    [appRef, navBarCellHeight, preScrollTop, translateY]
+    [appRef, navBarCellHeight, preScrollTop, translateY, isFirstScroll]
   );
+
+  useEffect(() => {
+    console.log("currentTab:", currentTab);
+  }, [currentTab]);
 
   // 默认song, tab变化反应在路由上，暂时放在 查询条件上， 但和当前详情页的 param 形式冲突；
 
@@ -111,6 +122,7 @@ export default function Song(props) {
     (tab, index) => {
       history.push(`/song?tab=${tab.title}`);
       dispatch(SetActions(actions[tab.title]));
+      setIsFirstScroll(true);
     },
     [history, dispatch]
   );
