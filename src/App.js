@@ -38,7 +38,7 @@ function App() {
         </BrowserRouter>
       </AppContext.Provider>
       {/* <MPlayer /> */}
-    </div>
+   </div>
   );
 }
 

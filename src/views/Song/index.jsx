@@ -8,6 +8,7 @@ import TabList from "../../components/TabList";
 import Style from "./index.less";
 import Grid from "../../base/gird.jsx";
 import { songList, singerList, albumnList } from "../../mock/list";
+import AlloyFinger from "alloyfinger";
 
 import { SetActions } from "../../state/action";
 import { actions } from "./config";
@@ -32,6 +33,27 @@ export default function Song(props) {
       contentRef.current = node;
     }
   }, []);
+  console.log("contentRef", contentRef);
+  // 待处理：初始状态的 tabs 页不能触发虚拟列表不能向下动，导致顶部fixed动画效果失效；
+  // AlloyFinger 和 虚拟列表的滚动不同时存在，how
+  // 顶部存在 fixed效果时 不触发虚拟列表的滚动；
+  // const fingerInstance = useCallback(() => {
+  //   new AlloyFinger(contentRef.current, {
+  //     pressMove: function (evt) {
+  //       console.log("evt", evt);
+  //     },
+  //   });
+  // }, [contentRef]);
+  // AlloyFinger 和虚拟列表的事件 相互影响
+  // contentRef 拿到的dom 似乎有问题
+  if (contentRef.current) {
+    new AlloyFinger(contentRef.current, {
+      pressMove: function (evt) {
+        console.log("evt", evt);
+      },
+    });
+  }
+
   const { width: htmlClientWidth } = useWindowSize();
   const [isFirstScroll, setIsFirstScroll] = useState(true);
   const navBarCellHeight = ((100 / 75) * htmlClientWidth) / 10;
