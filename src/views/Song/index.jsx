@@ -49,7 +49,7 @@ export default function Song(props) {
     console.log(
       "contentRef.current.children[0].children[0].style.overflow",
       contentRef.current.children[0].children[0]
-      // 拿到的是是渲染中的 dom ,不是 实时的；
+      // 拿到的是是渲染中某个最初时刻的 dom ,不是 实时的；
     );
   }, [locked, contentRef]);
 
