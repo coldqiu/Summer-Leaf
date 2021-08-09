@@ -44,12 +44,7 @@ export default function Song(props) {
   const navBarCellHeight = ((100 / 75) * htmlClientWidth) / 10;
   let virtualListScroll = useCallback(
     (scrollTop, e, virtualListRef) => {
-      console.log(
-        "virtualListScroll：scrollTop, preScrollTop, transLateY",
-        scrollTop,
-        preScrollTop,
-        translateY
-      );
+      console.log("virtualListScroll：scrollTop, preScrollTop, transLateY", scrollTop, preScrollTop, translateY);
       // handlePressMove();
       // onScroll 设置了passive: true 不可以调用preventDefault
       // 多个tab页的滚动都会影响 顶部的fixed效果
@@ -66,30 +61,26 @@ export default function Song(props) {
       let distance = translateY - direction < 0 ? translateY - direction : 0;
       setTranslateY(Math.abs(distance) < navBarCellHeight ? distance : -navBarCellHeight);
       appRef.current.style.transform = `translate(0, ${translateY}px)`;
-
-      // 切换tab for next problem
-      // let translateYLocal =
-      //   Math.abs(distance) < navBarCellHeight ? distance : -navBarCellHeight;
-      // setTranslateY(translateYLocal);
-      // appRef.current.style.transform = `translate(0, ${translateYLocal}px)`;
     },
     [appRef, navBarCellHeight, preScrollTop, translateY, isFirstScroll]
   );
 
-  console.log("htmlClientWidth oooo", htmlClientWidth);
-
-  let handlePressMove = useCallback(() => {
-    // console.log(" evt.deltaY", evt.deltaY);
-    console.log("translateY", translateY); // 作为 AlloyFinger事件的hander 需要在AlloyFinger实例化 时添加 变量做依赖
-    // 这个translateY 的之非常 奇怪， 而且 handlePressMove 触发频率太高了
-
-    // let distance = translateY + evt.deltaY < 0 ? translateY + evt.deltaY : 0;
-    // console.log("distance", distance);
-    // let nextTranslateY =
-    //   Math.abs(distance) < navBarCellHeight ? distance : -navBarCellHeight;
-    // setTranslateY(nextTranslateY);
-    // appRef.current.style.transform = `translate(0, ${nextTranslateY}px)`;
-  }, [translateY]);
+  const handlePressMove = useCallback(
+    (evt) => {
+      // 下拉加载跟多 也可能用的上
+      console.log("evt", evt.deltaY);
+      if (evt.deltaY > 0) {
+        const { top } = appRef.current.getBoundingClientRect();
+        console.log("top", top);
+        if (top < 0 && top >= -navBarCellHeight) {
+          let done = top + evt.deltaY > -navBarCellHeight ? top + evt.deltaY : -navBarCellHeight;
+          appRef.current.style.transform = `translate(0, ${done}px)`;
+          setTranslateY(done);
+        }
+      }
+    },
+    [appRef, navBarCellHeight]
+  );
 
   useEffect(() => {
     console.log("this.is useEffect");
@@ -97,7 +88,7 @@ export default function Song(props) {
     fingerInstance.on("pressMove", handlePressMove);
     // return fingerInstance.destroy();
     // 这样拿到的 translate
-  }, [contentRef, htmlClientWidth, translateY]);
+  }, [contentRef, htmlClientWidth, handlePressMove]);
 
   useEffect(() => {
     // console.log("currentTab:", currentTab);
@@ -197,19 +188,8 @@ export default function Song(props) {
       ></TabList>
       <Route path={"/song/:id"} exact={false}>
         {(props) => (
-          <CSSTransition
-            in={props.match != null}
-            timeout={500}
-            classNames="page"
-            unmountOnExit
-            onExit={onExit}
-          >
-            <Detail
-              {...props}
-              state={cache.current.position}
-              item={cache.current.item}
-              visible={detailVisible}
-            />
+          <CSSTransition in={props.match != null} timeout={500} classNames="page" unmountOnExit onExit={onExit}>
+            <Detail {...props} state={cache.current.position} item={cache.current.item} visible={detailVisible} />
           </CSSTransition>
         )}
       </Route>
