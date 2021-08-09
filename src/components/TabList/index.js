@@ -30,6 +30,7 @@ export function MyList({ tabs, onTabClick, onChange, activeTab }, ref) {
       {tabs.map((item) => {
         return (
           <div key={item.key} className={Style.content} ref={ref}>
+            {/* <div key={item.key} className={Style.content}> */}
             <item.component {...item.comProps} />
           </div>
         );

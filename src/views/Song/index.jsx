@@ -33,33 +33,24 @@ export default function Song(props) {
       contentRef.current = node;
     }
   }, []);
-  console.log("contentRef", contentRef);
   // 待处理：初始状态的 tabs 页不能触发虚拟列表不能向下动，导致顶部fixed动画效果失效；
   // AlloyFinger 和 虚拟列表的滚动不同时存在，how
   // 顶部存在 fixed效果时 不触发虚拟列表的滚动；
-  // const fingerInstance = useCallback(() => {
-  //   new AlloyFinger(contentRef.current, {
-  //     pressMove: function (evt) {
-  //       console.log("evt", evt);
-  //     },
-  //   });
-  // }, [contentRef]);
-  // AlloyFinger 和虚拟列表的事件 相互影响
-  // contentRef 拿到的dom 似乎有问题
-  if (contentRef.current) {
-    new AlloyFinger(contentRef.current, {
-      pressMove: function (evt) {
-        console.log("evt", evt);
-      },
-    });
-  }
+
+  // 使用contentRef 的offsetParent 添加 pressMove 事件，在 translateY < 0 时 响应 顶部fixed效果并 禁止虚拟列表的滚动；
 
   const { width: htmlClientWidth } = useWindowSize();
   const [isFirstScroll, setIsFirstScroll] = useState(true);
   const navBarCellHeight = ((100 / 75) * htmlClientWidth) / 10;
-  const virtualListScroll = useCallback(
+  let virtualListScroll = useCallback(
     (scrollTop, e, virtualListRef) => {
-      console.log("scrollTop, preScrollTop, transLateY", scrollTop, preScrollTop, translateY);
+      console.log(
+        "virtualListScroll：scrollTop, preScrollTop, transLateY",
+        scrollTop,
+        preScrollTop,
+        translateY
+      );
+      // handlePressMove();
       // onScroll 设置了passive: true 不可以调用preventDefault
       // 多个tab页的滚动都会影响 顶部的fixed效果
 
@@ -75,13 +66,44 @@ export default function Song(props) {
       let distance = translateY - direction < 0 ? translateY - direction : 0;
       setTranslateY(Math.abs(distance) < navBarCellHeight ? distance : -navBarCellHeight);
       appRef.current.style.transform = `translate(0, ${translateY}px)`;
+
+      // 切换tab for next problem
+      // let translateYLocal =
+      //   Math.abs(distance) < navBarCellHeight ? distance : -navBarCellHeight;
+      // setTranslateY(translateYLocal);
+      // appRef.current.style.transform = `translate(0, ${translateYLocal}px)`;
     },
     [appRef, navBarCellHeight, preScrollTop, translateY, isFirstScroll]
   );
 
+  console.log("htmlClientWidth oooo", htmlClientWidth);
+
+  let handlePressMove = useCallback(() => {
+    // console.log(" evt.deltaY", evt.deltaY);
+    console.log("translateY", translateY); // 作为 AlloyFinger事件的hander 需要在AlloyFinger实例化 时添加 变量做依赖
+    // 这个translateY 的之非常 奇怪， 而且 handlePressMove 触发频率太高了
+
+    // let distance = translateY + evt.deltaY < 0 ? translateY + evt.deltaY : 0;
+    // console.log("distance", distance);
+    // let nextTranslateY =
+    //   Math.abs(distance) < navBarCellHeight ? distance : -navBarCellHeight;
+    // setTranslateY(nextTranslateY);
+    // appRef.current.style.transform = `translate(0, ${nextTranslateY}px)`;
+  }, [translateY]);
+
   useEffect(() => {
-    console.log("currentTab:", currentTab);
+    console.log("this.is useEffect");
+    let fingerInstance = new AlloyFinger(contentRef.current.offsetParent, {});
+    fingerInstance.on("pressMove", handlePressMove);
+    // return fingerInstance.destroy();
+    // 这样拿到的 translate
+  }, [contentRef, htmlClientWidth, translateY]);
+
+  useEffect(() => {
+    // console.log("currentTab:", currentTab);
   }, [currentTab]);
+
+  //
 
   // 默认song, tab变化反应在路由上，暂时放在 查询条件上， 但和当前详情页的 param 形式冲突；
 
@@ -115,19 +137,31 @@ export default function Song(props) {
       key: "song",
       title: "song",
       component: Grid,
-      comProps: { list: songList.list, click: (item, pos) => onClick(item, pos), virtualListScroll },
+      comProps: {
+        list: songList.list,
+        click: (item, pos) => onClick(item, pos),
+        virtualListScroll,
+      },
     },
     {
       key: "singer",
       title: "singer",
       component: Grid,
-      comProps: { list: singerList.list, click: (item, pos) => onClick(item, pos), virtualListScroll },
+      comProps: {
+        list: singerList.list,
+        click: (item, pos) => onClick(item, pos),
+        virtualListScroll,
+      },
     },
     {
       key: "albumn",
       title: "albumn",
       component: Grid,
-      comProps: { list: albumnList.list, click: (item, pos) => onClick(item, pos), virtualListScroll },
+      comProps: {
+        list: albumnList.list,
+        click: (item, pos) => onClick(item, pos),
+        virtualListScroll,
+      },
     },
   ];
 
@@ -145,6 +179,8 @@ export default function Song(props) {
       history.push(`/song?tab=${tab.title}`);
       dispatch(SetActions(actions[tab.title]));
       setIsFirstScroll(true);
+      console.log("onChange translateY", translateY);
+      //  切换tabs 时的translateY 会被重置为 0 !? why
     },
     [history, dispatch]
   );
@@ -161,8 +197,19 @@ export default function Song(props) {
       ></TabList>
       <Route path={"/song/:id"} exact={false}>
         {(props) => (
-          <CSSTransition in={props.match != null} timeout={500} classNames="page" unmountOnExit onExit={onExit}>
-            <Detail {...props} state={cache.current.position} item={cache.current.item} visible={detailVisible} />
+          <CSSTransition
+            in={props.match != null}
+            timeout={500}
+            classNames="page"
+            unmountOnExit
+            onExit={onExit}
+          >
+            <Detail
+              {...props}
+              state={cache.current.position}
+              item={cache.current.item}
+              visible={detailVisible}
+            />
           </CSSTransition>
         )}
       </Route>
