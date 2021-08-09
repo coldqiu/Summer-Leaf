@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.isNavigator = exports.isBrowser = exports.off = exports.on = exports.noop = void 0;
 var noop = function () { };

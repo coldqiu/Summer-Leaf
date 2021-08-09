@@ -29,10 +29,7 @@ function preventDefault(rawEvent) {
   return false;
 }
 var isIosDevice =
-  isBrowser &&
-  window.navigator &&
-  window.navigator.platform &&
-  /iP(ad|hone|od)/.test(window.navigator.platform);
+  isBrowser && window.navigator && window.navigator.platform && /iP(ad|hone|od)/.test(window.navigator.platform);
 var bodies = new Map();
 var doc = typeof document === "object" ? document : undefined;
 var documentListenerAdded = false;
@@ -101,16 +98,19 @@ export default !doc
             unlock(body);
           }
         },
-        [locked, elementRef.current]
+        [locked, elementRef]
       );
       // clean up, on un-mount
-      useEffect(function () {
-        var body = getClosestBody(elementRef.current);
-        if (!body) {
-          return;
-        }
-        return function () {
-          unlock(body);
-        };
-      }, []);
+      useEffect(
+        function () {
+          var body = getClosestBody(elementRef.current);
+          if (!body) {
+            return;
+          }
+          return function () {
+            unlock(body);
+          };
+        },
+        [elementRef]
+      );
     };

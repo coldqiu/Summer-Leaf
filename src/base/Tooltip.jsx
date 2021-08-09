@@ -6,8 +6,6 @@ import Style from "./Tooltip.less";
 import collisionDetection from "@/utils/collisionDetection";
 
 export default function Tooltip(props) {
-  console.log("Tooltip props:", props);
-  // const [visible, setVisbile] = useState(props.visible ? props.visible : false);
   const [visible, setVisbile] = useState(false);
   const [triggerDom, setTriggerDom] = useState(null);
   const ref = useCallback(
@@ -20,7 +18,7 @@ export default function Tooltip(props) {
         overlayNode.style.cssText = `top: ${top}px; left: ${left}px`;
       }
     },
-    [triggerDom]
+    [triggerDom, props.align]
   );
   const onClick = (e) => {
     // debugger;

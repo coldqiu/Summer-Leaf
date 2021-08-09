@@ -1,14 +1,14 @@
-import { useCallback, useRef, useState, forwardRef, useContext, useEffect } from "react";
+import { useCallback, useRef, useState, useContext, useEffect } from "react";
 import { Route, useHistory } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import { useDispatch } from "react-redux";
-import { useSearchParam, useScroll, useToggle, useLockBodyScroll } from "react-use";
+import { useSearchParam, useWindowSize } from "react-use";
 
 import TabList from "../../components/TabList";
 import Style from "./index.less";
 import Grid from "../../base/gird.jsx";
 import { songList, singerList, albumnList } from "../../mock/list";
-import useLockElementScroll from "../../hooks/useLockElementScroll";
+import AlloyFinger from "alloyfinger";
 
 import { SetActions } from "../../state/action";
 import { actions } from "./config";
@@ -20,11 +20,8 @@ import { AppContext } from "@/App.js";
 
 export default function Song(props) {
   const appRef = useContext(AppContext);
-  console.log("appRef", appRef);
-
-  const [locked, toggleLocked] = useToggle(true);
-
-  useLockElementScroll(locked);
+  const [preScrollTop, setPreScrollTop] = useState(0); // 上一次滚动事件触发的 scrollTop, 用于检测滚动方向
+  const [translateY, setTranslateY] = useState(0);
   const cache = useRef({ position: null, item: null });
   const history = useHistory();
   const [detailVisible, setDetailVisible] = useState("visible");
@@ -33,25 +30,58 @@ export default function Song(props) {
   const contentRef = useRef(null);
   const tabRef = useCallback((node) => {
     if (node) {
-      console.log("tabcontentRef node", node.children[0].children[0]);
       contentRef.current = node;
     }
-  });
-  const { x, y } = useScroll(appRef);
-  console.log("body x y", x, y);
-  useEffect(() => {
-    // console.log(contentRef.current.children[0].children[0])
-    console.log("locked", locked);
-    locked
-      ? (contentRef.current.children[0].children[0].style.overflow = "hidden")
-      : (contentRef.current.children[0].children[0].style.overflow = "auto");
+  }, []);
+  console.log("contentRef", contentRef);
+  // 待处理：初始状态的 tabs 页不能触发虚拟列表不能向下动，导致顶部fixed动画效果失效；
+  // AlloyFinger 和 虚拟列表的滚动不同时存在，how
+  // 顶部存在 fixed效果时 不触发虚拟列表的滚动；
+  // const fingerInstance = useCallback(() => {
+  //   new AlloyFinger(contentRef.current, {
+  //     pressMove: function (evt) {
+  //       console.log("evt", evt);
+  //     },
+  //   });
+  // }, [contentRef]);
+  // AlloyFinger 和虚拟列表的事件 相互影响
+  // contentRef 拿到的dom 似乎有问题
+  if (contentRef.current) {
+    new AlloyFinger(contentRef.current, {
+      pressMove: function (evt) {
+        console.log("evt", evt);
+      },
+    });
+  }
 
-    console.log(
-      "contentRef.current.children[0].children[0].style.overflow",
-      contentRef.current.children[0].children[0]
-      // 拿到的是是渲染中某个最初时刻的 dom ,不是 实时的；
-    );
-  }, [locked, contentRef]);
+  const { width: htmlClientWidth } = useWindowSize();
+  const [isFirstScroll, setIsFirstScroll] = useState(true);
+  const navBarCellHeight = ((100 / 75) * htmlClientWidth) / 10;
+  const virtualListScroll = useCallback(
+    (scrollTop, e, virtualListRef) => {
+      console.log("scrollTop, preScrollTop, transLateY", scrollTop, preScrollTop, translateY);
+      // onScroll 设置了passive: true 不可以调用preventDefault
+      // 多个tab页的滚动都会影响 顶部的fixed效果
+
+      // 切换 tabs 页的第一个滚动 仅设置preScrollTop
+      if (isFirstScroll) {
+        setPreScrollTop(scrollTop);
+        setIsFirstScroll(false);
+        return;
+      }
+
+      setPreScrollTop(scrollTop);
+      let direction = scrollTop - preScrollTop; // 滚动方向 滚动多少
+      let distance = translateY - direction < 0 ? translateY - direction : 0;
+      setTranslateY(Math.abs(distance) < navBarCellHeight ? distance : -navBarCellHeight);
+      appRef.current.style.transform = `translate(0, ${translateY}px)`;
+    },
+    [appRef, navBarCellHeight, preScrollTop, translateY, isFirstScroll]
+  );
+
+  useEffect(() => {
+    console.log("currentTab:", currentTab);
+  }, [currentTab]);
 
   // 默认song, tab变化反应在路由上，暂时放在 查询条件上， 但和当前详情页的 param 形式冲突；
 
@@ -85,14 +115,24 @@ export default function Song(props) {
       key: "song",
       title: "song",
       component: Grid,
-      comProps: { list: songList.list, click: (item, pos) => onClick(item, pos) },
+      comProps: { list: songList.list, click: (item, pos) => onClick(item, pos), virtualListScroll },
     },
-    { key: "singer", title: "singer", component: Grid, comProps: { list: singerList } },
-    { key: "albumn", title: "albumn", component: Grid, comProps: { list: albumnList } },
+    {
+      key: "singer",
+      title: "singer",
+      component: Grid,
+      comProps: { list: singerList.list, click: (item, pos) => onClick(item, pos), virtualListScroll },
+    },
+    {
+      key: "albumn",
+      title: "albumn",
+      component: Grid,
+      comProps: { list: albumnList.list, click: (item, pos) => onClick(item, pos), virtualListScroll },
+    },
   ];
 
   const onTabClick = useCallback((tab, index) => {
-    console.log("onTabClick", tab, index);
+    // console.log("onTabClick", tab, index);
   }, []);
   const titleToIndex = {
     song: 0,
@@ -104,8 +144,9 @@ export default function Song(props) {
     (tab, index) => {
       history.push(`/song?tab=${tab.title}`);
       dispatch(SetActions(actions[tab.title]));
+      setIsFirstScroll(true);
     },
-    [history]
+    [history, dispatch]
   );
 
   const pageRef = useRef(null);
@@ -120,19 +161,8 @@ export default function Song(props) {
       ></TabList>
       <Route path={"/song/:id"} exact={false}>
         {(props) => (
-          <CSSTransition
-            in={props.match != null}
-            timeout={500}
-            classNames="page"
-            unmountOnExit
-            onExit={onExit}
-          >
-            <Detail
-              {...props}
-              state={cache.current.position}
-              item={cache.current.item}
-              visible={detailVisible}
-            />
+          <CSSTransition in={props.match != null} timeout={500} classNames="page" unmountOnExit onExit={onExit}>
+            <Detail {...props} state={cache.current.position} item={cache.current.item} visible={detailVisible} />
           </CSSTransition>
         )}
       </Route>

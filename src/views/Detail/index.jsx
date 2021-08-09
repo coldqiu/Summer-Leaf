@@ -26,7 +26,7 @@ export default function Detail(props) {
   const [x, y, width, height] = props.state ? props.state : location.state;
   // const [position, setPosition] = useState(null);
   const id = props.item ? props.item.id : parseInt(params.id);
-  const item = songList.filter((item) => item.id === id)[0];
+  const item = songList.list.filter((item) => item.id === id)[0];
   // 位置大小信息 id item 应该使用 缓存
 
   // useImperativeHandle(ref, () => {

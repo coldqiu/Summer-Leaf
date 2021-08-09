@@ -1,4 +1,4 @@
-import React, { Suspense, useRef, createContext, useCallback, useState } from "react";
+import React, { Suspense, useRef, createContext } from "react";
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import routers from "./router/index.js";
 
@@ -30,12 +30,7 @@ function App() {
               <Route exact path="/" render={() => <Redirect to="/song" />} />
               {routers.map((item) => {
                 return (
-                  <Route
-                    component={item.component}
-                    path={item.path}
-                    key={item.name}
-                    exact={item.exact || false}
-                  />
+                  <Route component={item.component} path={item.path} key={item.name} exact={item.exact || false} />
                 );
               })}
             </Switch>
@@ -43,7 +38,7 @@ function App() {
         </BrowserRouter>
       </AppContext.Provider>
       {/* <MPlayer /> */}
-    </div>
+   </div>
   );
 }
 
