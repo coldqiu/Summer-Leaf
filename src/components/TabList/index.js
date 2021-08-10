@@ -23,15 +23,16 @@ export function MyList({ tabs, onTabClick, onChange, activeTab }, ref) {
       tabBarActiveTextColor={"red"}
       tabBarTextStyle={tabsBar}
       tabBarUnderlineStyle={tabBarUnderlineStyle}
-      // ref={ref}
+      ref={ref}
       // activeTab={activeTab}
       page={activeTab}
     >
       {tabs.map((item) => {
         return (
-          <div key={item.key} className={Style.content} ref={ref}>
-            {/* <div key={item.key} className={Style.content}> */}
+          // <div key={item.key} className={Style.content} ref={ref}>
+          <div key={item.key} className={Style.content}>
             <item.component {...item.comProps} />
+            {/* <h1>{item.key}</h1> */}
           </div>
         );
       })}

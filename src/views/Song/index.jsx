@@ -44,7 +44,12 @@ export default function Song(props) {
   const navBarCellHeight = ((100 / 75) * htmlClientWidth) / 10;
   let virtualListScroll = useCallback(
     (scrollTop, e, virtualListRef) => {
-      console.log("virtualListScroll：scrollTop, preScrollTop, transLateY", scrollTop, preScrollTop, translateY);
+      console.log(
+        "virtualListScroll：scrollTop, preScrollTop, transLateY",
+        scrollTop,
+        preScrollTop,
+        translateY
+      );
       // handlePressMove();
       // onScroll 设置了passive: true 不可以调用preventDefault
       // 多个tab页的滚动都会影响 顶部的fixed效果
@@ -69,11 +74,44 @@ export default function Song(props) {
     (evt) => {
       // 下拉加载跟多 也可能用的上
       console.log("evt", evt.deltaY);
+      console.log("evt", evt);
+      // 向上 的PressMove 在fixed效果下 禁用虚拟列表的滚动；
+      // 向下 的PressMove 在fixed效果下 禁止虚拟列表滚动，
+      // fixed效果结束时 必须顺滑过渡到 虚拟列表下滑；
+      // fixed效果和虚拟列表下拉都结束时 做加载更多动画;
+
+      // AlloyFinger 底层用四个touch事件 组合模拟了 多个手势
+      const { top } = appRef.current.getBoundingClientRect();
+      console.log("contentRef.current", contentRef.current);
+      console.log(
+        "contentRef.current.layout.children[2].children[0]",
+        contentRef.current.layout.children[2].children[0]
+      );
+
+      if (top > -navBarCellHeight && top < 0) {
+        console.log("session 1 top:", top);
+        contentRef.current.layout.children[2].children[0].children[0].children[0].style.overflow =
+          "hidden";
+
+        // 这个设置 阻止了
+        // evt.stopPropagation();
+        // evt.stopImmediatePropagation();
+        // contentRef.current.children[0].children[0];
+      } else {
+        // contentRef.current.children[0].children[0].style.overflow = "hidden";
+        // console.log(
+        //   "contentRef.current.children[0].children[0]",
+        //   contentRef.current.children[0].children[0].style.overflow
+        // );
+      }
+      console.log("evt.deltaY", evt.deltaY);
+
       if (evt.deltaY > 0) {
-        const { top } = appRef.current.getBoundingClientRect();
+        // evt.stopPropagation();
         console.log("top", top);
         if (top < 0 && top >= -navBarCellHeight) {
-          let done = top + evt.deltaY > -navBarCellHeight ? top + evt.deltaY : -navBarCellHeight;
+          let done =
+            top + evt.deltaY > -navBarCellHeight ? top + evt.deltaY : -navBarCellHeight;
           appRef.current.style.transform = `translate(0, ${done}px)`;
           setTranslateY(done);
         }
@@ -84,7 +122,8 @@ export default function Song(props) {
 
   useEffect(() => {
     console.log("this.is useEffect");
-    let fingerInstance = new AlloyFinger(contentRef.current.offsetParent, {});
+    // let fingerInstance = new AlloyFinger(contentRef.current.offsetParent, {});
+    let fingerInstance = new AlloyFinger(contentRef.current.layout, {});
     fingerInstance.on("pressMove", handlePressMove);
     // return fingerInstance.destroy();
     // 这样拿到的 translate
@@ -92,6 +131,7 @@ export default function Song(props) {
 
   useEffect(() => {
     // console.log("currentTab:", currentTab);
+    // console.log("contentRef.current", contentRef.current.layout);
   }, [currentTab]);
 
   //
@@ -188,8 +228,19 @@ export default function Song(props) {
       ></TabList>
       <Route path={"/song/:id"} exact={false}>
         {(props) => (
-          <CSSTransition in={props.match != null} timeout={500} classNames="page" unmountOnExit onExit={onExit}>
-            <Detail {...props} state={cache.current.position} item={cache.current.item} visible={detailVisible} />
+          <CSSTransition
+            in={props.match != null}
+            timeout={500}
+            classNames="page"
+            unmountOnExit
+            onExit={onExit}
+          >
+            <Detail
+              {...props}
+              state={cache.current.position}
+              item={cache.current.item}
+              visible={detailVisible}
+            />
           </CSSTransition>
         )}
       </Route>
