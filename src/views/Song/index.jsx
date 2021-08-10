@@ -42,39 +42,34 @@ export default function Song(props) {
   const { width: htmlClientWidth } = useWindowSize();
   const [isFirstScroll, setIsFirstScroll] = useState(true);
   const navBarCellHeight = ((100 / 75) * htmlClientWidth) / 10;
+
+  const [fixedStatus, setFixedStatus] = useState(true);
+
   let virtualListScroll = useCallback(
     (scrollTop, e, virtualListRef) => {
-      console.log(
-        "virtualListScroll：scrollTop, preScrollTop, transLateY",
-        scrollTop,
-        preScrollTop,
-        translateY
-      );
-      // handlePressMove();
-      // onScroll 设置了passive: true 不可以调用preventDefault
-      // 多个tab页的滚动都会影响 顶部的fixed效果
+      if (!fixedStatus) {
+        // onScroll 设置了passive: true 不可以调用preventDefault
+        // 多个tab页的滚动都会影响 顶部的fixed效果
 
-      // 切换 tabs 页的第一个滚动 仅设置preScrollTop
-      if (isFirstScroll) {
+        // 切换 tabs 页的第一个滚动 仅设置preScrollTop
+        if (isFirstScroll) {
+          setPreScrollTop(scrollTop);
+          setIsFirstScroll(false);
+          return;
+        }
+
         setPreScrollTop(scrollTop);
-        setIsFirstScroll(false);
-        return;
+        let direction = scrollTop - preScrollTop; // 滚动方向 滚动多少
+        let distance = translateY - direction < 0 ? translateY - direction : 0;
+        setTranslateY(Math.abs(distance) < navBarCellHeight ? distance : -navBarCellHeight);
+        appRef.current.style.transform = `translate(0, ${translateY}px)`;
       }
-
-      setPreScrollTop(scrollTop);
-      let direction = scrollTop - preScrollTop; // 滚动方向 滚动多少
-      let distance = translateY - direction < 0 ? translateY - direction : 0;
-      setTranslateY(Math.abs(distance) < navBarCellHeight ? distance : -navBarCellHeight);
-      appRef.current.style.transform = `translate(0, ${translateY}px)`;
     },
-    [appRef, navBarCellHeight, preScrollTop, translateY, isFirstScroll]
+    [appRef, navBarCellHeight, preScrollTop, translateY, isFirstScroll, fixedStatus]
   );
-
   const handlePressMove = useCallback(
     (evt) => {
-      // 下拉加载跟多 也可能用的上
-      console.log("evt", evt.deltaY);
-      console.log("evt", evt);
+      // 下拉加载更多 也可能用的上
       // 向上 的PressMove 在fixed效果下 禁用虚拟列表的滚动；
       // 向下 的PressMove 在fixed效果下 禁止虚拟列表滚动，
       // fixed效果结束时 必须顺滑过渡到 虚拟列表下滑；
@@ -82,59 +77,28 @@ export default function Song(props) {
 
       // AlloyFinger 底层用四个touch事件 组合模拟了 多个手势
       const { top } = appRef.current.getBoundingClientRect();
-      console.log("contentRef.current", contentRef.current);
-      console.log(
-        "contentRef.current.layout.children[2].children[0]",
-        contentRef.current.layout.children[2].children[0]
-      );
 
       if (top > -navBarCellHeight && top < 0) {
-        console.log("session 1 top:", top);
-        contentRef.current.layout.children[2].children[0].children[0].children[0].style.overflow =
-          "hidden";
-
-        // 这个设置 阻止了
-        // evt.stopPropagation();
-        // evt.stopImmediatePropagation();
-        // contentRef.current.children[0].children[0];
+        setFixedStatus(true);
       } else {
-        // contentRef.current.children[0].children[0].style.overflow = "hidden";
-        // console.log(
-        //   "contentRef.current.children[0].children[0]",
-        //   contentRef.current.children[0].children[0].style.overflow
-        // );
+        setFixedStatus(false);
       }
-      console.log("evt.deltaY", evt.deltaY);
 
-      if (evt.deltaY > 0) {
-        // evt.stopPropagation();
-        console.log("top", top);
-        if (top < 0 && top >= -navBarCellHeight) {
-          let done =
-            top + evt.deltaY > -navBarCellHeight ? top + evt.deltaY : -navBarCellHeight;
-          appRef.current.style.transform = `translate(0, ${done}px)`;
-          setTranslateY(done);
-        }
+      if (top < 0 && top >= -navBarCellHeight) {
+        let done = top + evt.deltaY > -navBarCellHeight ? top + evt.deltaY : -navBarCellHeight;
+        appRef.current.style.transform = `translate(0, ${done}px)`;
+        setTranslateY(done);
       }
     },
     [appRef, navBarCellHeight]
   );
 
   useEffect(() => {
-    console.log("this.is useEffect");
-    // let fingerInstance = new AlloyFinger(contentRef.current.offsetParent, {});
     let fingerInstance = new AlloyFinger(contentRef.current.layout, {});
     fingerInstance.on("pressMove", handlePressMove);
     // return fingerInstance.destroy();
     // 这样拿到的 translate
   }, [contentRef, htmlClientWidth, handlePressMove]);
-
-  useEffect(() => {
-    // console.log("currentTab:", currentTab);
-    // console.log("contentRef.current", contentRef.current.layout);
-  }, [currentTab]);
-
-  //
 
   // 默认song, tab变化反应在路由上，暂时放在 查询条件上， 但和当前详情页的 param 形式冲突；
 
@@ -196,9 +160,7 @@ export default function Song(props) {
     },
   ];
 
-  const onTabClick = useCallback((tab, index) => {
-    // console.log("onTabClick", tab, index);
-  }, []);
+  const onTabClick = useCallback((tab, index) => {}, []);
   const titleToIndex = {
     song: 0,
     singer: 1,
@@ -228,19 +190,8 @@ export default function Song(props) {
       ></TabList>
       <Route path={"/song/:id"} exact={false}>
         {(props) => (
-          <CSSTransition
-            in={props.match != null}
-            timeout={500}
-            classNames="page"
-            unmountOnExit
-            onExit={onExit}
-          >
-            <Detail
-              {...props}
-              state={cache.current.position}
-              item={cache.current.item}
-              visible={detailVisible}
-            />
+          <CSSTransition in={props.match != null} timeout={500} classNames="page" unmountOnExit onExit={onExit}>
+            <Detail {...props} state={cache.current.position} item={cache.current.item} visible={detailVisible} />
           </CSSTransition>
         )}
       </Route>
