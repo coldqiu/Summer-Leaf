@@ -47,23 +47,24 @@ export default function Song(props) {
 
   let virtualListScroll = useCallback(
     (scrollTop, e, virtualListRef) => {
-      if (!fixedStatus) {
-        // onScroll 设置了passive: true 不可以调用preventDefault
-        // 多个tab页的滚动都会影响 顶部的fixed效果
+      console.log("in virtualListScroll fixedStatus", fixedStatus);
+      // if (!fixedStatus) {
+      // onScroll 设置了passive: true 不可以调用preventDefault
+      // 多个tab页的滚动都会影响 顶部的fixed效果
 
-        // 切换 tabs 页的第一个滚动 仅设置preScrollTop
-        if (isFirstScroll) {
-          setPreScrollTop(scrollTop);
-          setIsFirstScroll(false);
-          return;
-        }
-
+      // 切换 tabs 页的第一个滚动 仅设置preScrollTop
+      if (isFirstScroll) {
         setPreScrollTop(scrollTop);
-        let direction = scrollTop - preScrollTop; // 滚动方向 滚动多少
-        let distance = translateY - direction < 0 ? translateY - direction : 0;
-        setTranslateY(Math.abs(distance) < navBarCellHeight ? distance : -navBarCellHeight);
-        appRef.current.style.transform = `translate(0, ${translateY}px)`;
+        setIsFirstScroll(false);
+        return;
       }
+
+      // setPreScrollTop(scrollTop);
+      // let direction = scrollTop - preScrollTop; // 滚动方向 滚动多少
+      // let distance = translateY - direction < 0 ? translateY - direction : 0;
+      // setTranslateY(Math.abs(distance) < navBarCellHeight ? distance : -navBarCellHeight);
+      // appRef.current.style.transform = `translate(0, ${translateY}px)`;
+      // }
     },
     [appRef, navBarCellHeight, preScrollTop, translateY, isFirstScroll, fixedStatus]
   );
@@ -77,17 +78,28 @@ export default function Song(props) {
 
       // AlloyFinger 底层用四个touch事件 组合模拟了 多个手势
       const { top } = appRef.current.getBoundingClientRect();
+      console.log("PressMove", evt);
+      // if (top > -navBarCellHeight && top < 0) {
+      //   console.log("setFixedStatus(true)");
+      //   setFixedStatus(true);
+      // } else {
+      //   console.log("setFixedStatus(false)");
+      //   setFixedStatus(false);
+      // }
 
-      if (top > -navBarCellHeight && top < 0) {
-        setFixedStatus(true);
-      } else {
+      if (top <= 0 && top >= -navBarCellHeight) {
         setFixedStatus(false);
-      }
+        let done =
+          top + evt.deltaY > 0
+            ? 0
+            : top + evt.deltaY > -navBarCellHeight
+            ? top + evt.deltaY
+            : -navBarCellHeight;
 
-      if (top < 0 && top >= -navBarCellHeight) {
-        let done = top + evt.deltaY > -navBarCellHeight ? top + evt.deltaY : -navBarCellHeight;
         appRef.current.style.transform = `translate(0, ${done}px)`;
         setTranslateY(done);
+      } else {
+        setFixedStatus(true);
       }
     },
     [appRef, navBarCellHeight]
@@ -190,8 +202,19 @@ export default function Song(props) {
       ></TabList>
       <Route path={"/song/:id"} exact={false}>
         {(props) => (
-          <CSSTransition in={props.match != null} timeout={500} classNames="page" unmountOnExit onExit={onExit}>
-            <Detail {...props} state={cache.current.position} item={cache.current.item} visible={detailVisible} />
+          <CSSTransition
+            in={props.match != null}
+            timeout={500}
+            classNames="page"
+            unmountOnExit
+            onExit={onExit}
+          >
+            <Detail
+              {...props}
+              state={cache.current.position}
+              item={cache.current.item}
+              visible={detailVisible}
+            />
           </CSSTransition>
         )}
       </Route>
