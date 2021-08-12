@@ -43,15 +43,11 @@ export default function Song(props) {
   const [isFirstScroll, setIsFirstScroll] = useState(true);
   const navBarCellHeight = ((100 / 75) * htmlClientWidth) / 10;
 
-  const [fixedStatus, setFixedStatus] = useState(true);
-
   let virtualListScroll = useCallback(
     (scrollTop, e, virtualListRef) => {
-      console.log("in virtualListScroll fixedStatus", fixedStatus);
-      // if (!fixedStatus) {
       // onScroll 设置了passive: true 不可以调用preventDefault
+      console.log("scrollTop", scrollTop, virtualListRef);
       // 多个tab页的滚动都会影响 顶部的fixed效果
-
       // 切换 tabs 页的第一个滚动 仅设置preScrollTop
       if (isFirstScroll) {
         setPreScrollTop(scrollTop);
@@ -59,47 +55,37 @@ export default function Song(props) {
         return;
       }
 
-      // setPreScrollTop(scrollTop);
-      // let direction = scrollTop - preScrollTop; // 滚动方向 滚动多少
-      // let distance = translateY - direction < 0 ? translateY - direction : 0;
-      // setTranslateY(Math.abs(distance) < navBarCellHeight ? distance : -navBarCellHeight);
-      // appRef.current.style.transform = `translate(0, ${translateY}px)`;
-      // }
+      setPreScrollTop(scrollTop);
+      let direction = scrollTop - preScrollTop; // 滚动方向 滚动多少
+      let distance = translateY - direction < 0 ? translateY - direction : 0;
+      setTranslateY(Math.abs(distance) < navBarCellHeight ? distance : -navBarCellHeight);
+      appRef.current.style.transform = `translate(0, ${translateY}px)`;
     },
-    [appRef, navBarCellHeight, preScrollTop, translateY, isFirstScroll, fixedStatus]
+    [appRef, navBarCellHeight, preScrollTop, translateY, isFirstScroll]
   );
   const handlePressMove = useCallback(
     (evt) => {
       // 下拉加载更多 也可能用的上
-      // 向上 的PressMove 在fixed效果下 禁用虚拟列表的滚动；
-      // 向下 的PressMove 在fixed效果下 禁止虚拟列表滚动，
+      // 无法禁止　虚拟列表滚动
       // fixed效果结束时 必须顺滑过渡到 虚拟列表下滑；
       // fixed效果和虚拟列表下拉都结束时 做加载更多动画;
-
       // AlloyFinger 底层用四个touch事件 组合模拟了 多个手势
+      // 因为virtualListScroll的滚动是阻止不了的
+      // handlePressMove 处理向下滑动时的 fixed 效果
+      // virtualListScroll 处理向下滑动的 fixed效果
+      // translateY 是两者共同维护的
       const { top } = appRef.current.getBoundingClientRect();
+      // top 虽然是 translate的值 但是直接使用造成 递归调用 handlePresMove,因为 调用了setTranslateY(done);
       console.log("PressMove", evt);
-      // if (top > -navBarCellHeight && top < 0) {
-      //   console.log("setFixedStatus(true)");
-      //   setFixedStatus(true);
-      // } else {
-      //   console.log("setFixedStatus(false)");
-      //   setFixedStatus(false);
-      // }
-
       if (top <= 0 && top >= -navBarCellHeight) {
-        setFixedStatus(false);
         let done =
           top + evt.deltaY > 0
             ? 0
             : top + evt.deltaY > -navBarCellHeight
             ? top + evt.deltaY
             : -navBarCellHeight;
-
         appRef.current.style.transform = `translate(0, ${done}px)`;
         setTranslateY(done);
-      } else {
-        setFixedStatus(true);
       }
     },
     [appRef, navBarCellHeight]
