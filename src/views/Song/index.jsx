@@ -50,11 +50,7 @@ export default function Song(props) {
       console.log("PressMove", evt);
       if (top <= 0 && top >= -navBarCellHeight) {
         let done =
-          top + evt.deltaY > 0
-            ? 0
-            : top + evt.deltaY > -navBarCellHeight
-            ? top + evt.deltaY
-            : -navBarCellHeight;
+          top + evt.deltaY > 0 ? 0 : top + evt.deltaY > -navBarCellHeight ? top + evt.deltaY : -navBarCellHeight;
         appRef.current.style.transform = `translate(0, ${done}px)`;
         setTranslateY(done);
 
@@ -195,19 +191,8 @@ export default function Song(props) {
       ></TabList>
       <Route path={"/song/:id"} exact={false}>
         {(props) => (
-          <CSSTransition
-            in={props.match != null}
-            timeout={500}
-            classNames="page"
-            unmountOnExit
-            onExit={onExit}
-          >
-            <Detail
-              {...props}
-              state={cache.current.position}
-              item={cache.current.item}
-              visible={detailVisible}
-            />
+          <CSSTransition in={props.match != null} timeout={500} classNames="page" unmountOnExit onExit={onExit}>
+            <Detail {...props} state={cache.current.position} item={cache.current.item} visible={detailVisible} />
           </CSSTransition>
         )}
       </Route>
