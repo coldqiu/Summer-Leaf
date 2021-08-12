@@ -28,41 +28,12 @@ export default function Song(props) {
   const dispatch = useDispatch();
   let currentTab = useSearchParam("tab") || "song";
   const contentRef = useRef(null);
-  const tabRef = useCallback((node) => {
-    if (node) {
-      contentRef.current = node;
-    }
-  }, []);
-  // 待处理：初始状态的 tabs 页不能触发虚拟列表不能向下动，导致顶部fixed动画效果失效；
-  // AlloyFinger 和 虚拟列表的滚动不同时存在，how
-  // 顶部存在 fixed效果时 不触发虚拟列表的滚动；
-
-  // 使用contentRef 的offsetParent 添加 pressMove 事件，在 translateY < 0 时 响应 顶部fixed效果并 禁止虚拟列表的滚动；
-
   const { width: htmlClientWidth } = useWindowSize();
-  const [isFirstScroll, setIsFirstScroll] = useState(true);
+
   const navBarCellHeight = ((100 / 75) * htmlClientWidth) / 10;
+  console.log("navBarCellHeight", navBarCellHeight);
+  const [isFirstScroll, setIsFirstScroll] = useState(true);
 
-  let virtualListScroll = useCallback(
-    (scrollTop, e, virtualListRef) => {
-      // onScroll 设置了passive: true 不可以调用preventDefault
-      console.log("scrollTop", scrollTop, virtualListRef);
-      // 多个tab页的滚动都会影响 顶部的fixed效果
-      // 切换 tabs 页的第一个滚动 仅设置preScrollTop
-      if (isFirstScroll) {
-        setPreScrollTop(scrollTop);
-        setIsFirstScroll(false);
-        return;
-      }
-
-      setPreScrollTop(scrollTop);
-      let direction = scrollTop - preScrollTop; // 滚动方向 滚动多少
-      let distance = translateY - direction < 0 ? translateY - direction : 0;
-      setTranslateY(Math.abs(distance) < navBarCellHeight ? distance : -navBarCellHeight);
-      appRef.current.style.transform = `translate(0, ${translateY}px)`;
-    },
-    [appRef, navBarCellHeight, preScrollTop, translateY, isFirstScroll]
-  );
   const handlePressMove = useCallback(
     (evt) => {
       // 下拉加载更多 也可能用的上
@@ -86,17 +57,53 @@ export default function Song(props) {
             : -navBarCellHeight;
         appRef.current.style.transform = `translate(0, ${done}px)`;
         setTranslateY(done);
+
+        // 初始页面 向下滑动再向上滑动 fixed效果结束后 虚拟列表依然不滚动；
+        // 需要一个释放 handlePress 的时机；以及绑定 hanldePrss的时机？
+        // pressMove的触发频率 远高于 虚拟列表的滚动事件
+        // 当前的问题感觉 处理不了了
+        // 要是虚拟列表组件支持下拉加载更多这种 事件就好了向外暴露了 下拉的距离
+        // 既可以实现fixed效果，也能在切换tab时处理fixed效果
       }
     },
     [appRef, navBarCellHeight]
   );
+  const tabRef = useCallback(
+    (node) => {
+      if (node) {
+        contentRef.current = node;
+        let fingerInstance = new AlloyFinger(node.layout, {});
+        fingerInstance.on("pressMove", handlePressMove);
+      }
+    },
+    [handlePressMove]
+  );
+  // 待处理：初始状态的 tabs 页不能触发虚拟列表不能向下动，导致顶部fixed动画效果失效；
+  // AlloyFinger 和 虚拟列表的滚动不同时存在，how
+  // 顶部存在 fixed效果时 不触发虚拟列表的滚动；
 
-  useEffect(() => {
-    let fingerInstance = new AlloyFinger(contentRef.current.layout, {});
-    fingerInstance.on("pressMove", handlePressMove);
-    // return fingerInstance.destroy();
-    // 这样拿到的 translate
-  }, [contentRef, htmlClientWidth, handlePressMove]);
+  // 使用contentRef 的offsetParent 添加 pressMove 事件，在 translateY < 0 时 响应 顶部fixed效果并 禁止虚拟列表的滚动；
+
+  let virtualListScroll = useCallback(
+    (scrollTop, e, virtualListRef) => {
+      // onScroll 设置了passive: true 不可以调用preventDefault
+      console.log("scrollTop", scrollTop, virtualListRef);
+      // 多个tab页的滚动都会影响 顶部的fixed效果
+      // 切换 tabs 页的第一个滚动 仅设置preScrollTop
+      if (isFirstScroll) {
+        setPreScrollTop(scrollTop);
+        setIsFirstScroll(false);
+        return;
+      }
+
+      setPreScrollTop(scrollTop);
+      let direction = scrollTop - preScrollTop; // 滚动方向 滚动多少
+      let distance = translateY - direction < 0 ? translateY - direction : 0;
+      setTranslateY(Math.abs(distance) < navBarCellHeight ? distance : -navBarCellHeight);
+      appRef.current.style.transform = `translate(0, ${translateY}px)`;
+    },
+    [appRef, navBarCellHeight, preScrollTop, translateY, isFirstScroll]
+  );
 
   // 默认song, tab变化反应在路由上，暂时放在 查询条件上， 但和当前详情页的 param 形式冲突；
 
