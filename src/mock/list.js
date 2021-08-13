@@ -1,3 +1,5 @@
+import React from "react";
+
 const Mock = require("mockjs");
 
 function getImg(imgName) {
@@ -180,3 +182,4 @@ export const albumnList = Mock.mock({
     },
   ],
 });
+
