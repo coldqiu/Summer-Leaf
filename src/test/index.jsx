@@ -21,7 +21,8 @@ function CountLabel({ count }) {
     console.log("ref dom", ref);
     ref.current.addEventListener("click", domClick, false);
     return () => {
-      ref.current.removeEventListener("click", domClick);
+      // console.log("ref.current", ref.current);
+      // ref.current.removeEventListener("click", domClick);
     };
   }, []);
   const color = count > 10 ? "red" : "blue";

@@ -28,6 +28,8 @@ export default function Song(props) {
   const dispatch = useDispatch();
   let currentTab = useSearchParam("tab") || "song";
   const contentRef = useRef(null);
+  const pageRef = useRef(null);
+
   const { width: htmlClientWidth } = useWindowSize();
 
   const navBarCellHeight = ((100 / 75) * htmlClientWidth) / 10;
@@ -45,15 +47,26 @@ export default function Song(props) {
       // handlePressMove 处理向下滑动时的 fixed 效果
       // virtualListScroll 处理向下滑动的 fixed效果
       // translateY 是两者共同维护的
-      const { top } = appRef.current.getBoundingClientRect();
-      // top 虽然是 translate的值 但是直接使用造成 递归调用 handlePresMove,因为 调用了setTranslateY(done);
-      console.log("PressMove", evt);
+      let { top } = appRef.current.getBoundingClientRect();
+      // top 虽然是 translateY的值 但是直接使用造成 递归调用 handlePresMove,因为 调用了setTranslateY(done);
+      console.log("PressMove", evt, top);
+      top = parseInt(parseFloat(top).toFixed(2));
+
+      console.log("top", top);
+
+      if (top === 0 && preScrollTop === 0) {
+        // trouble 下拉
+        console.log("trouble");
+      }
+
       if (top <= 0 && top >= -navBarCellHeight) {
+        console.log("evt.deltaY", evt.deltaY);
+        console.log(" top + evt.deltaY", top + evt.deltaY);
         let done =
           top + evt.deltaY > 0 ? 0 : top + evt.deltaY > -navBarCellHeight ? top + evt.deltaY : -navBarCellHeight;
         appRef.current.style.transform = `translate(0, ${done}px)`;
+        console.log("don", done);
         setTranslateY(done);
-
         // 初始页面 向下滑动再向上滑动 fixed效果结束后 虚拟列表依然不滚动；
         // 需要一个释放 handlePress 的时机；以及绑定 hanldePrss的时机？
         // pressMove的触发频率 远高于 虚拟列表的滚动事件
@@ -62,7 +75,7 @@ export default function Song(props) {
         // 既可以实现fixed效果，也能在切换tab时处理fixed效果
       }
     },
-    [appRef, navBarCellHeight]
+    [appRef, navBarCellHeight, preScrollTop]
   );
   const tabRef = useCallback(
     (node) => {
@@ -83,7 +96,15 @@ export default function Song(props) {
   let virtualListScroll = useCallback(
     (scrollTop, e, virtualListRef) => {
       // onScroll 设置了passive: true 不可以调用preventDefault
-      console.log("scrollTop", scrollTop, virtualListRef);
+      console.log("scscrollTop, e, virtualListRef", scrollTop, e, virtualListRef, true);
+      // console.log(virtualListRef.current.rootNode);
+      // function handler(e) {
+      //   console.log("handler e", e);
+      //   // e.preventDefault();
+      //   // e.stopImmediatePropagation();
+      //   // e.stopPropagation();
+      // }
+      // virtualListRef.current.rootNode.offsetParent.addEventListener("scroll", handler, true);
       // 多个tab页的滚动都会影响 顶部的fixed效果
       // 切换 tabs 页的第一个滚动 仅设置preScrollTop
       if (isFirstScroll) {
@@ -179,7 +200,6 @@ export default function Song(props) {
     [history, dispatch]
   );
 
-  const pageRef = useRef(null);
   return (
     <div className={Style.song} ref={pageRef}>
       <TabList
