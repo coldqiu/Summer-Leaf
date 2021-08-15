@@ -194,7 +194,7 @@ export default function Song(props) {
       history.push(`/song?tab=${tab.title}`);
       dispatch(SetActions(actions[tab.title]));
       setIsFirstScroll(true);
-      console.log("onChange translateY", translateY);
+      // console.log("onChange translateY", translateY);
       //  切换tabs 时的translateY 会被重置为 0 !? why
     },
     [history, dispatch]

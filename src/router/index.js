@@ -27,6 +27,11 @@ const list = [
     name: "detail",
     component: lazy(() => import("../views/Detail")),
   },
+  {
+    path: "/test",
+    name: "test",
+    component: lazy(() => import("../views/TEST/index.jsx")),
+  },
 ];
 
 export default list;
