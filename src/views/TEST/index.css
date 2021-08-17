@@ -12,14 +12,14 @@
 }
 .list {
   width: 100%;
-  height: calc(100vh - 110px);
+  /* height: calc(100vh - 110px); */
   /* 使用calc 注意运算符前后需要空格 */
   overflow-y: auto;
   background: rgba(0, 0, 0, 0.15);
 }
 
 .ul {
-  height: 300vh;
+  /* height: 300vh; */
 }
 
 li {

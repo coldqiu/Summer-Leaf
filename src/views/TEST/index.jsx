@@ -1,19 +1,25 @@
 //
 import { useRef, useCallback, useState } from "react";
+import VirtualList from "react-tiny-virtual-list";
 
 import { useWindowSize, usePrevious } from "react-use";
 import AlloyFinger from "alloyfinger";
 
+import throttle from "lodash/throttle";
+// Lodash之throttle（节流）与 debounce （防抖
+
 import "./index.css";
 export default function Test() {
-  const { width: htmlClientWidth } = useWindowSize();
+  const { width: htmlClientWidth, height: htmlClientHeight } = useWindowSize();
+
   const [translateY, setTranslateY] = useState(0);
   const preTranslateY = usePrevious(translateY);
-  console.log("translateY, preTranslateY", translateY, preTranslateY);
+  const [scrollTop, setScrollTop] = useState(0);
+  const preScrollTop = usePrevious(scrollTop);
   const wrapRef = useRef(null);
   const contentRef = useRef(null);
   const navBarCellHeight = ((100 / 75) * htmlClientWidth) / 10;
-
+  const fingerInstance = useRef(null);
   // 获取页面容器dom
   const getWrapRef = useCallback((node) => {
     if (node) {
@@ -25,54 +31,79 @@ export default function Test() {
   const handlePressMove = useCallback(
     (evt) => {
       let { top } = wrapRef.current.getBoundingClientRect();
-      console.log("PressMove", evt, top);
       top = parseInt(parseFloat(top).toFixed(2));
-      console.log("top", top, navBarCellHeight);
-
-      if (top <= 0 && top >= -navBarCellHeight) {
-        console.log("evt.deltaY", evt.deltaY);
-        console.log(" top + evt.deltaY", top + evt.deltaY);
-        let done =
-          top + evt.deltaY > 0 ? 0 : top + evt.deltaY > -navBarCellHeight ? top + evt.deltaY : -navBarCellHeight;
-        wrapRef.current.style.transform = `translate(0, ${done}px)`;
-        console.log("don", done);
-        setTranslateY(done);
+      console.log("evt.deltaY, top", evt.deltaY, top);
+      if (evt.deltaY > 0) {
+        if (top <= 0 && top >= -navBarCellHeight) {
+          let done =
+            top + evt.deltaY > 0 ? 0 : top + evt.deltaY > -navBarCellHeight ? top + evt.deltaY : -navBarCellHeight;
+          wrapRef.current.style.transform = `translate(0, ${done}px)`;
+          setTranslateY(done);
+          evt.preventDefault();
+          console.log("done, navBarCellHeight:", done, navBarCellHeight);
+        } else {
+          console.log("pressMove else");
+        }
       }
     },
-    [wrapRef, navBarCellHeight]
+    [, navBarCellHeight]
   );
 
   // 获取列表容器dom
-  const getListRef = useCallback(
-    (node) => {
-      if (node) {
-        contentRef.current = node;
-        console.log("node", node);
-        let fingerInstance = new AlloyFinger(node, {});
-        fingerInstance.on("pressMove", handlePressMove);
-      }
-    },
-    [handlePressMove]
-  );
+  const getListRef = useCallback((node) => {
+    if (node) {
+      contentRef.current = node;
+      fingerInstance.current = new AlloyFinger(node, {});
 
+      fingerInstance.current.on("touchMove", handlePressMove);
+      // fingerInstance.on("pressMove", throttle(handlePressMove, 16));
+    }
+  }, []);
+  const [list, setList] = useState(new Array(300).fill(1));
+  const height = htmlClientHeight - ((180 / 75) * htmlClientWidth) / 10;
+
+  const virtualListScroll = useCallback((scrollTop, e) => {
+    // console.log("virtualListScroll,e", scrollTop, e);
+    setScrollTop(scrollTop);
+    let direction = scrollTop - preScrollTop; // 滚动方向 滚动多少
+    if (direction > 0) {
+      let distance = translateY - direction < 0 ? translateY - direction : 0;
+      setTranslateY(Math.abs(distance) < navBarCellHeight ? distance : -navBarCellHeight);
+      wrapRef.current.style.transform = `translate(0, ${translateY}px)`;
+    }
+  });
   return (
-    <div ref={getWrapRef} className="wrap">
-      <div className="nav">NAV</div>
-      <div className="content">
-        <div className="tab">TAB</div>
-        <div ref={getListRef} className="list">
-          <ul className="ul">
-            <li> LIST LI</li>
-            <li> LIST LI</li>
-            <li> LIST LI</li>
-            <li> LIST LI</li>
-            <li> LIST LI</li>
-            <li> LIST LI</li>
-            <li> LIST LI</li>
-            <li> LIST LI</li>
-          </ul>
+    <div className="page" style={{ overflow: "hidden", height: "100vh" }}>
+      <div ref={getWrapRef} className="wrap">
+        <div className="nav">NAV</div>
+        <div className="content">
+          <div className="tab">TAB</div>
+          <div ref={getListRef} className="list">
+            <ul className="ul">
+              <VirtualList
+                width="100%"
+                // height={600}
+                height={height}
+                itemCount={list.length}
+                itemSize={100}
+                overscanCount={4}
+                // estimatedItemSize={1}
+                onScroll={(scrollTop, e) => {
+                  virtualListScroll(scrollTop, e);
+                }}
+                renderItem={({ index, style }) => {
+                  return (
+                    <li key={index} style={style}>
+                      {index}
+                    </li>
+                  );
+                }}
+              ></VirtualList>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   );
 }
+
