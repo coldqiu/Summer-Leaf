@@ -1,5 +1,5 @@
 //
-import { useRef, useCallback, useState } from "react";
+import { useRef, useCallback, useState, useEffect } from "react";
 import VirtualList from "react-tiny-virtual-list";
 
 import { useWindowSize, usePrevious } from "react-use";
@@ -20,6 +20,9 @@ export default function Test() {
   const contentRef = useRef(null);
   const navBarCellHeight = ((100 / 75) * htmlClientWidth) / 10;
   const fingerInstance = useRef(null);
+
+  const [pos, setPos] = useState({ pageX: 0, pageY: 0 });
+  const prePos = usePrevious(pos);
   // 获取页面容器dom
   const getWrapRef = useCallback((node) => {
     if (node) {
@@ -52,10 +55,9 @@ export default function Test() {
   // 获取列表容器dom
   const getListRef = useCallback((node) => {
     if (node) {
-      contentRef.current = node;
-      fingerInstance.current = new AlloyFinger(node, {});
-
-      fingerInstance.current.on("touchMove", handlePressMove);
+      // contentRef.current = node;
+      // fingerInstance.current = new AlloyFinger(node, {});
+      // fingerInstance.current.on("touchMove", handlePressMove);
       // fingerInstance.on("pressMove", throttle(handlePressMove, 16));
     }
   }, []);
@@ -71,7 +73,64 @@ export default function Test() {
       setTranslateY(Math.abs(distance) < navBarCellHeight ? distance : -navBarCellHeight);
       wrapRef.current.style.transform = `translate(0, ${translateY}px)`;
     }
+    // }, []);
   });
+
+  // 监听虚拟列表的 touch事件；
+  const posRef = useRef(null);
+
+  const touchstart = useCallback(
+    (evt) => {
+      console.log("touchstart evt", evt);
+      const { pageY } = evt.touches[0];
+      console.log("pos", pageY);
+      posRef.current = pageY;
+    },
+    [posRef]
+  );
+  const touchmove = useCallback(
+    (evt) => {
+      const { pageY } = evt.touches[0];
+      console.log("pos", pageY);
+
+      const prePos = posRef.current;
+      console.log("prePos", prePos);
+      // console.log("1 posRef", posRef);
+      posRef.current = pageY;
+      // console.log("2 posRef", posRef); // 错误的值
+
+      let direction = pageY - prePos; // 滚动方向 滚动多少
+      console.log("directioin", direction);
+      // 还是旧问题， 一遍获取 translateY 一边设置
+      let { top } = wrapRef.current.getBoundingClientRect();
+      let translateY = parseInt(parseFloat(top).toFixed(2));
+      if (direction > 0) {
+        let distance = translateY + direction < 0 ? translateY + direction : 0;
+        setTranslateY(Math.abs(distance) < navBarCellHeight ? distance : -navBarCellHeight); //
+        console.log("distance", distance);
+        wrapRef.current.style.transform = `translate(0, ${distance}px)`;
+      }
+    },
+    [posRef]
+  );
+  const touchend = useCallback((evt) => {
+    console.log("touchend evt", evt);
+  }, []);
+  const touchcancel = useCallback((evt) => {
+    console.log("touchcancel evt", evt);
+  }, []);
+
+  const virtualListRef = useCallback((ref) => {
+    if (ref) {
+      let node = ref.rootNode;
+      contentRef.current = node;
+      node.addEventListener("touchstart", touchstart);
+      node.addEventListener("touchmove", touchmove);
+      node.addEventListener("touchend", touchend);
+      node.addEventListener("touchcancel", touchcancel);
+    }
+  });
+
   return (
     <div className="page" style={{ overflow: "hidden", height: "100vh" }}>
       <div ref={getWrapRef} className="wrap">
@@ -88,6 +147,7 @@ export default function Test() {
                 itemSize={100}
                 overscanCount={4}
                 // estimatedItemSize={1}
+                ref={virtualListRef}
                 onScroll={(scrollTop, e) => {
                   virtualListScroll(scrollTop, e);
                 }}
@@ -106,4 +166,3 @@ export default function Test() {
     </div>
   );
 }
-
