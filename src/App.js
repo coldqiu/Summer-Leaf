@@ -2,7 +2,7 @@ import { Suspense, useRef, createContext } from "react";
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import routers from "./router/index.js";
 
-// import NavBarCell from "@/components/NavBarCell.jsx";
+import NavBarCell from "@/components/NavBarCell.jsx";
 import MSiderBar from "./components/Sidebar/index.js";
 
 // import MPlayer from "./components/Player/index.js";
@@ -24,7 +24,7 @@ function App() {
       <AppContext.Provider value={ref}>
         <BrowserRouter>
           <MSiderBar />
-          {/* <NavBarCell /> */}
+          <NavBarCell />
           <Suspense fallback={<h1>loading</h1>}>
             <Switch>
               <Route exact path="/" render={() => <Redirect to="/song" />} />
