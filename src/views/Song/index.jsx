@@ -71,8 +71,8 @@ export default function Song(props) {
       if (node && node.layout) {
         console.log("node", node, node.layout);
         // node 存在， node.layout 不存在
-        // let fingerInstance = new AlloyFinger(node.layout, {});
-        // fingerInstance.on("pressMove", handlePressMove);
+        let fingerInstance = new AlloyFinger(node.layout, {});
+        fingerInstance.on("pressMove", handlePressMove);
       }
     },
     [handlePressMove]
