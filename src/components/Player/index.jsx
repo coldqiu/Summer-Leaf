@@ -9,6 +9,7 @@ export default function MPlayer(props) {
   // player作为全局组件，内部数据 暂不考虑存 redux;
   // const isPlaying = useSelector((state) => state.isPlaying);
   // const dispatch = useDispatch();
+  // playlist
   const [tracks, setTracks] = useState([]);
   // const tracks = [
   //   {
@@ -84,6 +85,7 @@ export default function MPlayer(props) {
   };
 
   // Handle setup when changing tracks
+  // isReady 应该监听 <audio /> 的ready事件
   useEffect(() => {
     audioRef.current.pause();
 
