@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState, useContext, useEffect } from "react";
+import { useCallback, useRef, useState, useContext } from "react";
 import { Route, useHistory } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import { useDispatch } from "react-redux";
@@ -20,6 +20,7 @@ export default function Song(props) {
   // const [fixedObject, setFixedObject] = useState({ scrollTop: 0, translateY: 0 });
   const fixedObject = useRef({ scrollTop: 0, translateY: 0 });
   let currentTab = useSearchParam("tab") || "song";
+  console.log("currentTab", currentTab);
   const [isFirstScroll, setIsFirstScroll] = useState(true);
   const [detailVisible, setDetailVisible] = useState("visible");
   const history = useHistory();
@@ -32,25 +33,10 @@ export default function Song(props) {
   const handlePressMove = useCallback(
     (evt) => {
       console.log("handlePressMove evt", evt);
-      // setFixedObject((object) => {
-      //   let { translateY } = object;
-      //   if (translateY <= 0 && translateY >= -navBarCellHeight) {
-      //     let nextTranslateY =
-      //       translateY + evt.deltaY > 0
-      //         ? 0
-      //         : translateY + evt.deltaY > -navBarCellHeight
-      //         ? translateY + evt.deltaY
-      //         : -navBarCellHeight;
-      //     appRef.current.style.transform = `translate(0, ${nextTranslateY}px)`;
-      //     return { ...object, translateY: nextTranslateY };
-      //   }
-      //   return { ...object };
-      // });
-
       // 这些变量不用于页面渲染，用useRef
       let object = fixedObject.current;
       let { translateY } = object;
-      let nextTranslateY;
+      let nextTranslateY = translateY;
       if (translateY <= 0 && translateY >= -navBarCellHeight) {
         nextTranslateY =
           translateY + evt.deltaY > 0
@@ -78,27 +64,42 @@ export default function Song(props) {
     [handlePressMove]
   );
 
-  const virtualListScroll = useCallback(
-    (scrollTop) => {
-      if (isFirstScroll) {
-        setIsFirstScroll(false);
-        return;
-      }
-      // setFixedObject((object) => { ...})
-      let object = fixedObject.current;
+  // 监听虚拟列表设置 translateY
+  // const virtualListScroll = useCallback(
+  //   (scrollTop) => {
+  //     console.log("scrollTop:", scrollTop);
+  //     if (isFirstScroll) {
+  //       setIsFirstScroll(false);
+  //       return;
+  //     }
+  //     let object = fixedObject.current;
 
-      let deltaY = scrollTop - object.scrollTop;
-      let nextTranslateY =
-        object.translateY + deltaY > 0
-          ? 0
-          : object.translateY + deltaY > -navBarCellHeight
-          ? object.translateY + deltaY
-          : -navBarCellHeight;
-      appRef.current.style.transform = `translate(0, ${nextTranslateY}px)`;
+  //     let deltaY = scrollTop - object.scrollTop;
+  //     console.log("deltaY", deltaY);
+  //     let nextTranslateY =
+  //       object.translateY - deltaY > 0
+  //         ? 0
+  //         : object.translateY - deltaY > -navBarCellHeight
+  //         ? object.translateY - deltaY
+  //         : -navBarCellHeight;
+  //     appRef.current.style.transform = `translate(0, ${nextTranslateY}px)`;
 
-      fixedObject.current = { ...object, translateY: nextTranslateY };
+  //     fixedObject.current = { ...object, translateY: nextTranslateY, scrollTop };
+  //   },
+  //   [appRef, navBarCellHeight, isFirstScroll]
+  // );
+
+  const virtualListScroll = useCallback((scrollTop) => {
+    // 不设置 translateY
+  }, []);
+
+  const onChange = useCallback(
+    (tab, index) => {
+      history.push(`/song?tab=${tab.title}`);
+      dispatch(SetActions(actions[tab.title]));
+      setIsFirstScroll(true);
     },
-    [appRef, navBarCellHeight]
+    [dispatch, history]
   );
 
   const titleToIndex = {
@@ -107,14 +108,13 @@ export default function Song(props) {
     albumn: 2,
   };
   const currentTabIndex = titleToIndex[currentTab];
-
-  const onChange = useCallback(
+  console.log("currentTabIndex", currentTabIndex);
+  const onTabClick = useCallback(
     (tab, index) => {
-      history.push(`/song?tab?=${tab.title}`);
-      dispatch(SetActions(actions[tab.title]));
-      setIsFirstScroll(true);
+      console.log("tab, index", tab, index);
+      history.push(`/song?tab=${tab.title}`);
     },
-    [dispatch, history]
+    [history]
   );
   // 点击列表元素跳转 详情页
   const onClick = useCallback(
@@ -125,7 +125,6 @@ export default function Song(props) {
     },
     [history]
   );
-
   const onExit = useCallback((e) => {
     const { position } = cache.current;
     const dom = e.children[0].children[0];
@@ -179,6 +178,9 @@ export default function Song(props) {
       <TabList
         tabs={tabs}
         onChange={(tab, index) => onChange(tab, index)}
+        onTabClick={(tab, index) => {
+          onTabClick(tab, index);
+        }}
         activeTab={currentTabIndex}
         ref={tabRef}
       ></TabList>
