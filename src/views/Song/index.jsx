@@ -21,7 +21,7 @@ export default function Song(props) {
   const fixedObject = useRef({ scrollTop: 0, translateY: 0 });
   let currentTab = useSearchParam("tab") || "song";
   console.log("currentTab", currentTab);
-  const [isFirstScroll, setIsFirstScroll] = useState(true);
+  // const [isFirstScroll, setIsFirstScroll] = useState(true);
   const [detailVisible, setDetailVisible] = useState("visible");
   const history = useHistory();
   const dispatch = useDispatch();
@@ -97,7 +97,7 @@ export default function Song(props) {
     (tab, index) => {
       history.push(`/song?tab=${tab.title}`);
       dispatch(SetActions(actions[tab.title]));
-      setIsFirstScroll(true);
+      // setIsFirstScroll(true);
     },
     [dispatch, history]
   );
